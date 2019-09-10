@@ -330,12 +330,13 @@
   class PopOver {
     constructor(popovers, events) {
       this.popovers = document.querySelectorAll(popovers);
-      if (events === undefined) this.events = ['click'];else this.events = events;
+      if (events === undefined) this.events = ['touchstart', 'click'];else this.events = events;
       this.activeClass = 'active';
       this.activatePopOver = this.activatePopOver.bind(this);
     }
 
     activatePopOver(event) {
+      event.preventDefault();
       const element = event.currentTarget;
       element.nextElementSibling.classList.toggle(this.activeClass);
       outSideClick(element.nextElementSibling, this.events, () => {
@@ -475,7 +476,7 @@
   menuMobile.init();
   const scrollAnimation = new ScrollAnimation('[data-anime^="scroll"]');
   scrollAnimation.init();
-  const popover = new PopOver('[data-popover]');
+  const popover = new PopOver('[data-popover="open"]');
   popover.init();
   const options = {
     behavior: 'smooth',

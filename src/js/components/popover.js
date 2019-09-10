@@ -4,7 +4,7 @@ export default class PopOver {
   constructor(popovers, events) {
     this.popovers = document.querySelectorAll(popovers);
     if (events === undefined)
-      this.events = ['click'];
+      this.events = ['touchstart','click'];
     else
       this.events = events;
     this.activeClass = 'active';
@@ -12,6 +12,7 @@ export default class PopOver {
   }
 
   activatePopOver(event) {
+    event.preventDefault();
     const element = event.currentTarget;
     element.nextElementSibling.classList.toggle(this.activeClass);
 

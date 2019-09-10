@@ -4,3 +4,7 @@
   animation: show-down .3s forwards;
 }
 
+[data-popover="open"] {
+  cursor: pointer;
+}
+

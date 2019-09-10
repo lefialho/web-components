@@ -30,7 +30,7 @@ menuMobile.init();
 const scrollAnimation = new ScrollAnimation('[data-anime^="scroll"]');
 scrollAnimation.init();
 
-const popover = new PopOver('[data-popover]');
+const popover = new PopOver('[data-popover="open"]');
 popover.init();
 
 const options = {
