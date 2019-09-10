@@ -32,15 +32,16 @@ block content
         .grid-4
           div
             figure.popover
-              img(src=urlImg + 'hacker.svg', alt="" data-popover)
+              img(src=urlImg + 'hacker.svg', alt="" data-popover="open")
               .popover-content(data-popover="content")
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi adipisci incidunt perspiciatis, labore ab sint ea perferendis cum, assumenda.
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates amet quod, eaque corporis repudiandae dicta assumenda, error autem quisquam ipsum vero aliquid tempora consectetur consequuntur totam deserunt magni provident a.
               figcaption Clique na imagem
 
         .grid-6
           p.main-content__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa distinctio non accusantium reiciendis maxime, fugiat soluta!
 
-          .popover(class="btn-inline") <button class="btn-popover" data-popover>Abrir Popover</button>
+          .popover(class="btn-inline") 
+            button(class="btn-popover" data-popover="open") Abrir Popover
             .popover-content(data-popover="content")
               p.main-content__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laudantium repudiandae dolores ratione, pariatur qui cum sed cupiditate doloribus.
               ul
@@ -77,7 +78,6 @@ block content
               |      &lt;/ul&gt;
               |    &lt;/div&gt;
               |  &lt;/div&gt;
-
 
   //- scripts
   //- ===================================

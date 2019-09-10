@@ -1,5 +1,5 @@
 (function (factory) {
-  typeof define === 'function' && define.amd ? define('script', factory) :
+  typeof define === 'function' && define.amd ? define('main', factory) :
   factory();
 }(function () { 'use strict';
 
@@ -402,6 +402,7 @@
     constructor(activeNav, navContents) {
       this.activeNav = document.querySelector(activeNav);
       this.navContents = document.querySelectorAll(navContents);
+      this.activeClass = 'active';
       this.activeOnScroll = debounce(this.activeOnScroll.bind(this), 50);
     }
 
@@ -428,9 +429,9 @@
         const itemMenu = document.querySelector('[data-menu="activeLink"][href="#' + contentId + '"]');
 
         if (content.scrollTop > contentStart && content.scrollTop < contentEnd) {
-          itemMenu.classList.add('active');
+          itemMenu.classList.add(this.activeClass);
         } else {
-          itemMenu.classList.remove('active');
+          itemMenu.classList.remove(this.activeClass);
         }
       });
     }
@@ -444,9 +445,9 @@
 
     activeLinks(link) {
       this.selectLinks.forEach(link => {
-        link.classList.remove('active');
+        link.classList.remove(this.activeClass);
       });
-      link.classList.add('active');
+      link.classList.add(this.activeClass);
     }
 
     init() {
@@ -475,7 +476,7 @@
   menuMobile.init();
   const scrollAnimation = new ScrollAnimation('[data-anime^="scroll"]');
   scrollAnimation.init();
-  const popover = new PopOver('[data-popover]');
+  const popover = new PopOver('[data-popover="open"]');
   popover.init();
   const options = {
     behavior: 'smooth',

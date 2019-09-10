@@ -4,6 +4,7 @@ export default class ActivateNavigation {
 	constructor(activeNav, navContents) {
 		this.activeNav = document.querySelector(activeNav);
 		this.navContents = document.querySelectorAll(navContents);
+		this.activeClass = 'active'
 		
 		this.activeOnScroll = debounce(this.activeOnScroll.bind(this), 50);
 	}
@@ -33,9 +34,9 @@ export default class ActivateNavigation {
 			const itemMenu = document.querySelector('[data-menu="activeLink"][href="#' + contentId + '"]');
 
 			if (content.scrollTop > contentStart && content.scrollTop < contentEnd) {
-				itemMenu.classList.add('active')
+				itemMenu.classList.add(this.activeClass)
 			} else {
-				itemMenu.classList.remove('active')
+				itemMenu.classList.remove(this.activeClass)
 			}
 		})
 	}
@@ -50,9 +51,9 @@ export default class ActivateNavigation {
 
 	activeLinks(link) {
 		this.selectLinks.forEach((link) => {
-			link.classList.remove('active')
+			link.classList.remove(this.activeClass)
 		})
-		link.classList.add('active')
+		link.classList.add(this.activeClass)
 	}
 
 	init() {

@@ -63,14 +63,13 @@
 /* Popover */
 .popover {
   color: $blue;
-  cursor: pointer;
   position: relative;
 
   &-content {
     display: none;
     background: $lightGray;
     color: $lightBlack;
-    padding: 0.9375rem;
+    padding: 2rem;
     border-radius: .5rem;
     font-size: 1.6rem;
     line-height: 1.55;
