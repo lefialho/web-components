@@ -4,17 +4,16 @@ export default class PopOver {
   constructor(popovers, events) {
     this.popovers = document.querySelectorAll(popovers);
     if (events === undefined)
-      this.events = ['touchstart', 'click'];
+      this.events = ['click'];
     else
       this.events = events;
-    this.activeClass = 'active'
+    this.activeClass = 'active';
     this.activatePopOver = this.activatePopOver.bind(this);
   }
 
   activatePopOver(event) {
-    event.preventDefault();
     const element = event.currentTarget;
-    element.nextElementSibling.classList.toggle(this.activeClass)
+    element.nextElementSibling.classList.toggle(this.activeClass);
 
     outSideClick(element.nextElementSibling, this.events, () => {
       element.nextElementSibling.classList.remove(this.activeClass);
@@ -24,7 +23,7 @@ export default class PopOver {
   addPopOverEvent() {
     this.popovers.forEach(popover => {
       this.events.forEach(userEvent => {
-        popover.addEventListener(userEvent, this.activatePopOver)
+        popover.addEventListener(userEvent, this.activatePopOver);
       });
     });
   }
@@ -36,5 +35,3 @@ export default class PopOver {
     return this;
   }
 }
-
-

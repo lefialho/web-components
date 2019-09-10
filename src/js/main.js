@@ -1,5 +1,5 @@
 (function (factory) {
-  typeof define === 'function' && define.amd ? define('script', factory) :
+  typeof define === 'function' && define.amd ? define('main', factory) :
   factory();
 }(function () { 'use strict';
 
@@ -330,13 +330,12 @@
   class PopOver {
     constructor(popovers, events) {
       this.popovers = document.querySelectorAll(popovers);
-      if (events === undefined) this.events = ['touchstart', 'click'];else this.events = events;
+      if (events === undefined) this.events = ['click'];else this.events = events;
       this.activeClass = 'active';
       this.activatePopOver = this.activatePopOver.bind(this);
     }
 
     activatePopOver(event) {
-      event.preventDefault();
       const element = event.currentTarget;
       element.nextElementSibling.classList.toggle(this.activeClass);
       outSideClick(element.nextElementSibling, this.events, () => {
@@ -402,6 +401,7 @@
     constructor(activeNav, navContents) {
       this.activeNav = document.querySelector(activeNav);
       this.navContents = document.querySelectorAll(navContents);
+      this.activeClass = 'active';
       this.activeOnScroll = debounce(this.activeOnScroll.bind(this), 50);
     }
 
@@ -428,9 +428,9 @@
         const itemMenu = document.querySelector('[data-menu="activeLink"][href="#' + contentId + '"]');
 
         if (content.scrollTop > contentStart && content.scrollTop < contentEnd) {
-          itemMenu.classList.add('active');
+          itemMenu.classList.add(this.activeClass);
         } else {
-          itemMenu.classList.remove('active');
+          itemMenu.classList.remove(this.activeClass);
         }
       });
     }
@@ -444,9 +444,9 @@
 
     activeLinks(link) {
       this.selectLinks.forEach(link => {
-        link.classList.remove('active');
+        link.classList.remove(this.activeClass);
       });
-      link.classList.add('active');
+      link.classList.add(this.activeClass);
     }
 
     init() {

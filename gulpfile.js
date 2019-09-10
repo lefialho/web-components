@@ -63,15 +63,15 @@ gulp.task('clean-scripts', function () {
 });
 
 gulp.task('export-js', function () {
-  return gulp.src('src/js/components/script.js')
+  return gulp.src('src/js/components/main.js')
     .pipe(rollup({
       plugins: [babelRollup(), resolve(), commonjs()]
     }, 'umd'))
-    .pipe(gulp.dest('src/js'));
+    .pipe(gulp.dest('src/js'))
 });
 
-gulp.task('js', ['clean-scripts'], function () {
-  return gulp.src(['src/js/**/*.js', '!src/js/components/script.js', '!src/js/lib/*.js', '!src/js/components/accordion.js', '!src/js/components/collapse.js', '!src/js/components/tab.js', '!src/js/components/modal.js', '!src/js/components/dropdown.js', '!src/js/components/menu-mobile.js', '!src/js/components/outside-click.js', '!src/js/components/scroll-animation.js', '!src/js/components/debounce.js', '!src/js/components/popover.js', '!src/js/components/smooth-scroll.js', '!src/js/components/active-navigation.js'])
+gulp.task('js', ['export-js','clean-scripts'], function () {
+  return gulp.src('src/js/main.js')
     .pipe(concat('scripts.min.js'))
     .pipe(babel({
       presets: ['@babel/env']
@@ -115,5 +115,5 @@ gulp.task('sprites', function () {
 // Task Sequence
 // ---------------
 gulp.task('default', function (callback) {
-  runSequence(['pug', 'sass', 'export-js', 'js', 'browserSync', 'images', 'sprites'], callback)
+  runSequence(['pug', 'sass', 'js', 'browserSync', 'images', 'sprites'], callback)
 })
