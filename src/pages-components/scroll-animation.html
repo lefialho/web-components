@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a class="selected" href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title">Scroll Animation</h1>
+        <p class="main-content__text moldure">Acrescentar um <b>data-anime="scroll-fade"</b> ou <b>data-anime="scroll-down"</b> ou <b>data-anime="scroll-right"</b> ou <b>data-anime="scroll-left"</b> ou <b>data-anime="scroll-top"</b> ou <b>data-anime="scroll-zoomIn"</b> no elemento que vai receber a animação.</p>
+        <div class="grid-container scroll-block">
+          <div class="grid-4" data-anime="scroll-right">
+            <h2 class="main-content__subtitle">Anime Right</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt asperiores cupiditate reprehenderit laboriosam et incidunt minima nisi voluptate ipsum. Rem dolorem sint, molestias facere amet accusantium. Dignissimos, ea at?Asperiores, quis expedita repudiandae, maiores assumenda, neque in dolores necessitatibus blanditiis tenetur quaerat ab officia natus quam voluptatem! Asperiores voluptatibus dolorum beatae debitis eius? Obcaecati aliquam voluptatum totam sit at.Voluptatibus animi reprehenderit eligendi maxime sit doloremque iusto. Facere officiis deserunt odio dignissimos iste eligendi sequi, aperiam consequatur libero, quos impedit.</p>
+          </div>
+          <div class="grid-6" data-anime="scroll-left">
+            <h2 class="main-content__subtitle">Anime Left</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptas quidem assumenda voluptatum voluptate aperiam quisquam, id illum sed eos cumque tempore pariatur consequatur placeat earum saepe vel esse. Harum.</p>
+          </div>
+        </div>
+        <div class="scroll-block" data-anime="scroll-down">
+          <h2 class="main-content__subtitle">Anime Down</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem harum libero temporibus voluptas quibusdam ab architecto possimus error tenetur? Quibusdam sapiente cumque accusantium dolorum explicabo quo similique fugit debitis deserunt.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt asperiores cupiditate reprehenderit laboriosam et incidunt minima nisi voluptate ipsum. Rem dolorem sint, molestias facere amet accusantium. Dignissimos, ea at?Asperiores, quis expedita repudiandae, maiores assumenda, neque in dolores necessitatibus blanditiis tenetur quaerat ab officia natus quam voluptatem! Asperiores voluptatibus dolorum beatae debitis eius? Obcaecati aliquam voluptatum totam sit at.Voluptatibus animi reprehenderit eligendi maxime sit doloremque iusto. Facere officiis deserunt odio dignissimos iste eligendi sequi, aperiam consequatur libero, quos impedit. Illum porro nihil beatae eos aut facere, praesentium magnam.Fugit amet fugiat, possimus eveniet soluta necessitatibus dolor ratione a, repellendus deleniti modi praesentium magni at incidunt quia vel blanditiis consequatur molestiae est enim. Nemo voluptates quasi ratione aspernatur doloribus.</p>
+        </div>
+        <div class="grid-container scroll-block">
+          <div class="grid-6" data-anime="scroll-fade">
+            <h2 class="main-content__subtitle">Anime Fade</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ducimus aspernatur et, blanditiis vitae quisquam sapiente, sit at sint quasi ut, libero ea commodi veritatis aliquam numquam quibusdam in non!Nobis tenetur officiis nihil voluptas laborum nam quae in dolor cumque, ut numquam tempore fugiat porro fugit rerum mollitia possimus iste suscipit? Veritatis deserunt voluptatum officiis id voluptatibus quisquam quod.</p>
+          </div>
+          <div class="grid-4" data-anime="scroll-zoomIn">
+            <h2 class="main-content__subtitle">Anime Zoom-In</h2><img src="../img/hacker.svg" alt="">
+          </div>
+        </div>
+        <div class="scroll-block" data-anime="scroll-top">
+          <h2 class="main-content__subtitle">Anime Top</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem harum libero temporibus voluptas quibusdam ab architecto possimus error tenetur? Quibusdam sapiente cumque accusantium dolorum explicabo quo similique fugit debitis deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla beatae soluta, laudantium distinctio reprehenderit neque. </p>
+          <p>Temporibus velit laborum, aperiam rem quis, incidunt fugiat architecto, magnam quidem iusto atque aut quia.Saepe necessitatibus modi odit recusandae dolorem, neque impedit atque doloribus iusto rerum sed eveniet, explicabo delectus earum sapiente ab eaque minima. Vel inventore totam reprehenderit quis omnis voluptas itaque officiis?Dignissimos amet fugiat ipsa vel animi neque eveniet laboriosam ut, iste molestiae non impedit quod! Nam nostrum atque provident velit natus exercitationem delectus, sequi similique sit commodi quaerat, est tenetur!Dolorum iste enim deleniti tempora nulla explicabo nisi animi dignissimos, asperiores corrupti. Provident, libero asperiores? Animi maxime ratione hic voluptatibus nam tempora illo, commodi ducimus ea, sequi ipsa. Tempora, voluptas.</p>
+        </div>
+        <div class="block-code">
+          <h2 class="main-content__subtitle">HTML Exemplo</h2>
+          <div class="code">
+            <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
+            <pre><code id="html-code"> &lt;div class=&quot;scroll-block&quot; data-anime=&quot;scroll-fade&quot;&gt;
+   &lt;p&gt;Texto aqui&lt;/p&gt;
+ &lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

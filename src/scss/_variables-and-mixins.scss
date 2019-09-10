@@ -1,0 +1,44 @@
+// colors
+$lightBlack: #353535;
+$gray: #C6C6C6;
+$ultraLightGray: #ECECEC;
+$lightGray: #DADADA;
+$darkGray: #706F6F;
+$blue: #37c2e3;
+$lightBlue: #6ee2fd;
+$darkBlue: #1291af;
+
+// mixins
+@mixin grid-12 {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin transition {
+	transition: .3s ease;
+}
+
+@mixin roboto {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1.8rem;
+	line-height: 1.6;
+}
+
+@mixin btn {
+	background-color: $blue;
+	padding: 1rem 2rem;
+	border-radius: .5rem;
+	color: aliceblue;
+	margin-bottom: 2rem;
+	cursor: pointer;
+	@include transition;
+	border: 0;
+	font-size: 1.8rem;
+	min-width: 16rem;
+	text-align: center;
+
+	&:hover {
+		background-color: $darkBlue;
+	}
+}

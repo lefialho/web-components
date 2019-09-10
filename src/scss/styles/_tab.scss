@@ -1,0 +1,48 @@
+/* Tab */
+.tab {
+  margin-bottom: 6rem;
+  
+  &-nav {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+
+    ul {
+      border-bottom-color: #dbdbdb;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    li.active a {
+      border-bottom-color: $blue;
+      color: $blue;
+    }
+
+    a {
+      font-size: 1.8rem;
+      align-items: center;
+      border-bottom-color: #dbdbdb;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      color: #4a4a4a;
+      display: flex;
+      justify-content: center;
+      margin-bottom: -1px;
+      padding: .5em 1em;
+      vertical-align: top;
+      white-space: nowrap;
+
+      &:hover {
+        border-bottom-color: #363636;
+        color: #363636;
+      }
+    }
+  }
+
+  &-content {
+    padding: 0 18px;
+    color: $darkGray;
+  }
+}

@@ -1,0 +1,146 @@
+/* ---- Geral ---- */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
+@import 'reset';
+@import 'variables-and-mixins';
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+}
+
+a {
+  color: $blue;
+  @include transition;
+
+  &:hover {
+    color: $darkBlue
+  }
+}
+
+.block-code {
+  margin-top: 6rem;
+
+  .code {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 2px dotted $lightGray;
+    white-space: nowrap;
+  }
+}
+
+pre {
+  color: $darkGray;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.btn-copy {
+  align-self: flex-end;
+  max-width: 3.5rem;
+  cursor: pointer;
+}
+
+.scroll-block {
+  margin-bottom: 6rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+
+  &-content {
+    padding: 2rem 6rem;
+
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      color: $lightBlack;
+
+      &::after {
+        content: '';
+        display: block;
+        background-color: $lightBlack;
+        width: 5%;
+        height: 1px;
+        margin-top: 10px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      color: $lightBlack;
+    }
+
+    &__text {
+      color: $darkGray;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+
+      &.moldure {
+        background-color: $ultraLightGray;
+        padding: 4rem;
+        border: 2px dotted $lightGray;
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 3rem;
+
+  .grid-4 {
+    grid-column: span 4;
+  }
+
+  .grid-6 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  pre {
+    white-space: pre;
+  } 
+
+  .main {
+    display: grid;
+    grid-template-columns: 100%;
+    height: initial;
+
+    &-content {
+      padding: 4rem 2rem;
+    }
+  }
+
+  .grid-container {
+    grid-template-columns: 100%;
+
+    .grid-4 {
+      grid-column: 1 / -1;
+    }
+
+    .grid-6 {
+      grid-column: 1 / -1;
+    }
+  }
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a class="selected" href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title">Active Navigation</h1>
+        <p class="main-content__text moldure">Acrescentar um <b>data-nav="activate-nav"</b> no menu. No conteúdo associado ao menu, aplicar um <b>data-activate="content"</b> e um <b>title</b>. Esse title, será o título dos itens do menu.</p><nav class="activate-menu" data-smooth>
+<ul class="activate-menu__list" data-nav="active-nav"></ul>
+</nav>
+        <section class="activate-content" data-activate="content" id="section01" title="Seção 01">
+          <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?</p>
+        </section>
+        <section class="activate-content" data-activate="content" id="section02" title="Seção 02">
+          <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. </p>
+        </section>
+        <section class="activate-content" data-activate="content" id="section03" title="Seção 03">
+          <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?
+            <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?</p>
+          </p>
+        </section>
+        <section class="activate-content" data-activate="content" id="section04" title="Seção 04">
+          <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?</p>
+        </section>
+        <section class="activate-content" data-activate="content" id="section05" title="Seção 05">
+          <p class="main-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nihil, minus, dolorem voluptatibus libero nulla placeat voluptatum eius suscipit consequuntur molestiae fugit at est culpa esse rerum quam, voluptatem nostrum.Iure saepe, eius doloribus non porro reprehenderit veritatis hic veniam ad quidem. Perspiciatis accusantium maiores aliquid. Non voluptates vero, mollitia placeat sit officia minus tempore expedita nostrum cumque repellendus aliquam.A modi enim possimus! Maiores, velit. Cum soluta voluptatem quaerat magnam culpa fugit, corrupti iste totam consequuntur eligendi? Id necessitatibus minus iste aut. Ipsam amet numquam dolorum at blanditiis minus!Eos possimus officia assumenda esse odio deleniti magnam officiis quaerat eum. Impedit voluptatem eaque deserunt, possimus, laborum facilis nemo sit provident obcaecati quam culpa minus commodi eveniet illum, mollitia voluptatibus!Odio sit omnis suscipit, voluptates mollitia perspiciatis, maxime aliquam saepe voluptas quas voluptatem reiciendis unde iste at neque enim sunt ratione dignissimos commodi quod non. Libero odio necessitatibus quibusdam debitis!Obcaecati fuga tenetur dolor recusandae laudantium, amet quidem vero accusamus nobis suscipit aliquam, corporis deserunt. Quis a explicabo ullam quos nemo asperiores tenetur? Quod facere expedita dolore placeat, voluptatum eius!Voluptatem sit a quidem ipsam recusandae! Facilis animi quia quae similique nihil qui! Assumenda, id voluptatibus deleniti quasi iusto temporibus nemo, itaque eaque ab consequatur tempora nostrum iste rem beatae?Voluptatem ipsa expedita eligendi optio consequuntur sapiente nobis nam, voluptates facere repudiandae obcaecati at aspernatur a incidunt quas, veniam necessitatibus deleniti illum voluptatibus! Nam commodi a, pariatur odit aliquid quae?</p>
+        </section>
+        <div class="block-code">
+          <h2 class="main-content__subtitle">HTML Exemplo</h2>
+          <div class="code">
+            <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
+            <pre><code id="html-code"> &lt;nav class=&quot;activate-menu&quot;&gt;
+   &lt;ul class=&quot;activate-menu__list&quot; data-nav=&quot;activate-nav&quot;&gt;&lt;/ul&gt;
+ &lt;/nav&gt;
+
+ &lt;section class=&quot;activate-content&quot; data-activate=&quot;content&quot; id=&quot;section01&|quot; title=&quot;Seção 01&quot;&gt;
+   &lt;p&gt;Conteúdo aqui&lt;/p&gt;
+ &lt;/section&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

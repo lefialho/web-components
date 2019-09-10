@@ -1,0 +1,6 @@
+mixin components(link, image, alt, title)
+  li.grid-home__item
+    a(href=link)
+      figure
+        img(src=urlImg + image, alt=alt)
+    h2 #{title}

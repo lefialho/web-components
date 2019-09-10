@@ -1,0 +1,12 @@
+[data-collapse="item"] {
+  cursor: pointer;
+}
+
+.js [data-collapse="content"] {
+  display: none;
+}
+
+[data-collapse="content"].active {
+  display: block;
+  animation: show-down .5s forwards;
+}

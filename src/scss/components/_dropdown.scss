@@ -1,0 +1,17 @@
+[data-dropdown] {
+  position: relative;
+}
+
+[data-dropdown="content"] {
+  display: none;
+  opacity: 0;
+}
+
+[data-dropdown="content"].active{
+  display: block;
+  animation: show-up .3s forwards;
+}
+
+[data-dropdown="link"].active::after {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a class="selected" href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title">Modal</h1>
+        <p class="main-content__text moldure">Acrescentar um <b>data-modal="open"</b> e um <b>aria-controls="#nomedotarget"</b> no elemento que vai abrir o modal. Colocar no elemento target, um <b>data-modal="container"</b> e um <b>id</b> com o mesmo nome do elemento que contem no aria-controls. Acrescentar ainda, um <b>data-modal="close"</b> no elemento de botão que fecha o modal. Para definir o tamanho do modal, colocar uma classe no elemento target com nome de <b>x-small</b>, <b>small</b>, <b>medium</b> ou <b>large</b></p>
+        <div class="modal-open"><a class="btn-modal" aria-controls="#modal0" data-modal="open">Modal x-small</a><a class="btn-modal" aria-controls="#modal1" data-modal="open">Modal small</a><a class="btn-modal" aria-controls="#modal2" data-modal="open">Modal medium</a><a class="btn-modal" aria-controls="#modal3" data-modal="open">Modal large</a></div><section class="modal" data-modal="container" id="modal0">
+<div class="modal-container x-small form">
+<button data-modal="close" class="modal-close">X</button>
+        <div class="modal-wrapper"><form action="">
+<label for="email">Email</label>
+<input type="text" form="email" id="email">
+<label for="email">Senha</label>
+<input type="password" form="senha" id="senha">
+<button type="submit">Entrar</button>
+</form>
+        </div></div>
+</section>
+<section class="modal" data-modal="container" id="modal1">
+<div class="modal-container small form">
+<button data-modal="close" class="modal-close">X</button>
+<div class="modal-wrapper">
+<form action="">
+<label for="email">Email</label>
+<input type="text" form="email" id="email">
+<label for="email">Senha</label>
+<input type="password" form="senha" id="senha">
+<button type="submit">Entrar</button>
+</form>
+</div>
+</div>
+</section>
+<section class="modal" data-modal="container" id="modal2">
+<div class="modal-container medium">
+<button data-modal="close" class="modal-close">X</button>
+        <div class="modal-wrapper">
+          <h3 class="main-content__title">Título aqui</h3>
+          <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam amet expedita delectus esse nisi consectetur dignissimos adipisci voluptates nihil aut! Explicabo officiis veritatis assumenda! Pariatur magni laudantium obcaecati est sapiente!</p>
+        </div></div>
+</section>
+<section class="modal" data-modal="container" id="modal3">
+<div class="modal-container large">
+<button data-modal="close" class="modal-close">X</button>
+<form action="">
+        <div class="modal-wrapper">
+          <h3 class="main-content__title">Título aqui</h3>
+          <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et veritatis ut laborum voluptatum corporis rem tempora at sapiente sunt. Numquam labore exercitationem non aperiam minus quasi iste doloribus at cupiditate.</p>
+          <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et veritatis ut laborum voluptatum corporis rem tempora at sapiente sunt. Numquam labore exercitationem non aperiam minus quasi iste doloribus at cupiditate.</p><img src="../img/hacker.svg" alt="">
+          <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et veritatis ut laborum voluptatum corporis rem tempora at sapiente sunt. Numquam labore exercitationem non aperiam minus quasi iste doloribus at cupiditate.</p>
+          <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et veritatis ut laborum voluptatum corporis rem tempora at sapiente sunt. Numquam labore exercitationem non aperiam minus quasi iste doloribus at cupiditate.</p><img src="../img/hacker.svg" alt="">
+          <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et veritatis ut laborum voluptatum corporis rem tempora at sapiente sunt. Numquam labore exercitationem non aperiam minus quasi iste doloribus at cupiditate.</p>
+          <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et veritatis ut laborum voluptatum corporis rem tempora at sapiente sunt. Numquam labore exercitationem non aperiam minus quasi iste doloribus at cupiditate.</p><img src="../img/hacker.svg" alt="">
+        </div></form>
+</div>
+</section>
+        <div class="block-code">
+          <h2 class="main-content__subtitle">HTML Exemplo</h2>
+          <div class="code">
+            <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
+            <pre><code id="html-code"> &lt;a class=&quot;btn-modal&quot; aria-controls=&quot;#modal2&quot; data-modal=&quot;open&quot;&gt;Modal medium&lt;/a&gt;
+
+ &lt;section class=&quot;modal&quot; data-modal=&quot;container&quot; id=&quot;modal1&quot;&gt;
+   &lt;div class=&quot;modal-container small form&quot;&gt;
+     &lt;button data-modal=&quot;close&quot; class=&quot;modal-close&quot;&gt;X&lt;/button&gt;
+     &lt;div class=&quot;modal-wrapper&quot;&gt;
+       &lt;form action=&quot;&quot;&gt;
+         &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+         &lt;input type=&quot;text&quot; form=&quot;email&quot; id=&quot;email&quot;&gt;
+         &lt;label for=&quot;email&quot;&gt;Senha&lt;/label&gt;
+         &lt;input type=&quot;password&quot; form=&quot;senha&quot; id=&quot;senha&quot;&gt;
+         &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+       &lt;/form&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/section&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

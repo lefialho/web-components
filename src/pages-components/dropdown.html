@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a class="selected" href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title">Dropdown Menu-mobile</h1>
+        <p class="main-content__text moldure">Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos menus dropdown. Inserir um <b>data-menu="close"</b> nos elementos de âncora do menu, para o mesmo fechar quando estiver em mobile. Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>.</p><nav class="menu" data-smooth>
+<button class="menu-button" data-menu="button" aria-expanded="false">Menu</button>
+<ul class="menu-list" data-menu="list" id="menu">
+<li><a href="" data-menu="close">Home</a></li>
+<li class="drop-down" data-dropdown>
+<a class="drop-down__link noHover" href="sobre.html" data-dropdown="link">Sobre</a>
+<ul class="dropdown-menu" data-dropdown="content">
+<li><a href="empresa.html">A Empresa</a></li>
+<li><a href="http://leandrofialho.com/">Equipe</a></li>
+<li><a href="socios.html">Sócios</a></li>
+<li><a href="investidores.html">Investidores</a></li>
+</ul>
+</li>
+<li class="drop-down" data-dropdown>
+<a class="drop-down__link" href="sobre.html" data-dropdown="link">Tipos de negócios</a>
+<ul class="dropdown-menu" data-dropdown="content">
+<li><a href="">Negócios 01</a></li>
+<li><a href="">Negócios 02</a></li>
+<li><a href="">Negócios 03</a></li>
+<li><a href="">Negócios 04</a></li>
+</ul>
+</li>
+<li><a href="" data-menu="close">Faq</a></li>
+<li><a href="#contact" data-menu="close">Contato</a></li>
+<li><a aria-controls="#login" data-modal="open">Login →</a></li>
+</ul>
+</nav>
+        <div class="block-code" id="contact">
+          <h2 class="main-content__subtitle">HTML Exemplo</h2>
+          <div class="code">
+            <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
+            <pre><code id="html-code"> &lt;nav class=&quot;menu&quot;&gt;
+   &lt;button class=&quot;menu-button&quot; data-menu=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Menu&lt;/button&gt;
+   &lt;ul class=&quot;menu-list&quot; data-menu=&quot;list&quot; id=&quot;menu&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;&quot; data-menu=&quot;close&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+
+     &lt;li class=&quot;drop-down&quot; data-dropdown&gt;
+       &lt;a class=&quot;drop-down__link noHover&quot; href=&quot;sobre.html&quot; data-dropdown=&quot;link&quot;&gt;Sobre&lt;/a&gt;
+      &lt;ul class=&quot;dropdown-menu&quot; data-dropdown=&quot;content&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;empresa.html&quot;&gt;A Empresa&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;http://leandrofialho.com/&quot;&gt;Equipe&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;socios.html&quot;&gt;Sócios&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;investidores.html&quot;&gt;Investidores&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+
+     &lt;li class=&quot;drop-down&quot; data-dropdown&gt;
+       &lt;a class=&quot;drop-down__link&quot; href=&quot;sobre.html&quot; data-dropdown=&quot;link&quot;&gt;Tipos de |negócios&lt;/a&gt;
+       &lt;ul class=&quot;dropdown-menu&quot; data-dropdown=&quot;content&quot;&gt;
+         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 01&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 02&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 03&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 04&lt;/a&gt;&lt;/li&gt;
+       &lt;/ul&gt;
+     &lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;&quot; data-menu=&quot;close&quot;&gt;Faq&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#contact&quot; data-menu=&quot;close&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a aria-controls=&quot;#login&quot; data-modal=&quot;open&quot;&gt;Login →&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/nav&gt;</code></pre>
+          </div>
+        </div><section class="modal" data-modal="container" id="login">
+<div class="modal-container x-small form">
+<button data-modal="close" class="modal-close">X</button>
+        <div class="modal-wrapper"><form action="">
+<label for="email">Email</label>
+<input type="text" id="email">
+<label for="email">Senha</label>
+<input type="password" id="senha">
+<button type="submit">Entrar</button>
+</form>
+        </div></div>
+</section>
+      </div>
+    </main>
+    <div class="bg-black" data-bgBlack></div>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

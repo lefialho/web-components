@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a class="selected" href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title" id="init">Tooltip - Popover</h1>
+        <div class="main-content__text moldure"> 
+          <p>Colocar uma classe <b>tooltip</b> em torno de um elemento pai e acrescentar um elemento filho com a classe <b>tooltip-content</b>, juntamente com seu conteúdo correspondente. </p>
+          <p>Para o <b>popover</b>, deve ser colocado um <b>data-popover</b> no elemento que irá ativar o recurso e um <b>data-popover="content"</b> no elemento seguinte, para ativar o mesmo.</p>
+        </div>
+        <p class="main-content__text">Ducimus numquam eligendi rem eaque quisquam dignissimos quidem dolorum assumenda explicabo molestias quibusdam labore asperiores eius incidunt, earum fugiat harum sequi quia.<span class=tooltip>Voluptatum<span class="tooltip-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></span> sequi perferendis molestias architecto distinctio laboriosam rerum. Veniam consectetur dolorem impedit nesciunt commodi ea!Asperiores repellat aliquam sit provident eveniet ullam culpa. <span class="tooltip">Deserunt quasi dolor ea saepe iusto nobis<span class="tooltip-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non explicabo architecto consectetur quas maiores tempore, quisquam odio commodi.</span></span></p>
+        <div class="grid-container">
+          <div class="grid-4">
+            <div>
+              <figure class="popover"><img src="../img/hacker.svg" alt="" data-popover>
+                <div class="popover-content" data-popover="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi adipisci incidunt perspiciatis, labore ab sint ea perferendis cum, assumenda.</p>
+                </div>
+                <figcaption>Clique na imagem</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="grid-6">
+            <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa distinctio non accusantium reiciendis maxime, fugiat soluta!</p>
+            <div class="popover btn-inline"><button class="btn-popover" data-popover>Abrir Popover</button>
+              <div class="popover-content" data-popover="content">
+                <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laudantium repudiandae dolores ratione, pariatur qui cum sed cupiditate doloribus.</p>
+                <ul>
+                  <li><a href="http://leandrofialho.com/" target="_blank">item 1</a> </li>
+                  <li>item 2</li>
+                  <li>item 3</li>
+                  <li data-smooth><a href="#init" target="_blank">item 4</a> </li>
+                </ul>
+              </div>
+            </div>
+            <p class="main-content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="tooltip">Culpa distinctio non accusantium reiciendis maxime, fugiat soluta! Rerum perspiciatis<span class="tooltip-content"> Lorem ipsum dolor sit</span></span> sed aperiam odio sunt omnis, expedita asperiores rem quod eveniet labore obcaecati?. </p>
+          </div>
+        </div>
+        <div class="block-code">
+          <h2 class="main-content__subtitle">HTML Exemplo</h2>
+          <div class="code">
+            <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
+            <pre><code id="html-code"> &lt;h3&gt;Tooltip&lt;/h3&gt;
+ &lt;p&gt;
+   &lt;span class=tooltip&gt;Voluptatum
+     &lt;span class=&quot;tooltip-content&quot;&gt;Lorem ipsum dolor sit amet consectetur&lt;/span&gt;
+   &lt;/span&gt;
+ &lt;/p&gt;
+
+ &lt;h3&gt;Popover&lt;/h3&gt
+ &lt;div class=&quot;popover&quot;&gt;
+   &lt;button class=&quot;btn-popover&quot; data-popover&gt;Abrir Popover&lt;/button&gt;
+   &lt;div class=&quot;popover-content&quot; data-popover=&quot;content&quot;&gt;
+     &lt;p&gt;Texto aqui&lt;/p&gt;
+     &lt;ul&gt;
+       &lt;li&gt;item 1&lt;/li&gt;
+       &lt;li&gt;item 2&lt;/li&gt;
+       &lt;li&gt;item 3&lt;/li&gt;
+     &lt;/ul&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+extends ../_components/layout.pug
+include ../_components/mixins/mixins.pug
+
+//- head
+//- ===================================
+append head
+  - var urlCSS = "../css/"
+  include ../_includes/head.pug
+
+//- Content
+//- ===================================
+block content
+  - var selected = 'Tooltip - Popover';	
+  - var urlAncor = '../#'
+  - var urlIndex = '../index.html'
+  - var urlImg = '../img/'
+  - var urlPages = '../pages-components/'; 
+
+  //Main
+  main.main
+    include ../_includes/menu.pug		
+	  
+    .main-content
+      h1.main-content__title(id="init") Tooltip - Popover
+      div.main-content__text.moldure 
+        p Colocar uma classe <b>tooltip</b> em torno de um elemento pai e acrescentar um elemento filho com a classe <b>tooltip-content</b>, juntamente com seu conteúdo correspondente. 
+        p Para o <b>popover</b>, deve ser colocado um <b>data-popover</b> no elemento que irá ativar o recurso e um <b>data-popover="content"</b> no elemento seguinte, para ativar o mesmo.
+
+      p.main-content__text Ducimus numquam eligendi rem eaque quisquam dignissimos quidem dolorum assumenda explicabo molestias quibusdam labore asperiores eius incidunt, earum fugiat harum sequi quia.<span class=tooltip>Voluptatum<span class="tooltip-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></span> sequi perferendis molestias architecto distinctio laboriosam rerum. Veniam consectetur dolorem impedit nesciunt commodi ea!Asperiores repellat aliquam sit provident eveniet ullam culpa. <span class="tooltip">Deserunt quasi dolor ea saepe iusto nobis<span class="tooltip-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non explicabo architecto consectetur quas maiores tempore, quisquam odio commodi.</span></span>
+
+      .grid-container
+        .grid-4
+          div
+            figure.popover
+              img(src=urlImg + 'hacker.svg', alt="" data-popover)
+              .popover-content(data-popover="content")
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi adipisci incidunt perspiciatis, labore ab sint ea perferendis cum, assumenda.
+              figcaption Clique na imagem
+
+        .grid-6
+          p.main-content__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa distinctio non accusantium reiciendis maxime, fugiat soluta!
+
+          .popover(class="btn-inline") <button class="btn-popover" data-popover>Abrir Popover</button>
+            .popover-content(data-popover="content")
+              p.main-content__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laudantium repudiandae dolores ratione, pariatur qui cum sed cupiditate doloribus.
+              ul
+                li #[a(href="http://leandrofialho.com/" target="_blank") item 1] 
+                li item 2
+                li item 3
+                li(data-smooth) #[a(href="#init" target="_blank") item 4] 
+          
+          p.main-content__text Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="tooltip">Culpa distinctio non accusantium reiciendis maxime, fugiat soluta! Rerum perspiciatis<span class="tooltip-content"> Lorem ipsum dolor sit</span></span> sed aperiam odio sunt omnis, expedita asperiores rem quod eveniet labore obcaecati?. 
+          
+      .block-code
+        h2.main-content__subtitle HTML Exemplo
+        .code
+          button(class="btn-copy" data-clipboard-target="#html-code")
+            img(src="../img/clippy.svg" alt="Copy Simbol")
+          pre
+            code(id="html-code")
+              |  &lt;h3&gt;Tooltip&lt;/h3&gt;
+              |  &lt;p&gt;
+              |    &lt;span class=tooltip&gt;Voluptatum
+              |      &lt;span class=&quot;tooltip-content&quot;&gt;Lorem ipsum dolor sit amet consectetur&lt;/span&gt;
+              |    &lt;/span&gt;
+              |  &lt;/p&gt;
+              |
+              |  &lt;h3&gt;Popover&lt;/h3&gt
+              |  &lt;div class=&quot;popover&quot;&gt;
+              |    &lt;button class=&quot;btn-popover&quot; data-popover&gt;Abrir Popover&lt;/button&gt;
+              |    &lt;div class=&quot;popover-content&quot; data-popover=&quot;content&quot;&gt;
+              |      &lt;p&gt;Texto aqui&lt;/p&gt;
+              |      &lt;ul&gt;
+              |        &lt;li&gt;item 1&lt;/li&gt;
+              |        &lt;li&gt;item 2&lt;/li&gt;
+              |        &lt;li&gt;item 3&lt;/li&gt;
+              |      &lt;/ul&gt;
+              |    &lt;/div&gt;
+              |  &lt;/div&gt;
+
+
+  //- scripts
+  //- ===================================
+  prepend scripts
+    - var urlJS = '../js/' 
+    include ../_includes/scripts.pug

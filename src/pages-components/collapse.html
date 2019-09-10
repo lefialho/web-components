@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a class="selected" href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title">Collapse</h1>
+        <p class="main-content__text moldure">Acrescentar um <b>data-collapseGroup</b> no elemento <b>pai</b>, um <b>data-collapse="title"</b> no título e <b>data-collapse="content"</b> no elemento target da navegação. As classes podem ter qualquer nome e serem estilizadas livremente.</p><h2 class="main-content__subtitle">Exemple</h2>
+<dl class="collapse" data-collapse="group">
+<dt class="collapse__title" data-collapse="item">Escreva aqui o título01</dt>
+<dd class="collapse__content" data-collapse="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt fugit dicta quos, reprehenderit nulla minus, quae esse, voluptatibus nisi veniam repellendus. Explicabo unde ratione cum, repellat sed porro rem!</dd>
+<dt class="collapse__title" data-collapse="item">Escreva aqui o título02</dt>
+<dd class="collapse__content" data-collapse="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet cupiditate odit. Aliquam eos ad quas, totam, facilis explicabo nostrum hic necessitatibus suscipit fugit sapiente incidunt minus quia eum eius!</dd>
+<dt class="collapse__title" data-collapse="item">Escreva aqui o título03</dt>
+<dd class="collapse__content" data-collapse="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi optio vitae, corrupti deleniti necessitatibus voluptas possimus placeat accusantium iusto doloremque explicabo provident illum est ratione quasi distinctio. Ratione, excepturi alias.</dd>
+<dt class="collapse__title" data-collapse="item">Escreva aqui o título04</dt>
+<dd class="collapse__content" data-collapse="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eveniet neque voluptates, incidunt ut, magnam voluptate non minima modi esse nostrum inventore laboriosam commodi ab dolor voluptatum architecto earum similique?Natus iste minus, quidem accusantium odit dicta ipsum debitis accusamus ut consequatur deserunt adipisci aliquid reiciendis repellendus voluptatibus quis rerum, soluta dolore. Autem nesciunt explicabo itaque consectetur, perspiciatis repellat nulla?Sit earum, voluptate itaque explicabo quam labore commodi rerum incidunt fugiat placeat laudantium. Animi repudiandae nulla velit perferendis adipisci voluptatem illo ipsa culpa corporis reprehenderit cum tenetur, aspernatur, veritatis officiis.</dd>
+</dl>
+        <div class="block-code">
+          <h2 class="main-content__subtitle">HTML Exemplo</h2>
+          <div class="code">
+            <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
+            <pre><code id="html-code"> &lt;section class=&quot;collapse&quot; data-collapse=&quot;group&quot;&gt;
+   &lt;h3 class=&quot;collapse__title&quot; data-collapse=&quot;title&quot;&gt;Escreva aqui o título01&lt;/h3&gt;
+   &lt;p class=&quot;collapse__content&quot; data-collapse=&quot;content&quot;&gt;Texto01&lt;/p&gt;
+   &lt;h3 class=&quot;collapse__title&quot; data-collapse=&quot;title&quot;&gt;Escreva aqui o título02&lt;/h3&gt;
+   &lt;div class=&quot;collapse__content&quot; data-collapse=&quot;content&quot;&gt;
+     &lt;p&gt;Texto02&lt;/p&gt;
+     &lt;p&gt;Texto03&lt;/p&gt;
+   &lt;/div&gt;
+ &lt;/section&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

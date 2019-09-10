@@ -1,0 +1,13 @@
+[data-modal="open"] {
+  cursor: pointer;
+}
+
+.modal-open {
+  display: flex;
+  flex-direction: column;
+
+  .btn-modal {
+    align-self: flex-start;
+    @include btn;
+  }
+}

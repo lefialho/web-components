@@ -1,0 +1,15 @@
+[data-accordion="group"] [data-accordion="item"],
+[data-accordion="group-child"] [data-accordion="item"] {
+  cursor: pointer;
+}
+
+.js [data-accordion="group"] [data-accordion="content"],
+.js [data-accordion="group-child"] [data-accordion="content"] {
+  display: none;
+}
+
+[data-accordion="group"] [data-accordion="content"].active,
+[data-accordion="group-child"] [data-accordion="content"].active {
+  display: block;
+  animation: show-down .5s forwards;
+}

@@ -1,0 +1,61 @@
+extends ../_components/layout.pug
+include ../_components/mixins/mixins.pug
+
+//- head
+//- ===================================
+append head
+  - var urlCSS = "../css/"
+  include ../_includes/head.pug
+
+//- Content
+//- ===================================
+block content
+  - var selected = 'Accordion';	
+  - var urlAncor = '../#'
+  - var urlIndex = '../index.html'
+  - var urlImg = '../img/'
+  - var urlPages = '../pages-components/'; 
+
+  //Main
+  main.main
+    include ../_includes/menu.pug		
+	  
+    .main-content
+      h1.main-content__title Accordion
+      p.main-content__text.moldure Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ser estilizadas livremente.
+
+      <h2 class="main-content__subtitle">Exemplo</h2>
+      <dl class="accordion" data-accordion="group">
+        <dt class="accordion__title" data-accordion="item">Escreva aqui o título01</dt>
+        <dd class="accordion__content" data-accordion="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quis quidem temporibus veroitaque. </dd>
+        <dt class="accordion__title" data-accordion="item">Escreva aqui o título02</dt>
+        <dd class="accordion__content" data-accordion="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe veniam, quidem laboriosam aspernatu autem amet reprehenderit? Tempora dolore sed laboriosam similique reprehenderit, sint harum voluptatibus.</dd>
+        <dt class="accordion__title" data-accordion="item">Escreva aqui o título03</dt>
+        <dd class="accordion__content" data-accordion="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore expedita fuga incidunt non mollitia corrupti perspiciatis quibusdam quos tempora magni. In est pariatur quibusdam suscipit nemo nam rem facere. Dolorem?</dd>
+        <dt class="accordion__title" data-accordion="item">Escreva aqui o título04</dt>
+        <dd class="accordion__content" data-accordion="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quis quidem temporibus vero itaque.</dd>
+      </dl>
+      
+      .block-code
+        h2.main-content__subtitle HTML Exemplo
+        .code
+          button(class="btn-copy" data-clipboard-target="#html-code")
+            img(src="../img/clippy.svg" alt="Copy Simbol")
+          pre
+            code(id="html-code")
+              |  &lt;section class=&quot;accordion&quot; data-accordion=&quot;group&quot;&gt;
+              |    &lt;h2 class=&quot;accordion__title&quot; data-accordion=&quot;title&quot;&gt;Escreva aqui o título&lt;/h2&gt;
+              |    &lt;p class=&quot;accordion__content&quot; data-accordion=&quot;content&quot;&gt;Escrava aqui o conteúdo&lt;/p&gt;
+
+              |    &lt;h2 class=&quot;accordion__title&quot; data-accordion=&quot;title&quot;&gt;Escreva aqui o título2&lt;/h2&gt;
+              |    &lt;div class=&quot;accordion__content&quot; data-accordion=&quot;content&quot;&gt;
+              |      &lt;p&gt;Escreva o texto aqui&lt;/p&gt;
+              |      &lt;p&gt;Escreva o texto&lt;/p&gt;
+              |    &lt;/div&gt;
+              |  &lt;/section&gt;
+
+  //- scripts
+  //- ===================================
+  prepend scripts
+    - var urlJS = '../js/'
+    include ../_includes/scripts.pug

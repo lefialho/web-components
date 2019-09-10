@@ -1,0 +1,34 @@
+/* Collapse */
+.collapse {
+  display: flex;
+  flex-direction: column;
+  
+  &__title {
+    align-self: flex-start;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: $darkBlue;
+
+    &::after {
+      content: '+';
+      margin-left: 10px;
+    }
+
+    &.active::after {
+      content: '-';
+      transform: rotate(90deg);
+      transition: .3s
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: $darkGray;
+  }
+}

@@ -1,0 +1,43 @@
+extends _components/layout.pug
+include _components/mixins/mixins.pug
+
+//- head
+//- ===================================
+append head
+	- var urlCSS = 'css/';
+	- var urlLogo = 'img/';
+	- var page = 'home';
+
+	include _includes/head.pug
+
+
+//- Content
+//- ===================================
+block content
+	- var selected = 'Tab';	
+	- var urlAncor = '../#'
+	- var urlIndex = 'index.html';
+	- var urlImg = 'img/';
+	- var urlPages = 'pages-components/';
+	- var page = 'home'
+	
+	//Main
+	main.main-home
+		.container
+			h1.main-home__title Web Components
+			ul.grid-home
+				+components('pages-components/tab.html', 'tab.svg', 'tab', 'Tab')
+				+components('pages-components/accordion.html', 'accordion.svg', 'accordion', 'Accordion')
+				+components('pages-components/collapse.html', 'collapse.svg', 'collapse', 'Collapse')
+				+components('pages-components/modal.html', 'modal.svg', 'modal', 'Modal')
+				+components('pages-components/dropdown.html', 'dropdown.svg', 'dropdown', 'Dropdown')
+				+components('pages-components/activate-navigation.html', 'active-nav.svg', 'active-navigation', 'Active navigation')
+				+components('pages-components/scroll-animation.html', 'scroll-animation.svg', 'scroll-animation', 'Scroll-animation')
+				+components('pages-components/tooltip.html', 'tooltip.svg', 'tooltip', 'Tooltip Popover')
+
+	//- scripts
+	//- ===================================
+
+	prepend scripts
+		- var urlJS = 'js/'
+		include _includes/scripts.pug

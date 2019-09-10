@@ -1,0 +1,11 @@
+# Node.js #
+Layout
+
+# Node.js #
+node_modules
+
+# Vídeos #
+src/video
+
+# json #
+package-lock.json
