@@ -54,7 +54,7 @@ pre {
 
 .main {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 200px minmax(250px, auto);
   height: 100vh;
 
   &-content {
@@ -91,13 +91,17 @@ pre {
         padding: 4rem;
         border: 2px dotted $lightGray;
         margin-bottom: 6rem;
+
+        .space-bottom {
+          margin-bottom: 2rem;
+        }
       }
     }
   }
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }

@@ -114,6 +114,24 @@
   }
 }
 
+@keyframes arrow-right {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes arrow-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-20px, 0, 0);
+  }
+}
+
 @keyframes modal {
   from {
     opacity: 0;
@@ -124,6 +142,7 @@
     transform: translate3d(0, 0, 0)
   }
 }
+
 
 /* Animação ao scroll */
 .js [data-anime="scroll-fade"],

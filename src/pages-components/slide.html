@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a class="selected" href="../pages-components/slide.html">Slide</a>
+            </li>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title">Slide</h1>
+        <div class="main-content__text moldure"> 
+          <p class="space-bottom">O slide, já está configurado com as <b>classes</b> e <b>id's</b> necessários para o seu funcionamento. Caso <b>não deseje</b> utilizar <b>controles</b>, basta retirar o elemento que possui a classe <b>custom-controls</b> e acrescentar uma classe <b>no-controls</b>, no elemento que possui a classe <b>slide-wrapper</b>. Para retirar as setas, deve-se retirar o elemento com a classe <b>arrow-nav</b></p>
+          <p>Para adicionar mais de um slide na mesma página, deverá ser utilizado o <b>node js</b> configurado com o <b>gulp</b>, explicado nessa <a href="../pages-components/documentation.html">documentação</a>.</p>
+        </div><section class="galery">
+<ul class="custom-controls" id="custom-controls">
+<li><img src="../img/slide/foto1.svg" alt=""></li>
+<li><img src="../img/slide/foto2.svg" alt=""></li>
+<li><img src="../img/slide/foto3.svg" alt=""></li>
+<li><img src="../img/slide/foto4.svg" alt=""></li>
+<li><img src="../img/slide/foto5.svg" alt=""></li>
+<li><img src="../img/slide/foto6.svg" alt=""></li>
+</ul>
+<div class="slide-wrapper" id="slide-wrapper">
+<ul class="slide" id="slide">
+<li><img src="../img/slide/foto1.svg" alt=""></li>
+<li><img src="../img/slide/foto2.svg" alt=""></li>
+<li><img src="../img/slide/foto3.svg" alt=""></li>
+<li><img src="../img/slide/foto4.svg" alt=""></li>
+<li><img src="../img/slide/foto5.svg" alt=""></li>
+<li><img src="../img/slide/foto6.svg" alt=""></li>
+</ul>
+</div>
+<div class="arrow-nav">
+<button class="prev" id="prev"></button>
+<button class="next" id="next"></button>
+</div>
+</section>
+        <div class="block-code">
+          <h2 class="main-content__subtitle">HTML Exemplo</h2>
+          <div class="code">
+            <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
+            <pre><code id="html-code"> &lt;section class=&quot;galery&quot;&gt;
+   &lt;ul class=&quot;custom-controls&quot; id=&quot;custom-controls&quot;&gt;
+     &lt;li&gt;&lt;img src=&quot;../img/slide/foto1-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;img src=&quot;../img/slide/foto2-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;img src=&quot;../img/slide/foto3-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;img src=&quot;../img/slide/foto4-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;img src=&quot;../img/slide/foto5-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;img src=&quot;../img/slide/foto6-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;div class=&quot;slide-wrapper&quot; id=&quot;slide-wrapper&quot;&gt;
+     &lt;ul class=&quot;slide&quot; id=&quot;slide&quot;&gt;
+       &lt;li&gt;&lt;img src=&quot;../img/slide/foto1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;img src=&quot;../img/slide/foto2.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;img src=&quot;../img/slide/foto3.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;img src=&quot;../img/slide/foto4.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;img src=&quot;../img/slide/foto5.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;img src=&quot;../img/slide/foto6.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;arrow-nav&quot;&gt;
+     &lt;button class=&quot;prev&quot; id=&quot;prev&quot;&gt;&lt;/button&gt;
+     &lt;button class=&quot;next&quot; id=&quot;next&quot;&gt;&lt;/button&gt;
+   &lt;/div&gt;
+ &lt;/section&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+  </body>
+</html>

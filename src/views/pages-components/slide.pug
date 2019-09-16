@@ -1,0 +1,90 @@
+extends ../_components/layout.pug
+include ../_components/mixins/mixins.pug          
+  
+//- head
+//- ===================================
+append head
+  - var urlCSS = "../css/"
+  include ../_includes/head.pug
+
+//- Content
+//- ===================================
+block content
+  - var selected = 'Slide';	
+  - var urlAncor = '../#'
+  - var urlIndex = '../index.html'
+  - var urlImg = '../img/'
+  - var urlPages = '../pages-components/';
+
+  //Main
+  main.main
+    include ../_includes/menu.pug	
+
+    .main-content
+      h1.main-content__title Slide
+      div.main-content__text.moldure 
+        p.space-bottom O slide, já está configurado com as <b>classes</b> e <b>id's</b> necessários para o seu funcionamento. Caso <b>não deseje</b> utilizar <b>controles</b>, basta retirar o elemento que possui a classe <b>custom-controls</b> e acrescentar uma classe <b>no-controls</b>, no elemento que possui a classe <b>slide-wrapper</b>. Para retirar as setas, deve-se retirar o elemento com a classe <b>arrow-nav</b>
+        p Para adicionar mais de um slide na mesma página, deverá ser utilizado o <b>node js</b> configurado com o <b>gulp</b>, explicado nessa #[a(href=`${urlPages}documentation.html`) documentação].
+
+      <section class="galery">
+        <ul class="custom-controls" id="custom-controls">
+          <li><img src="../img/slide/foto1.svg" alt=""></li>
+          <li><img src="../img/slide/foto2.svg" alt=""></li>
+          <li><img src="../img/slide/foto3.svg" alt=""></li>
+          <li><img src="../img/slide/foto4.svg" alt=""></li>
+          <li><img src="../img/slide/foto5.svg" alt=""></li>
+          <li><img src="../img/slide/foto6.svg" alt=""></li>
+        </ul>
+        <div class="slide-wrapper" id="slide-wrapper">
+          <ul class="slide" id="slide">
+            <li><img src="../img/slide/foto1.svg" alt=""></li>
+            <li><img src="../img/slide/foto2.svg" alt=""></li>
+            <li><img src="../img/slide/foto3.svg" alt=""></li>
+            <li><img src="../img/slide/foto4.svg" alt=""></li>
+            <li><img src="../img/slide/foto5.svg" alt=""></li>
+            <li><img src="../img/slide/foto6.svg" alt=""></li>
+          </ul>
+        </div>
+        <div class="arrow-nav">
+          <button class="prev" id="prev"></button>
+          <button class="next" id="next"></button>
+        </div>
+      </section>
+
+      .block-code
+        h2.main-content__subtitle HTML Exemplo
+        .code
+          button(class="btn-copy" data-clipboard-target="#html-code")
+            img(src="../img/clippy.svg" alt="Copy Simbol")
+          pre
+            code(id="html-code")
+              |  &lt;section class=&quot;galery&quot;&gt;
+              |    &lt;ul class=&quot;custom-controls&quot; id=&quot;custom-controls&quot;&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto1-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto2-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto3-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto4-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto5-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto6-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |    &lt;/ul&gt;
+              |    &lt;div class=&quot;slide-wrapper&quot; id=&quot;slide-wrapper&quot;&gt;
+              |      &lt;ul class=&quot;slide&quot; id=&quot;slide&quot;&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto2.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto3.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto4.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto5.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto6.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;/ul&gt;
+              |    &lt;/div&gt;
+              |    &lt;div class=&quot;arrow-nav&quot;&gt;
+              |      &lt;button class=&quot;prev&quot; id=&quot;prev&quot;&gt;&lt;/button&gt;
+              |      &lt;button class=&quot;next&quot; id=&quot;next&quot;&gt;&lt;/button&gt;
+              |    &lt;/div&gt;
+              |  &lt;/section&gt;
+
+  //- scripts
+  //- ===================================
+  prepend scripts
+    - var urlJS = '../js/' 
+    include ../_includes/scripts.pug

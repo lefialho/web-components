@@ -8,6 +8,7 @@ import ScrollAnimation from './scroll-animation.js';
 import PopOver from './popover.js';
 import SmoothScroll from './smooth-scroll.js';
 import ActivateNavigation from './active-navigation.js';
+import SlideNav from './slide.js';
 
 const accordion = new Accordion('[data-accordion="group"]');
 accordion.init();
@@ -42,3 +43,8 @@ smoothScroll.init();
 
 const activateNavigation = new ActivateNavigation('[data-nav="active-nav"]', '[data-activate="content"]');
 activateNavigation.init();
+
+const slide = new SlideNav('#slide', '#slide-wrapper');
+slide.init();
+slide.addArrow('#prev', '#next');
+slide.addControl('#custom-controls')
