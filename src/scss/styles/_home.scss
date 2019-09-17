@@ -100,9 +100,14 @@
   .grid-home {
     max-height: initial;
   }
+
   .main-home {
     height: initial;
     padding: 2rem;
+
+    &__subtitle {
+      margin: 0;
+    }
   }
 }
 
