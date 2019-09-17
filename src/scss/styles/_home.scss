@@ -9,7 +9,7 @@
   height: 100vh;
 
   &__title {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     font-size: 4rem;
     color: $darkBlue;
     text-align: center;
@@ -24,12 +24,11 @@
     }
   }
 
-  &__download {
-    margin-bottom: 4rem;
+  &__block {
+    margin-bottom: 6rem;
   }
 
   &__subtitle {
-    margin-top: 8rem;
     margin-bottom: 2rem;
     font-size: 2rem;
     color: $darkBlue;

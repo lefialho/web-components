@@ -24,9 +24,9 @@ block content
 	//Main
 	main.main-home
 		.container
+			h1.main-home__title Web Components
 			div.grid-container
 				div.grid-8
-					h1.main-home__title Web Components
 					ul.grid-home
 						+components('pages-components/slide.html', 'slide.svg', 'slide', 'Slide')
 						+components('pages-components/tab.html', 'tab.svg', 'tab', 'Tab')
@@ -39,13 +39,15 @@ block content
 						+components('pages-components/tooltip.html', 'tooltip.svg', 'tooltip', 'Tooltip Popover')
 				div.grid-4
 					aside.main-home__download
-						h2.main-home__subtitle Arquivos
-						p.main-home__text Para utilizar o projeto, faça o download dos #[a(href="download.rar" download) arquivos]. 
-						a.main-home__link()
-						p.main-home__text Insira o arquivo <b>components.css</b> no header do html e <b>default.css</b>, caso deseje utilizar os estilos padrões.
-						p.main-home__text Adicionar também o arquivo <b>components.js</b>, antes de fechar a tag body no html.
-						h2.main-home__subtitle Documentação do slide
-						p.main-home__text Para adicionar mais de um slide na mesma página, acesse a documentação #[a(href="documentation.html" target="_blank") documentação].
+						div.main-home__block
+							h2.main-home__subtitle Arquivos
+							p.main-home__text Para utilizar o projeto, faça o download dos #[a(href="download.rar" download) arquivos]. 
+							a.main-home__link()
+							p.main-home__text Insira o arquivo <b>components.css</b> no header do html e <b>default.css</b>, caso deseje utilizar os estilos padrões.
+							p.main-home__text Adicionar também o arquivo <b>components.js</b>, antes de fechar a tag body no html.
+						div.main-home__block
+							h2.main-home__subtitle Documentação do slide
+							p.main-home__text Para adicionar mais de um slide na mesma página, acesse a documentação #[a(href="documentation.html" target="_blank") documentação].
 
 
 	//- scripts
