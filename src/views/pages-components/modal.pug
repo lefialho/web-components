@@ -22,7 +22,11 @@ block content
 	  
     .main-content
       h1.main-content__title Modal
-      p.main-content__text.moldure Acrescentar um <b>data-modal="open"</b> e um <b>aria-controls="#nomedotarget"</b> no elemento que vai abrir o modal. Colocar no elemento target, um <b>data-modal="container"</b> e um <b>id</b> com o mesmo nome do elemento que contem no aria-controls. Acrescentar ainda, um <b>data-modal="close"</b> no elemento de botão que fecha o modal. Para definir o tamanho do modal, colocar uma classe no elemento target com nome de <b>x-small</b>, <b>small</b>, <b>medium</b> ou <b>large</b>
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p.space-bottom Acrescentar um <b>data-modal="open"</b> e um <b>aria-controls="#nomedotarget"</b> no elemento que vai abrir o modal. Colocar no elemento target, um <b>data-modal="container"</b> e um <b>id</b> com o mesmo nome do elemento que contem no aria-controls. Acrescentar ainda, um <b>data-modal="close"</b> no elemento de botão que fecha o modal. 
+          p.space-bottom Para definir o tamanho do modal, colocar uma classe no elemento target com nome de <b>x-small</b>, <b>small</b>, <b>medium</b> ou <b>large</b>. As classes podem ter qualquer nome e serem estilizadas livremente.
 
       .modal-open
         a(class="btn-modal" aria-controls="#modal0" data-modal="open") Modal x-small

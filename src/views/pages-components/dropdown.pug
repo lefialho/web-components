@@ -22,7 +22,11 @@ block content
 
     .main-content
       h1.main-content__title Dropdown Menu-mobile
-      p.main-content__text.moldure Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos menus dropdown. Inserir um <b>data-menu="close"</b> nos elementos de âncora do menu, para o mesmo fechar quando estiver em mobile. Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>.
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p.space-bottom Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos menus dropdown. Inserir também um <b>data-menu="close"</b> nos elementos de âncora do menu, para o mesmo fechar quando estiver em mobile.
+          p.space-bottom  Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>. As classes podem ter qualquer nome e serem estilizadas livremente.
 
       <nav class="menu" data-smooth>
       <button class="menu-button" data-menu="button" aria-expanded="false">Menu</button>

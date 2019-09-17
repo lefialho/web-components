@@ -22,7 +22,10 @@ block content
 
     .main-content
       h1.main-content__title Tab
-      p.main-content__text.moldure Acrescentar um <b>data-tabGroup</b> no elemento <b>pai</b>, um <b>data-tab="nav"</b> na navegação e um <b>data-tab="content"</b> no elemento target da navegação. As classes podem ser estilizadas livremente.
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p Acrescentar um <b>data-tabGroup</b> no elemento <b>pai</b>, um <b>data-tab="nav"</b> na navegação e um <b>data-tab="content"</b> no elemento target da navegação. As classes podem ser estilizadas livremente.
 
       <div class="tab one" data-tab="group">
         <nav class="tab-nav" data-tab="nav">

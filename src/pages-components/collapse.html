@@ -40,9 +40,15 @@
       </div>
       <div class="main-content">
         <h1 class="main-content__title">Collapse</h1>
-        <p class="main-content__text moldure">Acrescentar um <b>data-collapseGroup</b> no elemento <b>pai</b>, um <b>data-collapse="title"</b> no título e <b>data-collapse="content"</b> no elemento target da navegação. As classes podem ter qualquer nome e serem estilizadas livremente.</p><dl class="collapse" data-collapse="group">
-<dt class="collapse__title" data-collapse="item">Escreva aqui o título01</dt>
-<dd class="collapse__content" data-collapse="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt fugit dicta quos, reprehenderit nulla minus, quae esse, voluptatibus nisi veniam repellendus. Explicabo unde ratione cum, repellat sed porro rem!</dd>
+        <div class="collapse" data-collapse="group">
+          <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
+          <div class="main-content__text moldure" data-collapse="content"> 
+            <p class="space-bottom">Acrescentar um <b>data-collapseGroup</b> no elemento <b>pai</b>, um <b>data-collapse="title"</b> no título e <b>data-collapse="content"</b> no elemento target da navegação. As classes podem ter qualquer nome e serem estilizadas livremente. </p>
+            <p class="space-bottom">Para deixar um item ativo ao abrir a página, deve-se adicionar a classe <b>active</b> nos elementos que possuem <b>data-collapse="title"</b> e também <b>data-collapse="content"</b>.</p>
+          </div>
+        </div><dl class="collapse" data-collapse="group">
+<dt class="collapse__title active" data-collapse="item">Escreva aqui o título01</dt>
+<dd class="collapse__content active" data-collapse="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt fugit dicta quos, reprehenderit nulla minus, quae esse, voluptatibus nisi veniam repellendus. Explicabo unde ratione cum, repellat sed porro rem!</dd>
 <dt class="collapse__title" data-collapse="item">Escreva aqui o título02</dt>
 <dd class="collapse__content" data-collapse="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet cupiditate odit. Aliquam eos ad quas, totam, facilis explicabo nostrum hic necessitatibus suscipit fugit sapiente incidunt minus quia eum eius!</dd>
 <dt class="collapse__title" data-collapse="item">Escreva aqui o título03</dt>
@@ -55,9 +61,9 @@
           <div class="code">
             <button class="btn-copy" data-clipboard-target="#html-code"><img src="../img/clippy.svg" alt="Copy Simbol"></button>
             <pre><code id="html-code"> &lt;section class=&quot;collapse&quot; data-collapse=&quot;group&quot;&gt;
-   &lt;h3 class=&quot;collapse__title&quot; data-collapse=&quot;title&quot;&gt;Escreva aqui o título01&lt;/h3&gt;
-   &lt;p class=&quot;collapse__content&quot; data-collapse=&quot;content&quot;&gt;Texto01&lt;/p&gt;
-   &lt;h3 class=&quot;collapse__title&quot; data-collapse=&quot;title&quot;&gt;Escreva aqui o título02&lt;/h3&gt;
+   &lt;h3 class=&quot;collapse__title active&quot; data-collapse=&quot;item&quot;&gt;Escreva aqui o título01&lt;/h3&gt;
+   &lt;p class=&quot;collapse__content active&quot; data-collapse=&quot;content&quot;&gt;Texto01&lt;/p&gt;
+   &lt;h3 class=&quot;collapse__title&quot; data-collapse=&quot;item&quot;&gt;Escreva aqui o título02&lt;/h3&gt;
    &lt;div class=&quot;collapse__content&quot; data-collapse=&quot;content&quot;&gt;
      &lt;p&gt;Texto02&lt;/p&gt;
      &lt;p&gt;Texto03&lt;/p&gt;

@@ -22,9 +22,11 @@ block content
 	  
     .main-content
       h1.main-content__title(id="init") Tooltip - Popover
-      div.main-content__text.moldure 
-        p Colocar uma classe <b>tooltip</b> em torno de um elemento pai e acrescentar um elemento filho com a classe <b>tooltip-content</b>, juntamente com seu conteúdo correspondente. 
-        p Para o <b>popover</b>, deve ser colocado um <b>data-popover</b> no elemento que irá ativar o recurso e um <b>data-popover="content"</b> no elemento seguinte, para ativar o mesmo.
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p.space-bottom Colocar uma classe <b>tooltip</b> em torno de um elemento pai e acrescentar um elemento filho com a classe <b>tooltip-content</b>, juntamente com seu conteúdo correspondente. 
+          p Para o <b>popover</b>, deve ser colocado um <b>data-popover</b> no elemento que irá ativar o recurso e um <b>data-popover="content"</b> no elemento seguinte, para ativar o mesmo.
 
       p.main-content__text Ducimus numquam eligendi rem eaque quisquam dignissimos quidem dolorum assumenda explicabo molestias quibusdam labore asperiores eius incidunt, earum fugiat harum sequi quia.<span class=tooltip>Voluptatum<span class="tooltip-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></span> sequi perferendis molestias architecto distinctio laboriosam rerum. Veniam consectetur dolorem impedit nesciunt commodi ea!Asperiores repellat aliquam sit provident eveniet ullam culpa. <span class="tooltip">Deserunt quasi dolor ea saepe iusto nobis<span class="tooltip-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non explicabo architecto consectetur quas maiores tempore, quisquam odio commodi.</span></span>
 

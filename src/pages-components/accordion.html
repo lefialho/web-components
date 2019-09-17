@@ -40,7 +40,12 @@
       </div>
       <div class="main-content">
         <h1 class="main-content__title">Accordion</h1>
-        <p class="main-content__text moldure">Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ser estilizadas livremente.</p><dl class="accordion" data-accordion="group">
+        <div class="collapse" data-collapse="group">
+          <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
+          <div class="main-content__text moldure" data-collapse="content">
+            <p>Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ter qualquer nome e serem estilizadas livremente.</p>
+          </div>
+        </div><dl class="accordion" data-accordion="group">
 <dt class="accordion__title" data-accordion="item">Escreva aqui o título01</dt>
 <dd class="accordion__content" data-accordion="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quis quidem temporibus veroitaque. </dd>
 <dt class="accordion__title" data-accordion="item">Escreva aqui o título02</dt>

@@ -22,32 +22,65 @@ block content
 
     .main-content
       h1.main-content__title Slide
-      div.main-content__text.moldure 
-        p.space-bottom O slide, já está configurado com as <b>classes</b> e <b>id's</b> necessários para o seu funcionamento. Caso <b>não deseje</b> utilizar <b>controles</b>, basta retirar o elemento que possui a classe <b>custom-controls</b> e acrescentar uma classe <b>no-controls</b>, no elemento que possui a classe <b>slide-wrapper</b>. Para retirar as setas, deve-se retirar o elemento com a classe <b>arrow-nav</b>
-        p Para adicionar mais de um slide na mesma página, deverá ser utilizado o <b>node js</b> configurado com o <b>gulp</b>, explicado nessa #[a(href=`${urlPages}documentation.html`) documentação].
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p.space-bottom Para cada slide acrescentado, deve-se copiar o código html e modificar os números dos <b>data-slide = custom-controls, slide-wrapper, slide, prev e next</b> de 1 até 10. 
+          p.space-bottom Os slides podem ser configurados sem o uso de minituaras e sem setas, para isso, basta <b>remover</b> os elementos <b>custom-controls</b> e <b>arrow-nav</b> respectivamente. Também é possível utilizar um slide sem nenhum controle, para isso, deve-se remover os elementos <b>custom-controls</b> e <b>arrow-nav</b> e ainda adicionar uma classe <b>no-controls</b> no elemento <b>slide-wrapper</b>.
+          p.space-bottom Caso queria <b>centralizar</b> o slide na tela, deve-se aplicar uma classe <b>slide-center</b> no elemento com a classe <b>slide-wrapper</b>.
+          p.space-bottom É possível adicionar até 10 slides numa mesma página. Caso deseje adicionar mais slides, veja a #[a(href="documentation.html" target="_blank") documentação].
 
+      h2.main-content__subtitle Com miniaturas e setas
       <section class="galery">
-        <ul class="custom-controls" id="custom-controls">
-          <li><img src="../img/slide/foto1.svg" alt=""></li>
-          <li><img src="../img/slide/foto2.svg" alt=""></li>
-          <li><img src="../img/slide/foto3.svg" alt=""></li>
-          <li><img src="../img/slide/foto4.svg" alt=""></li>
-          <li><img src="../img/slide/foto5.svg" alt=""></li>
-          <li><img src="../img/slide/foto6.svg" alt=""></li>
+        <ul class="custom-controls" data-slide="custom-controls1">
+          <li><img src="../img/slide/img1.svg" alt=""></li>
+          <li><img src="../img/slide/img2.svg" alt=""></li>
+          <li><img src="../img/slide/img3.svg" alt=""></li>
+          <li><img src="../img/slide/img4.svg" alt=""></li>
+          <li><img src="../img/slide/img5.svg" alt=""></li>
+          <li><img src="../img/slide/img6.svg" alt=""></li>
         </ul>
-        <div class="slide-wrapper" id="slide-wrapper">
-          <ul class="slide" id="slide">
-            <li><img src="../img/slide/foto1.svg" alt=""></li>
-            <li><img src="../img/slide/foto2.svg" alt=""></li>
-            <li><img src="../img/slide/foto3.svg" alt=""></li>
-            <li><img src="../img/slide/foto4.svg" alt=""></li>
-            <li><img src="../img/slide/foto5.svg" alt=""></li>
-            <li><img src="../img/slide/foto6.svg" alt=""></li>
+        <div class="slide-wrapper" data-slide="slide-wrapper1">
+          <ul class="slide" data-slide="slide1">
+            <li><img src="../img/slide/img1.svg" alt=""></li>
+            <li><img src="../img/slide/img2.svg" alt=""></li>
+            <li><img src="../img/slide/img3.svg" alt=""></li>
+            <li><img src="../img/slide/img4.svg" alt=""></li>
+            <li><img src="../img/slide/img5.svg" alt=""></li>
+            <li><img src="../img/slide/img6.svg" alt=""></li>
           </ul>
         </div>
         <div class="arrow-nav">
-          <button class="prev" id="prev"></button>
-          <button class="next" id="next"></button>
+          <button class="prev" data-slide="prev1"></button>
+          <button class="next" data-slide="next1"></button>
+        </div>
+      </section>
+
+      h2.main-content__subtitle Centralizado, sem miniaturas e setas
+      <section class="galery">
+        <div class="slide-wrapper slide-center" data-slide="slide-wrapper2">
+          <ul class="slide" data-slide="slide2">
+            <li><img src="../img/slide/img1.svg" alt=""></li>
+            <li><img src="../img/slide/img2.svg" alt=""></li>
+            <li><img src="../img/slide/img3.svg" alt=""></li>
+            <li><img src="../img/slide/img4.svg" alt=""></li>
+            <li><img src="../img/slide/img5.svg" alt=""></li>
+            <li><img src="../img/slide/img6.svg" alt=""></li>
+          </ul>
+        </div>
+      </section>
+
+      h2.main-content__subtitle Sem controles
+      <section class="galery">
+        <div class="slide-wrapper no-controls" data-slide="slide-wrapper3">
+          <ul class="slide" data-slide="slide3">
+            <li><img src="../img/slide/img1.svg" alt=""></li>
+            <li><img src="../img/slide/img2.svg" alt=""></li>
+            <li><img src="../img/slide/img3.svg" alt=""></li>
+            <li><img src="../img/slide/img4.svg" alt=""></li>
+            <li><img src="../img/slide/img5.svg" alt=""></li>
+            <li><img src="../img/slide/img6.svg" alt=""></li>
+          </ul>
         </div>
       </section>
 
@@ -59,27 +92,27 @@ block content
           pre
             code(id="html-code")
               |  &lt;section class=&quot;galery&quot;&gt;
-              |    &lt;ul class=&quot;custom-controls&quot; id=&quot;custom-controls&quot;&gt;
-              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto1-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto2-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto3-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto4-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto5-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |      &lt;li&gt;&lt;img src=&quot;../img/slide/foto6-thumb.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |    &lt;ul class=&quot;custom-controls&quot; data-slide=&quot;custom-controls1&quot;&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/img1.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/img2.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/img3.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/img4.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/img5.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |      &lt;li&gt;&lt;img src=&quot;../img/slide/img6.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
               |    &lt;/ul&gt;
-              |    &lt;div class=&quot;slide-wrapper&quot; id=&quot;slide-wrapper&quot;&gt;
-              |      &lt;ul class=&quot;slide&quot; id=&quot;slide&quot;&gt;
-              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto2.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto3.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto4.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto5.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-              |        &lt;li&gt;&lt;img src=&quot;../img/slide/foto6.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |    &lt;div class=&quot;slide-wrapper&quot; data-slide=&quot;slide-wrapper1&quot;&gt;
+              |      &lt;ul class=&quot;slide&quot; data-slide=&quot;slide1&quot;&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/img1.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/img2.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/img3.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/img4.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/img5.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+              |        &lt;li&gt;&lt;img src=&quot;../img/slide/img6.svg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
               |      &lt;/ul&gt;
               |    &lt;/div&gt;
               |    &lt;div class=&quot;arrow-nav&quot;&gt;
-              |      &lt;button class=&quot;prev&quot; id=&quot;prev&quot;&gt;&lt;/button&gt;
-              |      &lt;button class=&quot;next&quot; id=&quot;next&quot;&gt;&lt;/button&gt;
+              |      &lt;button class=&quot;prev&quot; data-slide=&quot;prev1&quot;&gt;&lt;/button&gt;
+              |      &lt;button class=&quot;next&quot; data-slide=&quot;next1&quot;&gt;&lt;/button&gt;
               |    &lt;/div&gt;
               |  &lt;/section&gt;
 

@@ -22,7 +22,10 @@ block content
 
     .main-content
       h1.main-content__title Scroll Animation
-      p.main-content__text.moldure Acrescentar um <b>data-anime="scroll-fade"</b> ou <b>data-anime="scroll-down"</b> ou <b>data-anime="scroll-right"</b> ou <b>data-anime="scroll-left"</b> ou <b>data-anime="scroll-top"</b> ou <b>data-anime="scroll-zoomIn"</b> no elemento que vai receber a animação.
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p Acrescentar um <b>data-anime="scroll-fade"</b> ou <b>data-anime="scroll-down"</b> ou <b>data-anime="scroll-right"</b> ou <b>data-anime="scroll-left"</b> ou <b>data-anime="scroll-top"</b> ou <b>data-anime="scroll-zoomIn"</b> no elemento que vai receber a animação. As classes podem ter qualquer nome e serem estilizadas livremente.
 
       div.grid-container(class="scroll-block")
         .grid-4(data-anime="scroll-right")

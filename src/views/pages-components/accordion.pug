@@ -22,7 +22,10 @@ block content
 	  
     .main-content
       h1.main-content__title Accordion
-      p.main-content__text.moldure Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ser estilizadas livremente.
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ter qualquer nome e serem estilizadas livremente.
 
       <dl class="accordion" data-accordion="group">
         <dt class="accordion__title" data-accordion="item">Escreva aqui o título01</dt>

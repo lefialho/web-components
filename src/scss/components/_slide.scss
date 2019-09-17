@@ -45,6 +45,10 @@
   }
 }
 
+.no-controls > [data-control="slide"] {
+  display: none;
+}
+
 .arrow-nav {
   display: flex;
   justify-content: space-around;
@@ -55,12 +59,10 @@
   }
 }
 
-.no-controls > [data-control="slide"] {
-  display: none;
-}
-
 .prev.hide, .next.hide {
   opacity: 0;
   pointer-events: none;
   transition: .3s ease-in-out;
 }
+
+
