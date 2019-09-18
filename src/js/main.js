@@ -584,10 +584,8 @@
     }
 
     onResize() {
-      setTimeout(() => {
-        this.slidesConfig();
-        this.changeSlide(this.index.active);
-      }, 500);
+      this.slidesConfig();
+      this.changeSlide(this.index.active);
     }
 
     addResizeEvent() {
@@ -600,7 +598,7 @@
       this.onEnd = this.onEnd.bind(this);
       this.activePrevSlide = this.activePrevSlide.bind(this);
       this.activeNextSlide = this.activeNextSlide.bind(this);
-      this.onResize = debounce(this.onResize.bind(this), 200);
+      this.onResize = debounce(this.onResize.bind(this), 50);
     }
 
   }

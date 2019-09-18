@@ -4,7 +4,7 @@ div.main-menu
 			img( class="back-home__icon" src=urlImg + 'home.svg', alt="Voltar para home")
 		h1.main-menu__title Web Components
 		ul
-			- var menu = [{"name":"Slide", "link":`${urlPages}slide.html`}, {"name":"Tab", "link":`${urlPages}tab.html`}, {"name":"Accordion", "link": `${urlPages}accordion.html`}, {"name":"Collapse", "link": `${urlPages}collapse.html`}, {"name":"Modal", "link": `${urlPages}modal.html`}, {"name":"Dropdown Menu", "link": `${urlPages}dropdown.html`}, {"name":"Active Navigation", "link": `${urlPages}activate-navigation.html`}, {"name":"Scroll Animation", "link": `${urlPages}scroll-animation.html`}, {"name":"Tooltip - Popover", "link": `${urlPages}tooltip.html`}];
+			- var menu = [{"name":"Documentação", "link":`${urlPages}documentation.html`},{"name":"Slide", "link":`${urlPages}slide.html`}, {"name":"Tab", "link":`${urlPages}tab.html`}, {"name":"Accordion", "link": `${urlPages}accordion.html`}, {"name":"Collapse", "link": `${urlPages}collapse.html`}, {"name":"Modal", "link": `${urlPages}modal.html`}, {"name":"Dropdown Menu", "link": `${urlPages}dropdown.html`}, {"name":"Active Navigation", "link": `${urlPages}activate-navigation.html`}, {"name":"Scroll Animation", "link": `${urlPages}scroll-animation.html`}, {"name":"Tooltip - Popover", "link": `${urlPages}tooltip.html`}];
 			each item in menu
 				li
 					if selected === item.name

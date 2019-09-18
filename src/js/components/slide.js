@@ -125,10 +125,8 @@ export class Slide {
   }
 
   onResize() {
-    setTimeout(() => {
-      this.slidesConfig();
-      this.changeSlide(this.index.active);
-    }, 500)
+    this.slidesConfig();
+    this.changeSlide(this.index.active);
   }
 
   addResizeEvent() {
@@ -141,7 +139,7 @@ export class Slide {
     this.onEnd = this.onEnd.bind(this);
     this.activePrevSlide = this.activePrevSlide.bind(this);
     this.activeNextSlide = this.activeNextSlide.bind(this);
-    this.onResize = debounce(this.onResize.bind(this), 200);
+    this.onResize = debounce(this.onResize.bind(this), 50);
   }
 }
 
@@ -187,14 +185,14 @@ export default class SlideNav extends Slide {
       item.classList.remove(this.activeClass);
     })
     this.controlArray[this.index.active].classList.add(this.activeClass);
-    
-    if(this.prevElement && this.nextElement) {
-      if(this.controlArray[0].classList.contains(this.activeClass)) {
+
+    if (this.prevElement && this.nextElement) {
+      if (this.controlArray[0].classList.contains(this.activeClass)) {
         this.prevElement.classList.add('hide')
       } else {
         this.prevElement.classList.remove('hide')
       }
-      if (this.controlArray[this.controlArray.length-1].classList.contains(this.activeClass)) {
+      if (this.controlArray[this.controlArray.length - 1].classList.contains(this.activeClass)) {
         this.nextElement.classList.add('hide');
       } else {
         this.nextElement.classList.remove('hide')

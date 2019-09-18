@@ -1,6 +1,7 @@
 .galery {
   margin-bottom: 8rem;
-  .slide-center { 
+
+  .slide-center {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -20,7 +21,7 @@
     transform: scale(.8);
     transition: .4s;
     border-radius: 4px;
-    background:#d6daff;
+    background: #d6daff;
   }
 
   >*.active {
@@ -34,7 +35,7 @@
   margin-top: 2rem;
 }
 
-[data-control="slide"] > * > * {
+[data-control="slide"]>*>* {
   display: block;
   width: 1.6rem;
   height: 1.6rem;
@@ -43,9 +44,10 @@
   overflow: hidden;
   text-indent: -999px;
   margin: .5rem;
-} 
+}
 
-[data-control="slide"] > *.active > *, [data-control="slide"] > * > *:hover {
+[data-control="slide"]>*.active>*,
+[data-control="slide"]>*>*:hover {
   background: #1291af;
 }
 
@@ -56,18 +58,18 @@
   margin-top: 4rem;
   margin-bottom: 2rem;
 
-  > * {
+  >* {
     opacity: .8;
     transform: scale(.8);
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
     margin: .4rem;
-    box-shadow: 0 2px 2px rgba(0,0,0,.5);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
     transition: .3s ease-in-out;
   }
 
-  > *.active {
+  >*.active {
     transform: scale(1);
   }
 }
@@ -85,7 +87,7 @@
     height: 4rem;
     text-indent: -999px;
     overflow: hidden;
-    outline: none; 
+    outline: none;
   }
 
   *:hover {
@@ -93,20 +95,30 @@
   }
 
   *.prev {
-    background: url('../img/slide/arrow-left.svg') center center no-repeat; 
-   }
-
-   *.next {
-    background: url('../img/slide/arrow-right.svg') center center no-repeat; 
-   }
-
-   *.prev:hover { 
-    animation: arrow-left .3s alternate infinite;
+    background: url('../img/slide/arrow-left.svg') center center no-repeat;
   }
 
-  *.next:hover { 
-    animation: arrow-right .3s alternate infinite;
+  *.next {
+    background: url('../img/slide/arrow-right.svg') center center no-repeat;
   }
 }
 
+@media (hover: hover) {
+  .arrow-nav {
+    *.prev:hover {
+      animation: arrow-left .3s alternate infinite;
+    }
+  
+    *.next:hover {
+      animation: arrow-right .3s alternate infinite;
+    }
+  }
+}
 
+@media (max-width: 768px) {
+  .galery {
+    .slide-center {
+      max-width: 100%;
+    }
+  }
+}

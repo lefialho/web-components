@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Framework de componentes para uso em web-sites">
+    <link rel="shortcut icon" href="img/png/favicon.png">
+    <title>Framework de componentes para uso em web-sites</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <script>document.documentElement.className += ' js';</script>
+  </head>
+  <body>
+    <!--Main-->
+    <main class="main">
+      <div class="main-menu">
+        <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
+          <h1 class="main-menu__title">Web Components</h1>
+          <ul>
+            <li><a class="selected" href="../pages-components/documentation.html">Documentação</a>
+            </li>
+            <li><a href="../pages-components/slide.html">Slide</a>
+            </li>
+            <li><a href="../pages-components/tab.html">Tab</a>
+            </li>
+            <li><a href="../pages-components/accordion.html">Accordion</a>
+            </li>
+            <li><a href="../pages-components/collapse.html">Collapse</a>
+            </li>
+            <li><a href="../pages-components/modal.html">Modal</a>
+            </li>
+            <li><a href="../pages-components/dropdown.html">Dropdown Menu</a>
+            </li>
+            <li><a href="../pages-components/activate-navigation.html">Active Navigation</a>
+            </li>
+            <li><a href="../pages-components/scroll-animation.html">Scroll Animation</a>
+            </li>
+            <li><a href="../pages-components/tooltip.html">Tooltip - Popover</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1 class="main-content__title">Documentação</h1>
+        <div class="grid-container">
+          <div class="grid-8">
+            <div class="documentation__block">
+              <h2 class="main-content__subtitle">Arquivos</h2>
+              <p class="documentation__text">Para utilizar o projeto, faça o download dos <a href="components.zip" download>arquivos</a>. </p>
+              <p class="documentation__text">Insira o arquivo <b>components.css</b> no header do html e <b>default.css</b>, caso deseje utilizar os estilos padrões. Adicionar também o arquivo <b>components.js</b>, antes de fechar a tag body no html.</p>
+            </div>
+            <div class="documentation__block">
+              <h2 class="main-content__subtitle">NPM</h2>
+              <p class="documentation__text">É possível utilizar o web-components via <b>NPM</b>. Para isso, acesse o repositório do github <a href="https://github.com/lefialho/web-components" target="_blank">web-components</a>, clone o projeto e faça um npm install. </p>
+              <p class="documentation__text">O web-components vem estruturado com <b>pug</b>, <b>sass</b> e <b>babel</b>. O código é aberto e pode ser totaltmente modificado. Para rodar o projeto, digite <b>gulp</b> na linha de comando.</p>
+            </div>
+            <div class="documentation__block" id="documetation">
+              <h2 class="main-content__subtitle">Mais slides na página</h2>
+              <p class="documentation__text">Para adicionar mais de 10 slides na mesma página, <b>clone</b> o repositório no <b>git</b>, faça um <b>npm install</b> e acesse o arquivo <b>main.js</b>. Acrescente novas constantes nos construtores dos slides e modifique os valores de data. <b>Obs</b>: No HTML os elementos que devem ter o mesmo nome das constantes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/components.js"></script>
+  </body>
+</html>
