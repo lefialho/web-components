@@ -3,8 +3,8 @@
   cursor: pointer;
 }
 
-.js [data-accordion="group"] [data-accordion="content"],
-.js [data-accordion="group-child"] [data-accordion="content"] {
+[data-accordion="group"] [data-accordion="content"],
+[data-accordion="group-child"] [data-accordion="content"] {
   display: none;
 }
 

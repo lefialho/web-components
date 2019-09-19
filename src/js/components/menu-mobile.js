@@ -31,7 +31,7 @@ export default class MenuMobile {
   }
 
   init() {
-    if (this.menuMobileButton && this.menuList) {
+    if (this.menuMobileButton && this.menuList && this.bgBlack) {
       this.addMenuMobileEvents();
     }
     return this

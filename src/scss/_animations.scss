@@ -145,12 +145,12 @@
 
 
 /* Animação ao scroll */
-.js [data-anime="scroll-fade"],
-.js [data-anime="scroll-left"],
-.js [data-anime="scroll-right"],
-.js [data-anime="scroll-top"],
-.js [data-anime="scroll-down"],
-.js [data-anime="scroll-zoomIn"] {
+[data-anime="scroll-fade"],
+[data-anime="scroll-left"],
+[data-anime="scroll-right"],
+[data-anime="scroll-top"],
+[data-anime="scroll-down"],
+[data-anime="scroll-zoomIn"] {
   opacity: 0;
 }
 

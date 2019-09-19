@@ -71,7 +71,7 @@ gulp.task('export-js', function () {
 });
 
 gulp.task('js', ['export-js','clean-scripts'], function () {
-  return gulp.src(['src/js/main.js', 'src/js/components/clipboard.js', '!src/js/lib/*.js'])
+  return gulp.src(['src/js/main.js', '!src/js/components/clipboard.js', '!src/js/lib/*.js'])
     .pipe(concat('components.js'))
     .pipe(babel({
       presets: ['@babel/env']
