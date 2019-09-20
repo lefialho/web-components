@@ -1,26 +1,15 @@
-.documentation {
-  &__block {
-    margin: 6rem 0;
-  }
-
-  &__subtitle {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: $darkBlue;
-
-    &::after {
-      content: '';
-      display: block;
-      background-color: $darkBlue;
-      width: 5%;
-      height: 1px;
-      margin: 1rem 0;
-    }
-  }
+.documentation-block {
+  margin: 6rem 0;
 
   &__text {
     color: $darkGray;
     margin-bottom: 2rem;
     line-height: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .documentation-block {
+    margin: 3rem 0;
   }
 }

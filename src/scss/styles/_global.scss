@@ -130,10 +130,14 @@ pre {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+
   pre {
     white-space: pre;
-  } 
+  }
 
   .main {
     display: grid;
@@ -142,15 +146,24 @@ pre {
 
     &-content {
       padding: 4rem 2rem;
+
+      &__title {
+        font-size: 3rem;
+      }
+
+      &__subtitle {
+        font-size: 2rem;
+      }
     }
   }
 
   .grid-container {
     grid-template-columns: 100%;
 
-    .grid-4, .grid-6, .grid-8 {
+    .grid-4,
+    .grid-6,
+    .grid-8 {
       grid-column: 1 / -1;
     }
   }
 }
-
