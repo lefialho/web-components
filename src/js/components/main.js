@@ -8,6 +8,7 @@ import ScrollAnimation from './scroll-animation.js';
 import PopOver from './popover.js';
 import SmoothScroll from './smooth-scroll.js';
 import ActivateNavigation from './active-navigation.js';
+import SlidebackTopButton from './back-top.js';
 import SlideNav from './slide.js';
 
 const accordion = new Accordion('[data-accordion="group"]');
@@ -36,13 +37,16 @@ popover.init();
 
 const options = {
   behavior: 'smooth',
-  block: 'end'
+  block: 'start'
 }
 const smoothScroll = new SmoothScroll('[data-smooth] a[href^="#"]', options);
 smoothScroll.init();
 
 const activateNavigation = new ActivateNavigation('[data-nav="active-nav"]', '[data-activate="content"]');
 activateNavigation.init();
+
+const topButton = new SlidebackTopButton('[data-button="top-page"]');
+topButton.init();
 
 
 // Slides

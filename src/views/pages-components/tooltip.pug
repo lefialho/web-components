@@ -17,7 +17,7 @@ block content
   - var urlPages = '../pages-components/'; 
 
   //Main
-  main.main
+  main.main(id="main")
     include ../_includes/menu.pug		
 	  
     .main-content
@@ -83,6 +83,8 @@ block content
               |    &lt;/div&gt;
               |  &lt;/div&gt;
 
+    include ../_includes/footer.pug
+    
   //- scripts
   //- ===================================
   prepend scripts

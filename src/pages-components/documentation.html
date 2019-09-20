@@ -11,7 +11,7 @@
   </head>
   <body>
     <!--Main-->
-    <main class="main">
+    <main class="main" id="main">
       <div class="main-menu">
         <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
           <h1 class="main-menu__title">Web Components</h1>
@@ -39,7 +39,7 @@
           </ul>
         </nav>
       </div>
-      <div class="main-content">
+      <div class="main-content" id="main">
         <h1 class="main-content__title">Documentação</h1>
         <div class="grid-container">
           <div class="grid-8">
@@ -61,7 +61,9 @@
           </div>
         </div>
       </div>
+      <div data-smooth><a class="back-top-button" href="#main" data-button="top-page"><img src="../img/arrow-up.svg" alt=""></a></div>
     </main>
+    <script src="../js/components/back-top.js"></script>
     <script src="../js/lib/clipboard.min.js"></script>
     <script src="../js/components/clipboard.js"></script>
     <script src="../js/components.js"></script>

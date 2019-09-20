@@ -17,7 +17,7 @@ block content
   - var urlPages = '../pages-components/'; 
 
   //Main
-  main.main
+  main.main(id="main")
     include ../_includes/menu.pug		
 
     .main-content
@@ -62,6 +62,8 @@ block content
               |  &lt;section class=&quot;activate-content&quot; data-activate=&quot;content&quot; id=&quot;section01&quot; title=&quot; Seção 01&quot;&gt;
               |    &lt;p&gt;Conteúdo aqui&lt;/p&gt;
               |  &lt;/section&gt
+
+    include ../_includes/footer.pug
 
   //- scripts
   //- ===================================

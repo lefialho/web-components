@@ -460,6 +460,28 @@
 
   }
 
+  class backTopButton {
+    constructor(topButton) {
+      this.topButton = document.querySelector(topButton);
+      console.log(this.topButton);
+      this.showButton = debounce(this.showButton.bind(this), 50);
+    }
+
+    showButton() {
+      console.log('test');
+      if (window.window.pageYOffset > 100) this.topButton.classList.add('active');else this.topButton.classList.remove('active');
+    }
+
+    init() {
+      if (this.topButton) {
+        window.addEventListener('scroll', this.showButton);
+      }
+
+      return this;
+    }
+
+  }
+
   class Slide {
     constructor(slide, wrapper) {
       this.slide = document.querySelector(slide);
@@ -709,12 +731,14 @@
   popover.init();
   const options = {
     behavior: 'smooth',
-    block: 'end'
+    block: 'start'
   };
   const smoothScroll = new SmoothScroll('[data-smooth] a[href^="#"]', options);
   smoothScroll.init();
   const activateNavigation = new ActivateNavigation('[data-nav="active-nav"]', '[data-activate="content"]');
-  activateNavigation.init(); // Slides
+  activateNavigation.init();
+  const topButton = new backTopButton('[data-button="top-page"]');
+  topButton.init(); // Slides
 
   const slide = new SlideNav('[data-slide="slide1"]', '[data-slide="slide-wrapper1"]');
   slide.init();

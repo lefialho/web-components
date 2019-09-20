@@ -17,7 +17,7 @@ block content
   - var urlPages = '../pages-components/'; 
 
   //Main
-  main.main
+  main.main(id="main")
     include ../_includes/menu.pug		
 
     .main-content
@@ -68,6 +68,8 @@ block content
               |  &lt;div class=&quot;scroll-block&quot; data-anime=&quot;scroll-fade&quot;&gt;
               |    &lt;p&gt;Texto aqui&lt;/p&gt;
               |  &lt;/div&gt;
+
+    include ../_includes/footer.pug
 
   //- scripts
   //- ===================================

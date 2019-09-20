@@ -17,7 +17,7 @@ block content
   - var urlPages = '../pages-components/'; 
 
   //Main
-  main.main
+  main.main(id="main")
     include ../_includes/menu.pug		
 
     .main-content
@@ -112,6 +112,8 @@ block content
       </section>
 
   div(class="bg-black" data-bgBlack)
+
+    include ../_includes/footer.pug
 
   //- scripts
   //- ===================================

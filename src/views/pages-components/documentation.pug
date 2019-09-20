@@ -17,10 +17,10 @@ block content
   - var urlPages = '../pages-components/'; 
 
   //Main
-  main.main
+  main.main(id="main")
     include ../_includes/menu.pug	
 
-    .main-content
+    .main-content(id="main")
       h1.main-content__title Documentação
       .grid-container
         .grid-8
@@ -38,9 +38,12 @@ block content
             h2.main-content__subtitle Mais slides na página
             p.documentation-block__text Para adicionar mais de 10 slides na mesma página, <b>clone</b> o repositório no <b>git</b>, faça um <b>npm install</b> e acesse o arquivo <b>main.js</b>. Acrescente novas constantes nos construtores dos slides e modifique os valores de data. 
             p.documentation-block__text <b>Obs</b>: No HTML os elementos devem ter o mesmo nome das constantes do main.js.
+          
+    include ../_includes/footer.pug	
 
   //- scripts
   //- ===================================
   prepend scripts
     - var urlJS = '../js/'
+    script(src=urlJS + 'components/back-top.js')
     include ../_includes/scripts.pug

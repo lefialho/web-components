@@ -6,7 +6,7 @@
 
 html {
   font-size: 10px;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -130,6 +130,32 @@ pre {
   }
 }
 
+.back-top-button {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  background-color: $blue;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  box-shadow: 2px 2px 4px rgba($darkGray, $alpha: .5);
+  z-index: 50;
+
+  &:hover {
+    background-color: $darkBlue;
+  }
+
+  &.active {
+    opacity: 1;
+    animation: show-up .3s ease-in-out;
+    pointer-events: visible;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 1.6rem;
@@ -154,6 +180,12 @@ pre {
       &__subtitle {
         font-size: 2rem;
       }
+    }
+
+    .back-top-button {
+      width: 3rem;
+      height: 3rem;
+      padding: .7rem;
     }
   }
 
