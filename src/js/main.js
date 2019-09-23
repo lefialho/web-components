@@ -409,7 +409,7 @@
         const listItems = document.createElement('li');
         const links = document.createElement('a');
         const contentsId = topic.getAttribute('id');
-        const contentsTitle = topic.getAttribute('title');
+        const contentsTitle = topic.getAttribute('aria-label');
         links.innerText = contentsTitle;
         links.setAttribute('data-menu', 'activeLink');
         links.setAttribute('href', '#' + contentsId);
@@ -463,11 +463,12 @@
   class backTopButton {
     constructor(topButton) {
       this.topButton = document.querySelector(topButton);
+      this.acttiveClass = 'active';
       this.showButton = debounce(this.showButton.bind(this), 50);
     }
 
     showButton() {
-      if (window.window.pageYOffset > 100) this.topButton.classList.add('active');else this.topButton.classList.remove('active');
+      if (window.window.pageYOffset > 100) this.topButton.classList.add(this.acttiveClass);else this.topButton.classList.remove(this.acttiveClass);
     }
 
     init() {

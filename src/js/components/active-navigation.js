@@ -4,7 +4,7 @@ export default class ActivateNavigation {
 	constructor(activeNav, navContents) {
 		this.activeNav = document.querySelector(activeNav);
 		this.navContents = document.querySelectorAll(navContents);
-		this.activeClass = 'active'
+		this.activeClass = 'active';
 		
 		this.activeOnScroll = debounce(this.activeOnScroll.bind(this), 50);
 	}
@@ -14,7 +14,7 @@ export default class ActivateNavigation {
 			const listItems = document.createElement('li');
 			const links = document.createElement('a');
 			const contentsId = topic.getAttribute('id');
-			const contentsTitle = topic.getAttribute('title');
+			const contentsTitle = topic.getAttribute('aria-label');
 
 			links.innerText = contentsTitle;
 			links.setAttribute('data-menu', 'activeLink');
