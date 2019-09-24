@@ -39,11 +39,14 @@
         border-bottom: 1px solid $gray;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
+        &:last-child {
+          border: none;
+        }
       }
 
       a {
         display: block;
-        padding: 0.5rem;
+        padding: 0.25rem;
         color: $darkGray;
         @include transition;
 

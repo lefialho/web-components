@@ -58,6 +58,17 @@ pre {
   margin-bottom: 6rem;
 }
 
+.grid-block {
+  margin-bottom: 6rem;
+  &__content {
+    border: 1px dotted $darkGray;
+    padding: 1rem;
+  }
+  &__item {
+    color: $darkBlue;
+  }
+}
+
 .main {
   display: grid;
   grid-template-columns: 200px minmax(250px, auto);

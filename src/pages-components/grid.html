@@ -17,9 +17,9 @@
         <nav class="main-menu__nav"><a class="back-home" href="../index.html"><img class="back-home__icon" src="../img/home.svg" alt="Voltar para home"></a>
           <h1 class="main-menu__title">Web Components</h1>
           <ul>
-            <li><a class="selected" href="../pages-components/grid.html">Grid</a>
-            </li>
             <li><a href="../pages-components/documentation.html">Documentação</a>
+            </li>
+            <li><a class="selected" href="../pages-components/grid.html">Grid</a>
             </li>
             <li><a href="../pages-components/slide.html">Slide</a>
             </li>
@@ -47,30 +47,93 @@
         <div class="collapse" data-collapse="group">
           <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
           <div class="main-content__text moldure" data-collapse="content">
-            <p>Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ter qualquer nome e serem estilizadas livremente.</p>
+            <p class="space-bottom">Para utilizar o sistema de grid é necessário adicionar as classes grid-<b>numero<small>*</small></b>, grid-xs-<b>numero<small>*</small></b>, grid-s-<b>numero<small>*</small></b>, grid-m-<b>numero<small>*</small></b> e grid-l-<b>numero<small>*</small></b>.</p>
+            <p>O <b>número</b> varia de <b>1 até 12</b>, pois foi desenvolvido para comportar até <b>12 colunas</b>.</p>
+            <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
+              <li>O valor do <b>grid-</b> corresponde à tela com tamanho até <b>560px</b>;</li>
+              <li>O valor do <b>grid-xs (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
+              <li>O valor do <b>grid-s (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
+              <li>O valor do <b>grid-m (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
+              <li>O valor do <b>grid-l (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
+            </ul>
+            <p class="space-bottom">Para acrescentar uma margem de <b>offset</b>, é necessário adicionar as classes grid-offset-<b>numero<small>*</small></b>, grid-xs-offset-<b>numero<small>*</small></b>, grid-s-offset-<b>numero<small>*</small></b>, grid-m-offset-<b>numero<small>*</small></b> e grid-l-offset-<b>numero<small>*</small></b>. </p>
+            <p>O sistema foi desenvolvido com uso do <b>CSS Grid Layout</b> e portanto, não é compatível com todos os browsers, principalmente os mais antigos.</p>
+            <p>No site do <a href="https://caniuse.com/#search=grid" target="_blank">Can I use</a> é possível verificar à compatibilidade.</p>
           </div>
         </div>
-        <div class="grid-container">
-          <div class="grid-12 grid-xs-6 grid-s-6 grid-m-4 grid-l-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!</p>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo com 12 colunas padrão, 4 em large, 3 em medium e 2 em extra-small</h2>
+          <div class="grid-container">
+            <div class="grid-12 grid-xs-6 grid-m-4 grid-l-3">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-12) (grid-xs-6) (grid-m-4) (grid-l-4)</span></p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-6 grid-m-4 grid-l-3">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-12) (grid-xs-6) (grid-m-4) (grid-l-4)</span></p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-6 grid-m-4 grid-l-3">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-12) (grid-xs-6) (grid-m-4) (grid-l-4)</span></p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-6 grid-m-12 grid-l-3">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-12) (grid-xs-6) (grid-m-12) (grid-l-4)</span></p>
+              </div>
+            </div>
           </div>
-          <div class="grid-12 grid-xs-6 grid-s-6 grid-m-4 grid-l-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!</p>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo com 2 colunas padrão, 7 e 5 em small e offset-9 em medium </h2>
+          <div class="grid-container">
+            <div class="grid-6 grid-s-7">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-6) (grid-s-7)</span></p>
+              </div>
+            </div>
+            <div class="grid-6 grid-s-5 grid-m-offset-9">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-6) (grid-s-5) (grid-m-offset-9)</span></p>
+              </div>
+            </div>
           </div>
-          <div class="grid-12 grid-s-6 grid-s-6 grid-m-4 grid-l-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!</p>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo com offset-6 padrão</h2>
+          <div class="grid-container">
+            <div class="grid-offset-6">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-offset-6)</span></p>
+              </div>
+            </div>
           </div>
-          <div class="grid-12 grid-s-6 grid-s-6 grid-m-12 grid-l-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!</p>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo com 12 colunas padrão e offset-4 em small </h2>
+          <div class="grid-container">
+            <div class="grid-12 grid-s-offset-4">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-12) (grid-s-offset-4)</span></p>
+              </div>
+            </div>
           </div>
-          <div class="grid-6 grid-s-6 grid-l-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?</p>
-          </div>
-          <div class="grid-6 grid-s-6 grid-l-4 grid-m-offset-2 grid-l-offset-5">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?</p>
-          </div>
-          <div class="grid-12 grid-m-12 grid-l-4 grid-l-offset-2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?</p>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo com 2 colunas padrão e offset-8 em large </h2>
+          <div class="grid-container">
+            <div class="grid-6 grid-l-2">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-6) (grid-l-2)</span></p>
+              </div>
+            </div>
+            <div class="grid-6 grid-l-offset-8">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-6) (grid-l-offset-8)</span></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

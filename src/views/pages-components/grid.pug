@@ -25,33 +25,75 @@ block content
       div(class="collapse" data-collapse="group")
         div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
         div.main-content__text.moldure(data-collapse="content")
-          p Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ter qualquer nome e serem estilizadas livremente.
+          p.space-bottom Para utilizar o sistema de grid é necessário adicionar as classes grid-<b>numero<small>*</small></b>, grid-xs-<b>numero<small>*</small></b>, grid-s-<b>numero<small>*</small></b>, grid-m-<b>numero<small>*</small></b> e grid-l-<b>numero<small>*</small></b>.
+          p O <b>número</b> varia de <b>1 até 12</b>, pois foi desenvolvido para comportar até <b>12 colunas</b>.
 
-      .grid-container
-        div(class="grid-12 grid-xs-6 grid-s-6 grid-m-4 grid-l-3")
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+          ul.space-bottom(style="list-style: disc; padding-left: 4rem;")
+            li O valor do <b>grid-</b> corresponde à tela com tamanho até <b>560px</b>;
+            li O valor do <b>grid-xs (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;
+            li O valor do <b>grid-s (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;
+            li O valor do <b>grid-m (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;
+            li O valor do <b>grid-l (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;
 
-        div(class="grid-12 grid-xs-6 grid-s-6 grid-m-4 grid-l-3")
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+          p.space-bottom Para acrescentar uma margem de <b>offset</b>, é necessário adicionar as classes grid-offset-<b>numero<small>*</small></b>, grid-xs-offset-<b>numero<small>*</small></b>, grid-s-offset-<b>numero<small>*</small></b>, grid-m-offset-<b>numero<small>*</small></b> e grid-l-offset-<b>numero<small>*</small></b>. 
 
-        div(class="grid-12 grid-s-6 grid-s-6 grid-m-4 grid-l-3")
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+          p O sistema foi desenvolvido com uso do <b>CSS Grid Layout</b> e portanto, não é compatível com todos os browsers, principalmente os mais antigos.
+          p No site do #[a(href="https://caniuse.com/#search=grid" target="_blank") Can I use] é possível verificar à compatibilidade.
 
-        div(class="grid-12 grid-s-6 grid-s-6 grid-m-12 grid-l-3")
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+      .grid-block
+        h2.main-content__subtitle Exemplo com 12 colunas padrão, 4 em large, 3 em medium e 2 em extra-small
+        .grid-container
+          div(class="grid-12 grid-xs-6 grid-m-4 grid-l-3")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-12) (grid-xs-6) (grid-m-4) (grid-l-4)]
 
-        .grid-6.grid-s-6.grid-l-4
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?
-        
-        div(class="grid-6 grid-s-6 grid-l-4 grid-m-offset-2 grid-l-offset-5")
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?
-        
-        div(class="grid-12 grid-m-12 grid-l-4 grid-l-offset-2")
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?
+          div(class="grid-12 grid-xs-6 grid-m-4 grid-l-3")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-12) (grid-xs-6) (grid-m-4) (grid-l-4)]
 
-        
+          div(class="grid-12 grid-xs-6 grid-m-4 grid-l-3")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-12) (grid-xs-6) (grid-m-4) (grid-l-4)]
 
-        
+          div(class="grid-12 grid-xs-6 grid-m-12 grid-l-3")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-12) (grid-xs-6) (grid-m-12) (grid-l-4)]
+
+      .grid-block
+        h2.main-content__subtitle Exemplo com 2 colunas padrão, 7 e 5 em small e offset-9 em medium 
+        .grid-container
+          div(class="grid-6 grid-s-7")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-6) (grid-s-7)]
+          
+          div(class="grid-6 grid-s-5 grid-m-offset-9")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-6) (grid-s-5) (grid-m-offset-9)]
+      
+      .grid-block
+        h2.main-content__subtitle Exemplo com offset-6 padrão
+        .grid-container
+          div(class="grid-offset-6")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-offset-6)]
+
+      .grid-block
+        h2.main-content__subtitle Exemplo com 12 colunas padrão e offset-4 em small 
+        .grid-container
+          div(class="grid-12 grid-s-offset-4")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-12) (grid-s-offset-4)]
+
+      .grid-block
+        h2.main-content__subtitle Exemplo com 2 colunas padrão e offset-8 em large 
+        .grid-container
+          div(class="grid-6 grid-l-2")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-6) (grid-l-2)]
+              
+          div(class="grid-6 grid-l-offset-8")
+            .grid-block__content
+              p #[span(class="grid-block__item") (grid-6) (grid-l-offset-8)]
 
     include ../_includes/footer.pug	
 
