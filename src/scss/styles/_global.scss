@@ -106,30 +106,6 @@ pre {
   }
 }
 
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 3rem;
-
-  .grid-4 {
-    grid-column: span 4;
-  }
-
-  .grid-6 {
-    grid-column: span 6;
-  }
-
-  .grid-8 {
-    grid-column: span 8;
-  }
-}
-
 .back-top-button {
   display: flex;
   opacity: 0;
@@ -186,16 +162,6 @@ pre {
       width: 3rem;
       height: 3rem;
       padding: .7rem;
-    }
-  }
-
-  .grid-container {
-    grid-template-columns: 100%;
-
-    .grid-4,
-    .grid-6,
-    .grid-8 {
-      grid-column: 1 / -1;
     }
   }
 }

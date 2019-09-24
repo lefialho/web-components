@@ -1,0 +1,62 @@
+extends ../_components/layout.pug
+include ../_components/mixins/mixins.pug
+
+//- head
+//- ===================================
+append head
+  - var urlCSS = "../css/"
+  include ../_includes/head.pug
+
+//- Content
+//- ===================================
+block content
+  - var selected = 'Grid';	
+  - var urlAncor = '../#'
+  - var urlIndex = '../index.html'
+  - var urlImg = '../img/'
+  - var urlPages = '../pages-components/'; 
+
+  //Main
+  main.main(id="main")
+    include ../_includes/menu.pug	
+
+    .main-content(id="main")
+      h1.main-content__title Grid
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p Acrescentar um <b>data-accordion="group"</b> no elemento <b>pai</b>, um <b>data-accordion="item"</b> no item e um <b> data-accordion="content"</b> no conteúdo relativo ao item. As classes podem ter qualquer nome e serem estilizadas livremente.
+
+      .grid-container
+        div(class="grid-12 grid-xs-6 grid-s-6 grid-m-4 grid-l-3")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+
+        div(class="grid-12 grid-xs-6 grid-s-6 grid-m-4 grid-l-3")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+
+        div(class="grid-12 grid-xs-6 grid-s-6 grid-m-4 grid-l-3")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+
+        div(class="grid-12 grid-xs-6 grid-s-6 grid-m-12 grid-l-3")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, adipisci aut in dolor cumque illo modi cupiditate, nam autem, similique asperiores officiis dolore repellendus quis ea est possimus ratione sed!
+
+        .grid-12.grid-xs-6.grid-l-4
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?
+        
+        div(class="grid-12 grid-xs-6 grid-l-4 grid-m-offset-2 grid-l-offset-5")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?
+        
+        div(class="grid-12 grid-m-12 grid-l-4 grid-l-offset-2")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cum itaque quasi laboriosam perferendis ab quis eveniet quas est possimus tenetur, at nostrum ipsa voluptate dolorum? Dolor voluptates sunt vel?
+
+        
+
+        
+
+    include ../_includes/footer.pug	
+
+  //- scripts
+  //- ===================================
+  prepend scripts
+    - var urlJS = '../js/'
+    include ../_includes/scripts.pug
