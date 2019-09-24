@@ -4,7 +4,7 @@ $gutter: 3rem;
 $l-device: 1200px;
 $m-device: 992px;
 $s-device: 768px;
-$xs-device: 400px;
+$xs-device: 560px;
 
 .container {
   max-width: $l-device;
@@ -109,14 +109,9 @@ $xs-device: 400px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: $xs-device) { 
   .grid-container {
-    grid-template-columns: 100%;
-  }
-
-  @for $i from 1 through $cols {
-    .grid-#{$i} {
-      grid-column: 1 / -1;
-    }
+    grid-gap: $gutter / 2;
   }
 }
+
