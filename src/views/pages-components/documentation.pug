@@ -27,7 +27,7 @@ block content
           div.documentation-block
             h2.main-content__subtitle Arquivos
             p.documentation-block__text Para utilizar o projeto, faça o download dos #[a(href="../components.zip" download) arquivos]. 
-            p.documentation-block__text Insira o arquivo <b>components.css</b> no header do html e <b>default.css</b>, caso deseje utilizar os estilos padrões. Adicionar também o arquivo <b>components.js</b> antes de fechar a tag body no html.
+            p.documentation-block__text Insira o arquivo <b>components.css</b> e <b>grid.css</b> no header do html. Caso deseje utilizar os estilos padrões, acrescente o arquivo <b>default.css</b> . Adicionar também o arquivo <b>components.js</b> antes de fechar a tag body no html.
 
           div.documentation-block
             h2.main-content__subtitle NPM
@@ -37,7 +37,7 @@ block content
           div.documentation-block(id="documetation")
             h2.main-content__subtitle Mais slides na página
             p.documentation-block__text Para adicionar mais de 10 slides na mesma página, <b>clone</b> o repositório no <b>git</b>, faça um <b>npm install</b> e acesse o arquivo <b>main.js</b>. Acrescente novas constantes nos construtores dos slides e modifique os valores de data. 
-            p.documentation-block__text <b>Obs</b>: No HTML os elementos devem ter o mesmo nome das constantes do main.js.
+            p.documentation-block__text <b>Obs</b>: No HTML os elementos devem ter o mesmo valor de <b>data-slide</b> das constantes do main.js.
           
     include ../_includes/footer.pug	
 
