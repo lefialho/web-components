@@ -60,10 +60,12 @@ pre {
 
 .grid-block {
   margin-bottom: 6rem;
+
   &__content {
     border: 1px dotted $darkGray;
     padding: 1rem;
   }
+
   &__item {
     color: $darkBlue;
   }
@@ -167,12 +169,18 @@ pre {
       &__subtitle {
         font-size: 2rem;
       }
-    }
 
-    .back-top-button {
-      width: 3rem;
-      height: 3rem;
-      padding: .7rem;
+      &__text {
+        &.moldure {
+          padding: 3rem;
+        }
+      }
+
+      .back-top-button {
+        width: 3rem;
+        height: 3rem;
+        padding: .7rem;
+      }
     }
   }
 }
