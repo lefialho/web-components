@@ -1,5 +1,6 @@
 // Variables grid 
 $cols: 12;
+$lines: 13;
 $gutter: 3rem;
 $l-device: 1200px;
 $m-device: 992px;
@@ -17,13 +18,6 @@ $xs-device: 560px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: $gutter;
-}
-
-// Offset Calc
-@function grid($col) {
-  $width: (100 / $cols * $col);
-  $result: $width + 0%;
-  @return $result;
 }
 
 // Basic Grid

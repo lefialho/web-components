@@ -4,7 +4,7 @@ export default class DropDown {
   constructor(dropdownMenus, events) {
     this.dropdownMenus = document.querySelectorAll(dropdownMenus);
     if (events === undefined)
-      this.events = ['touchstart', 'click'];
+      this.events = ['click'];
     else
       this.events = events;
     this.activeClass = 'active'
