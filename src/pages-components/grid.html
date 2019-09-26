@@ -47,18 +47,16 @@
         <div class="collapse" data-collapse="group">
           <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
           <div class="main-content__text moldure" data-collapse="content">
-            <p class="space-bottom">Para utilizar o sistema de grid é necessário adicionar as classes grid-<b>numero<small>*</small></b>, grid-xs-<b>numero<small>*</small></b>, grid-s-<b>numero<small>*</small></b>, grid-m-<b>numero<small>*</small></b> e grid-l-<b>numero<small>*</small></b>.</p>
+            <p class="space-bottom">Para utilizar o sistema de <b>grid</b> é necessário acrescentar um elemento pai com a classe <b>grid-container</b> e adicionar aos elementos filhos, as classes grid-<b>numero<small>*</small></b>, grid-xs-<b>numero<small>*</small></b>, grid-s-<b>numero<small>*</small></b>, grid-m-<b>numero<small>*</small></b> e grid-l-<b>numero<small>*</small></b>.</p>
             <p>O <b>número</b> varia de <b>1 até 12</b>, pois foi desenvolvido para comportar até <b>12 colunas</b>.</p>
             <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
-              <li>O valor do <b>grid-</b> corresponde à tela com tamanho até <b>560px</b>;</li>
-              <li>O valor do <b>grid-xs (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
-              <li>O valor do <b>grid-s (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
-              <li>O valor do <b>grid-m (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
-              <li>O valor do <b>grid-l (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
+              <li>O valor do <b>grid-numero (defaul)</b> corresponde à tela com tamanho até <b>560px</b>;</li>
+              <li>O valor do <b>grid-xs-numero (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
+              <li>O valor do <b>grid-s-numero (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
+              <li>O valor do <b>grid-m-numero (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
+              <li>O valor do <b>grid-l-numero (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
             </ul>
             <p class="space-bottom">Para acrescentar uma margem de <b>offset</b>, é necessário adicionar as classes grid-offset-<b>numero<small>*</small></b>, grid-xs-offset-<b>numero<small>*</small></b>, grid-s-offset-<b>numero<small>*</small></b>, grid-m-offset-<b>numero<small>*</small></b> e grid-l-offset-<b>numero<small>*</small></b>. </p>
-            <p>O sistema foi desenvolvido com uso do <b>CSS Grid Layout</b> e portanto, não é compatível com todos os browsers, principalmente os mais antigos.</p>
-            <p>No site do <a href="https://caniuse.com/#search=grid" target="_blank">Can I use</a> é possível verificar à compatibilidade.</p>
           </div>
         </div>
         <div class="grid-block">
@@ -112,16 +110,6 @@
           </div>
         </div>
         <div class="grid-block">
-          <h2 class="main-content__subtitle">Exemplo com 12 colunas padrão e offset-4 em small </h2>
-          <div class="grid-container">
-            <div class="grid-12 grid-s-offset-4">
-              <div class="grid-block__content">
-                <p><span class="grid-block__item">(grid-12) (grid-s-offset-4)</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-block">
           <h2 class="main-content__subtitle">Exemplo com 2 colunas padrão e offset-8 em large </h2>
           <div class="grid-container">
             <div class="grid-6 grid-l-2">
@@ -135,6 +123,217 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo com 12 colunas padrão, 3 em m e offset-6 na coluna do meio <span class="grid-block__item">(nesssa coluna foi adicionado outro grid) </span></h2>
+          <div class="grid-container">
+            <div class="grid-12 grid-m-4">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-12) (grid-m-4)</span></p>
+              </div>
+            </div>
+            <div class="grid-12 grid-m-4">
+              <div class="grid-container">
+                <div class="grid-12 grid-xs-offset-6">
+                  <div class="grid-block__content">
+                    <p><span class="grid-block__item">(grid-12) (grid-l-offset-6)</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-12 grid-m-4">
+              <div class="grid-block__content">
+                <p><span class="grid-block__item">(grid-12) (grid-xs-4)</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 class="main-content__title title-margin">Alinhamento do Grid</h1>
+        <div class="collapse" data-collapse="group">
+          <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
+          <div class="main-content__text moldure" data-collapse="content">
+            <p class="space-bottom">Por padrão, os itens do grid vem configurados com alinhamento ao topo, no entanto é possível alterar esse comportamento adicionando classes no elemento do <b>grid-container</b>;</p>
+            <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
+              <li>Para alinhar os itens ao topo, adicione a classe <b>grid-align-start</b></li>
+              <li>Para alinhar os itens ao centro, adicione a classe <b>grid-align-center</b></li>
+              <li>Para alinhar os itens ao rodapé, adicione a classe <b>grid-align-end</b></li>
+            </ul>
+            <p class="space-bottom">Cada item pode também ser alinhado individualmente no <b>eixo y</b>, adicionando classes ao <b>item do grid</b>;</p>
+            <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
+              <li>Para alinhar o item ao topo, adicione a classe <b>grid-start</b></li>
+              <li>Para alinhar o item ao centro, adicione a classe <b>grid-center</b></li>
+              <li>Para alinhar o item ao rodapé, adicione a classe <b>grid-self-end</b></li>
+            </ul>
+            <p class="space-bottom">É possível ainda alinhar os itens no <b>eixo x</b> com comportamentos diferentes, adicionando um elemento pai com as seguintes classes;</p>
+            <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
+              <li>Para alinhar os itens na esquerda, adicione a classe <b>grid-self-start</b></li>
+              <li>Para alinhar os itens no topo, adicione a classe <b>grid-self-center</b></li>
+              <li>Para alinhar os itens no topo, adicione a classe <b>grid-self-end</b></li>
+            </ul>
+            <p>Nesse exemplo anterior, podem-ser acrescentados quantos elementos filhos forem necessários, desde que comportem no layout</p>
+          </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo no eixo-y ao centro <span class="grid-block__item">(grid-align-center)</span></h2>
+          <div class="grid-container grid-align-center">
+            <div class="grid-12 grid-xs-4">
+              <div class="grid-block__content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-4">
+              <div class="grid-block__content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia ipsum quam autem laborum aliquid rerum error pariatur, in minus voluptas sint maxime, quas, quae quis impedit expedita fugiat maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-4">
+              <div class="grid-block__content">
+                <p>Ut necessitatibus tenetur eligendi alias quis aperiam quia earum facilis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo no eixo-y ao rodapé <span class="grid-block__item">(grid-align-end)</span></h2>
+          <div class="grid-container grid-align-end">
+            <div class="grid-12 grid-xs-4">
+              <div class="grid-block__content">
+                <p>Doloremque itaque nulla eaque tenetur vel, aspernatur minus?</p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-4">
+              <div class="grid-block__content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia ipsum quam autem laborum aliquid rerum error pariatur, in minus voluptas sint maxime, quas, quae quis impedit expedita fugiat maiores.</p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-4">
+              <div class="grid-block__content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo no eixo-y para cada item individualmente</h2>
+          <div class="grid-container">
+            <div class="grid-12 grid-xs-4 grid-self-end">
+              <div class="grid-block__content">
+                <h3 class="grid-block__content-title"><span class="grid-block__item">(grid-self-end)</span></h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-4 grid-self-center">
+              <div class="grid-block__content">
+                <h3 class="grid-block__content-title"><span class="grid-block__item">(grid-self-center)</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia ipsum quam autem laborum aliquid rerum error pariatur, in minus voluptas sint maxime, quas, quae quis impedit expedita fugiat maiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cum vel consequuntur! </p>
+              </div>
+            </div>
+            <div class="grid-12 grid-xs-4 grid-self-start">
+              <div class="grid-block__content">
+                <h3 class="grid-block__content-title"><span class="grid-block__item">(grid-self-start)</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo no eixo-x inicial <span class="grid-block__item">(grid-start)</span></h2>
+          <div class="grid-start">
+            <div class="grid-block__content">item 1</div>
+            <div class="grid-block__content">item 2</div>
+            <div class="grid-block__content">item 3</div>
+            <div class="grid-block__content">item 4</div>
+            <div class="grid-block__content">item 5</div>
+          </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo no eixo-x central <span class="grid-block__item">(grid-center)</span></h2>
+          <div class="grid-center">
+            <div class="grid-block__content">item 1</div>
+            <div class="grid-block__content">item 2</div>
+            <div class="grid-block__content">item 3</div>
+            <div class="grid-block__content">item 4</div>
+            <div class="grid-block__content">item 5</div>
+          </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo no eixo-x, distribuidos em iguais proporções <span class="grid-block__item">(grid-between)</span></h2>
+          <div class="grid-between">
+            <div class="grid-block__content">item 1</div>
+            <div class="grid-block__content">item 2</div>
+            <div class="grid-block__content">item 3</div>
+            <div class="grid-block__content">item 4</div>
+            <div class="grid-block__content">item 5</div>
+          </div>
+        </div>
+        <div class="grid-block">
+          <h2 class="main-content__subtitle">Exemplo no eixo-x, distribuidos em iguais proporções e acrescentado um espaço ao lado de fora <span class="grid-block__item">(grid-evenly)</span></h2>
+          <div class="grid-evenly">
+            <div class="grid-block__content">item 1</div>
+            <div class="grid-block__content">item 2</div>
+            <div class="grid-block__content">item 3</div>
+            <div class="grid-block__content">item 4</div>
+            <div class="grid-block__content">item 5</div>
+          </div>
+        </div>
+        <h1 class="main-content__title title-margin">Grid - Mosaico</h1>
+        <div class="collapse" data-collapse="group">
+          <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
+          <div class="main-content__text moldure" data-collapse="content">
+            <p class="space-bottom">Para utilizar o grid mosaico, é necessário criar um elemento pai com uma classe mosaic-<b>numero<small>*</small></b> e 4 elementos filhos. Existem 4 estilos pré-definidos e cada número de <b>1 a 4</b> corresponde a um estilo diferente.</p>
+            <p class="space-bottom">Se desejar, o mosaico pode ser adicionado conforme o tamanho da tela:
+              <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
+                <li>O valor do <b>mosaic-numero<small>*</small></b> corresponde à tela com tamanho indefinido (padrão);</li>
+                <li>O valor do <b>mosaic-xs-numero<small>*</small> (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
+                <li>O valor do <b>mosaic-s-numero<small>*</small> (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
+                <li>O valor do <b>mosaic-m-numero<small>*</small> (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
+                <li>O valor do <b>mosaic-l-numero<small>*</small> (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="grid-block">
+          <div class="grid-container">
+            <div class="grid-12 grid-l-6">
+              <h2 class="main-content__subtitle">Exemplo de mosaico 1 - default</h2>
+              <ul class="mosaic-1">
+                <li class="grid-block__content"><span class="grid-block__item">item 1</span></li>
+                <li class="grid-block__content"><span class="grid-block__item">item 2</span> </li>
+                <li class="grid-block__content"><span class="grid-block__item">item 3</span> </li>
+                <li class="grid-block__content"><span class="grid-block__item">item 4</span></li>
+              </ul>
+            </div>
+            <div class="grid-12 grid-l-6">
+              <h2 class="main-content__subtitle">Exemplo de mosaico 2 - A partir de 1200px</h2>
+              <ul class="mosaic-l-2">
+                <li class="grid-block__content"><span class="grid-block__item">item 1</span></li>
+                <li class="grid-block__content"><span class="grid-block__item">item 2</span> </li>
+                <li class="grid-block__content"><span class="grid-block__item">item 3</span></li>
+                <li class="grid-block__content"><span class="grid-block__item">item 4</span></li>
+              </ul>
+            </div>
+            <div class="grid-12 grid-l-6">
+              <h2 class="main-content__subtitle">Exemplo de mosaico 3 - A partir de 992px</h2>
+              <ul class="mosaic-m-3">
+                <li class="grid-block__content"><span class="grid-block__item">item 1</span></li>
+                <li class="grid-block__content"><span class="grid-block__item">item 2</span> </li>
+                <li class="grid-block__content"><span class="grid-block__item">item 3</span> </li>
+                <li class="grid-block__content"><span class="grid-block__item">item 4</span> </li>
+              </ul>
+            </div>
+            <div class="grid-12 grid-l-6">
+              <h2 class="main-content__subtitle">Exemplo de mosaico 4 - A partir de 768px</h2>
+              <ul class="mosaic-s-4">
+                <li class="grid-block__content"><span class="grid-block__item">item 1</span></li>
+                <li class="grid-block__content"><span class="grid-block__item">item 2</span> </li>
+                <li class="grid-block__content"><span class="grid-block__item">item 3</span> </li>
+                <li class="grid-block__content"><span class="grid-block__item">item 4</span> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main-content__text moldure">
+          <p class="main-content__text">O sistema de grid foi desenvolvido com uso do <b>CSS Grid Layout</b> e portanto, não é compatível com todos os browsers, principalmente os mais antigos. No site do <a href="https://caniuse.com/#search=grid" target="_blank">Can I use</a> é possível verificar à compatibilidade.</p>
         </div>
       </div>
       <div data-smooth><a class="back-top-button" href="#main" data-button="top-page"><img src="../img/arrow-up.svg" alt=""></a></div>

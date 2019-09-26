@@ -64,6 +64,16 @@ pre {
   &__content {
     border: 1px dotted $darkGray;
     padding: 1rem;
+
+    &-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: $lightBlack;
+    }
+
+    p {
+      color: $darkGray;
+    }
   }
 
   &__item {
