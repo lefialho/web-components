@@ -144,8 +144,12 @@ $xs-device: 560px;
 }
 
 // Grid-mosaic-1
-@mixin mosaic-1 {
+.mosaic {
   display: grid;
+  grid-gap: .5rem;
+}
+
+@mixin mosaic-1 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-gap: .5rem;
@@ -169,7 +173,6 @@ $xs-device: 560px;
 
 // Grid-mosaic-2
 @mixin mosaic-2 {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-gap: .5rem;
@@ -193,7 +196,6 @@ $xs-device: 560px;
 
 // Grid-mosaic-3
 @mixin mosaic-3 {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-gap: .5rem;
@@ -217,7 +219,6 @@ $xs-device: 560px;
 
 // Grid-mosaic-4
 @mixin mosaic-4 {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-gap: .5rem;

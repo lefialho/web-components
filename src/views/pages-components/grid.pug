@@ -87,7 +87,7 @@ block content
               p #[span(class="grid-block__item") (grid-6) (grid-l-offset-8)]
       
       .grid-block
-        h2.main-content__subtitle Exemplo com 12 colunas padrão, 3 em m e offset-6 na coluna do meio #[span(class="grid-block__item") (nesssa coluna foi adicionado outro grid) ]
+        h2.main-content__subtitle Exemplo com 12 colunas padrão, 3 em medium e offset-6 na coluna do meio #[span(class="grid-block__item") (nesssa coluna foi adicionado outro grid) ]
         .grid-container
           div(class="grid-12 grid-m-4")
             .grid-block__content
@@ -103,7 +103,6 @@ block content
             .grid-block__content
               p #[span(class="grid-block__item") (grid-12) (grid-xs-4)]
               
-      
 
       //- Alinhamento do grid
       h1.main-content__title.title-margin Alinhamento do Grid
@@ -221,7 +220,8 @@ block content
       div(class="collapse" data-collapse="group")
         div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
         div.main-content__text.moldure(data-collapse="content")
-          p.space-bottom Para utilizar o grid mosaico, é necessário criar um elemento pai com uma classe mosaic-<b>numero<small>*</small></b> e 4 elementos filhos. Existem 4 estilos pré-definidos e cada número de <b>1 a 4</b> corresponde a um estilo diferente.
+          p.space-bottom Para utilizar o grid mosaico, é necessário adicionar uma classe <b>mosaic</b> e uma outra mosaic-<b>numero<small>*</small></b> no elmento pai. Deve-se ainda, acrescentar mais 4 elementos filhos. 
+          p.space-bottom Existem 4 estilos pré-definidos e cada <b>número</b> de <b>1 a 4</b> corresponde a um estilo diferente.
           p.space-bottom Se desejar, o mosaico pode ser adicionado conforme o tamanho da tela:
            ul.space-bottom(style="list-style: disc; padding-left: 4rem;")
             li O valor do <b>mosaic-numero<small>*</small></b> corresponde à tela com tamanho indefinido (padrão);
@@ -234,7 +234,7 @@ block content
         .grid-container
           div(class="grid-12 grid-l-6")
             h2.main-content__subtitle Exemplo de mosaico 1 - default
-            ul(class="mosaic-1")
+            ul(class="mosaic mosaic-1")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
               li.grid-block__content #[span(class="grid-block__item") item 3] 
@@ -242,7 +242,7 @@ block content
           
           div(class="grid-12 grid-l-6")
             h2.main-content__subtitle Exemplo de mosaico 2 - A partir de 1200px
-            ul(class="mosaic-l-2")
+            ul(class="mosaic mosaic-l-2")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
               li.grid-block__content #[span(class="grid-block__item") item 3]
@@ -250,7 +250,7 @@ block content
 
           div(class="grid-12 grid-l-6")
             h2.main-content__subtitle Exemplo de mosaico 3 - A partir de 992px
-            ul(class="mosaic-m-3")
+            ul(class="mosaic mosaic-m-3")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
               li.grid-block__content #[span(class="grid-block__item") item 3] 
@@ -258,7 +258,7 @@ block content
           
           div(class="grid-12 grid-l-6")
             h2.main-content__subtitle Exemplo de mosaico 4 - A partir de 768px
-            ul(class="mosaic-s-4")
+            ul(class="mosaic mosaic-s-4")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
               li.grid-block__content #[span(class="grid-block__item") item 3] 
