@@ -18,6 +18,9 @@
   }
 
   >* {
+    width: 80vw;
+    max-width: 80rem;
+    margin: 0 2rem;
     flex-shrink: 0;
     overflow: hidden;
   }

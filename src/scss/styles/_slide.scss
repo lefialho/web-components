@@ -1,20 +1,7 @@
-.galery {
-  .slide-center {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
-.slide-wrapper {
-  margin-bottom: 2rem;
-}
 
 .slide {
   >* {
-    width: 80vw;
-    max-width: 80rem;
-    margin: 0 2rem;
     opacity: .8;
     transform: scale(.8);
     transition: .4s;
