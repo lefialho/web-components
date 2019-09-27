@@ -26,17 +26,17 @@ block content
       div(class="collapse" data-collapse="group")
         div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
         div.main-content__text.moldure(data-collapse="content")
-          p.space-bottom Para utilizar o sistema de <b>grid</b> é necessário acrescentar um elemento pai com a classe <b>grid-container</b> e adicionar aos elementos filhos, as classes grid-<b>numero<small>*</small></b>, grid-xs-<b>numero<small>*</small></b>, grid-s-<b>numero<small>*</small></b>, grid-m-<b>numero<small>*</small></b> e grid-l-<b>numero<small>*</small></b>.
+          p.space-bottom Para utilizar o sistema de <b>grid</b> é necessário acrescentar um elemento pai com a classe <b>grid-container</b> e adicionar aos elementos filhos, as classes grid-<b>numero<small>*</small></b> ou grid-xs-<b>numero<small>*</small></b> ou grid-s-<b>numero<small>*</small></b>ou grid-m-<b>numero<small>*</small></b> ou grid-l-<b>numero<small>*</small></b>.
           p O <b>número</b> varia de <b>1 até 12</b>, pois foi desenvolvido para comportar até <b>12 colunas</b>.
 
           ul.space-bottom(style="list-style: disc; padding-left: 4rem;")
-            li O valor do <b>grid-numero (defaul)</b> corresponde à tela com tamanho até <b>560px</b>;
+            li O valor do <b>grid-numero (default)</b> corresponde à tela com tamanho até <b>560px</b>;
             li O valor do <b>grid-xs-numero (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;
             li O valor do <b>grid-s-numero (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;
             li O valor do <b>grid-m-numero (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;
             li O valor do <b>grid-l-numero (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;
 
-          p.space-bottom Para acrescentar uma margem de <b>offset</b>, é necessário adicionar as classes grid-offset-<b>numero<small>*</small></b>, grid-xs-offset-<b>numero<small>*</small></b>, grid-s-offset-<b>numero<small>*</small></b>, grid-m-offset-<b>numero<small>*</small></b> e grid-l-offset-<b>numero<small>*</small></b>. 
+          p.space-bottom Para acrescentar uma margem de <b>offset</b>, é necessário adicionar as classes grid-offset-<b>numero<small>*</small></b> ou grid-xs-offset-<b>numero<small>*</small></b> ou grid-s-offset-<b>numero<small>*</small></b> ou grid-m-offset-<b>numero<small>*</small></b> ou grid-l-offset-<b>numero<small>*</small></b> nos elementos filhos.
 
       .grid-block
         h2.main-content__subtitle Exemplo com 12 colunas padrão, 4 em large, 3 em medium e 2 em extra-small
@@ -76,7 +76,7 @@ block content
               p #[span(class="grid-block__item") (grid-offset-6)]
 
       .grid-block
-        h2.main-content__subtitle Exemplo com 2 colunas padrão e offset-8 em large 
+        h2.main-content__subtitle Exemplo com 2 colunas padrão, 2 em large e offset-8 em large 
         .grid-container
           div(class="grid-6 grid-l-2")
             .grid-block__content
@@ -101,7 +101,7 @@ block content
 
           div(class="grid-12 grid-m-4")
             .grid-block__content
-              p #[span(class="grid-block__item") (grid-12) (grid-xs-4)]
+              p #[span(class="grid-block__item") (grid-12) (grid-m-4)]
               
 
       //- Alinhamento do grid
@@ -109,25 +109,27 @@ block content
       div(class="collapse" data-collapse="group")
         div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
         div.main-content__text.moldure(data-collapse="content")
-          p.space-bottom Por padrão, os itens do grid vem configurados com alinhamento ao topo, no entanto é possível alterar esse comportamento adicionando classes no elemento do <b>grid-container</b>;
+          p.space-bottom Por padrão, os itens do grid vem configurados com alinhamento ao topo, no entanto é possível alterar esse comportamento adicionando classes no elemento pai <b>grid-container</b>:
           ul.space-bottom(style="list-style: disc; padding-left: 4rem;")
             li Para alinhar os itens ao topo, adicione a classe <b>grid-align-start</b>
             li Para alinhar os itens ao centro, adicione a classe <b>grid-align-center</b>
             li Para alinhar os itens ao rodapé, adicione a classe <b>grid-align-end</b>
 
-          p.space-bottom Cada item pode também ser alinhado individualmente no <b>eixo y</b>, adicionando classes ao <b>item do grid</b>;
+          p.space-bottom Cada item pode também ser alinhado individualmente no <b>eixo y</b>, adicionando classes aos elementos <b>filhos  do grid</b>:
           ul.space-bottom(style="list-style: disc; padding-left: 4rem;")
-            li Para alinhar o item ao topo, adicione a classe <b>grid-start</b>
-            li Para alinhar o item ao centro, adicione a classe <b>grid-center</b>
+            li Para alinhar o item ao topo, adicione a classe <b>grid-self-start</b>
+            li Para alinhar o item ao centro, adicione a classe <b>grid-self-center</b>
             li Para alinhar o item ao rodapé, adicione a classe <b>grid-self-end</b>
 
-          p.space-bottom É possível ainda alinhar os itens no <b>eixo x</b> com comportamentos diferentes, adicionando um elemento pai com as seguintes classes;
+          p.space-bottom É possível ainda alinhar os itens no <b>eixo x</b>, criando um elemento pai com as seguintes classes:
           ul.space-bottom(style="list-style: disc; padding-left: 4rem;")
-            li Para alinhar os itens na esquerda, adicione a classe <b>grid-self-start</b>
-            li Para alinhar os itens no topo, adicione a classe <b>grid-self-center</b>
-            li Para alinhar os itens no topo, adicione a classe <b>grid-self-end</b>
+            li Para alinhar os itens na esquerda, adicione a classe <b>grid-start</b>
+            li Para alinhar os itens no centro, adicione a classe <b>grid-center</b>
+            li Para alinhar os itens na direita, adicione a classe <b>grid-end</b>
+            li Para distribuir os itens em iguais proporções, adicione a classe <b>grid-between</b>
+            li Para distribuir os itens em iguais proporções e acrescentar um espaço em volta deles, adicione a classe <b>grid-evenly</b>
 
-          p Nesse exemplo anterior, podem-ser acrescentados quantos elementos filhos forem necessários, desde que comportem no layout
+          p Nesse exemplo anterior, podem-ser acrescentados quantos elementos filhos forem necessários, desde que comportem no tamanho do layout.
 
 
       .grid-block
@@ -220,8 +222,7 @@ block content
       div(class="collapse" data-collapse="group")
         div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
         div.main-content__text.moldure(data-collapse="content")
-          p.space-bottom Para utilizar o grid mosaico, é necessário adicionar uma classe <b>mosaic</b> e uma outra mosaic-<b>numero<small>*</small></b> no elmento pai. Deve-se ainda, acrescentar mais 4 elementos filhos. 
-          p.space-bottom Existem 4 estilos pré-definidos e cada <b>número</b> de <b>1 a 4</b> corresponde a um estilo diferente.
+          p.space-bottom Para utilizar o grid mosaico, é necessário criar um elemento pai com uma classe <b>mosaic</b> e uma outra mosaic-<b>numero<small>*</small></b>. Deve-se ainda, acrescentar mais <b>4 elementos filhos</b>. Existem 4 estilos pré-definidos de mosaico e cada <b>número</b> de <b>1 a 4</b> corresponde a um estilo diferente.
           p.space-bottom Se desejar, o mosaico pode ser adicionado conforme o tamanho da tela:
            ul.space-bottom(style="list-style: disc; padding-left: 4rem;")
             li O valor do <b>mosaic-numero<small>*</small></b> corresponde à tela com tamanho indefinido (padrão);
@@ -233,7 +234,7 @@ block content
       .grid-block
         .grid-container
           div(class="grid-12 grid-l-6")
-            h2.main-content__subtitle Exemplo de mosaico 1 - default
+            h2.main-content__subtitle Exemplo de mosaico 1 - default #[span(class="grid-block__item") (mosaic mosaic-1)]
             ul(class="mosaic mosaic-1")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
@@ -241,7 +242,7 @@ block content
               li.grid-block__content #[span(class="grid-block__item") item 4]
           
           div(class="grid-12 grid-l-6")
-            h2.main-content__subtitle Exemplo de mosaico 2 - A partir de 1200px
+            h2.main-content__subtitle Exemplo de mosaico 2 - A partir de 1200px #[span(class="grid-block__item") (mosaic mosaic-l-2)]
             ul(class="mosaic mosaic-l-2")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
@@ -249,7 +250,7 @@ block content
               li.grid-block__content #[span(class="grid-block__item") item 4]
 
           div(class="grid-12 grid-l-6")
-            h2.main-content__subtitle Exemplo de mosaico 3 - A partir de 992px
+            h2.main-content__subtitle Exemplo de mosaico 3 - A partir de 992px #[span(class="grid-block__item") (mosaic mosaic-m-3)]
             ul(class="mosaic mosaic-m-3")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
@@ -257,7 +258,7 @@ block content
               li.grid-block__content #[span(class="grid-block__item") item 4] 
           
           div(class="grid-12 grid-l-6")
-            h2.main-content__subtitle Exemplo de mosaico 4 - A partir de 768px
+            h2.main-content__subtitle Exemplo de mosaico 4 - A partir de 768px #[span(class="grid-block__item") (mosaic mosaic-s-4)]
             ul(class="mosaic mosaic-s-4")
               li.grid-block__content #[span(class="grid-block__item") item 1]
               li.grid-block__content #[span(class="grid-block__item") item 2] 
