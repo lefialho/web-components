@@ -130,7 +130,11 @@
     &__item {
       flex: 0 0 12rem;
       a {
-        padding: 3rem;
+        padding: 2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
       }
 
       figure img {
