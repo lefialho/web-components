@@ -17,7 +17,6 @@
     "gulp-babel": "^8.0.0",
     "gulp-better-rollup": "^4.0.1",
     "gulp-cache": "^0.4.6",
-    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.3.0",
@@ -28,9 +27,7 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "run-sequence": "^1.2.2"
-  },
-  "dependencies": {
+    "run-sequence": "^1.2.2",
     "clipboard": "^2.0.4",
     "gulp-uglify": "^3.0.2"
   }

@@ -3,7 +3,6 @@ const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
-// const clean = require('gulp-clean');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify')
@@ -54,13 +53,6 @@ gulp.task('sass', function () {
       stream: true
     }))
 });
-
-// gulp.task('clean-scripts', function () {
-//   return gulp.src('src/js/scripts.min.js', {
-//       read: false
-//     })
-//     .pipe(clean())
-// });
 
 gulp.task('export-js', function () {
   return gulp.src('src/js/components/main.js')
