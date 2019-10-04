@@ -1,41 +1,12 @@
 /* Tooltip */
 .tooltip {
   color: $blue;
-  cursor: pointer;
-  position: relative;
-  z-index: 555;
 
   &-content {
-    visibility: hidden;
-    position: absolute;
-    z-index: 200;
-    bottom: calc(100% + 1.5rem);
-    left: 2rem;
-    width: 24rem;
-    padding: 0.9375rem;
-    border-radius: .5rem;
-    transition: transform 0.3s, opacity 0.3s;
-    transform: translate3d(0, 3rem, 0);
-    opacity: 0;
-    height: 0px;
-    pointer-events: none;
     font-size: 1.6rem;
     line-height: 1.55;
     letter-spacing: -.01rem;
     font-style: italic;
-    z-index: 999;
-
-    &::before {
-      content: "";
-      width: 2rem;
-      height: 2rem;
-      display: block;
-      position: absolute;
-      transform: rotate(45deg);
-      border-radius: 5px 0 0 0;
-      bottom: -10px;
-      left: 2rem;
-    }
   }
 
   .tooltip-content {
@@ -46,19 +17,7 @@
       background: $lightBlack;
     }
   }
-
-  &:hover {
-    .tooltip-content {
-      visibility: visible;
-      opacity: .9;
-      height: auto;
-      -webkit-transform: translate3d(0, 0px, 0);
-      transform: translate3d(0, 0px, 0);
-    }
-  }
 }
-
-
 
 /* Popover */
 .popover {
@@ -66,29 +25,14 @@
   position: relative;
 
   &-content {
-    display: none;
     background: $lightGray;
     color: $lightBlack;
-    padding: 2rem;
-    border-radius: .5rem;
     font-size: 1.6rem;
     line-height: 1.55;
     letter-spacing: -.01rem;
-    position: absolute;
-    top: calc(100% + 1.5rem);
-    width: 30rem;
-    z-index: 999;
+    
   
     &::before {
-      content: "";
-      width: 2rem;
-      height: 2rem;
-      display: block;
-      position: absolute;
-      transform: rotate(45deg);
-      border-radius: 5px 0 0 0;
-      top: -10px;
-      left: 2rem;
       background: $lightGray;
     }
   }
