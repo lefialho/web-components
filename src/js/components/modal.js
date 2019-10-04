@@ -1,8 +1,9 @@
 export default class Modal {
-  constructor(openButton, closeButton, containerModal) {
-    this.openButton = document.querySelectorAll(openButton);
-    this.closeButton = document.querySelectorAll(closeButton);
+  constructor(openModalButton, closeModalButton, containerModal) {
+    this.openModalButton = document.querySelectorAll(openModalButton);
+    this.closeModalButton = document.querySelectorAll(closeModalButton);
     this.containerModal = document.querySelectorAll(containerModal);
+    this.body = document.querySelector('body');
     this.activeClass = 'active';
 
     this.openModal = this.openModal.bind(this);
@@ -17,12 +18,16 @@ export default class Modal {
     thisModal.forEach((item) => {
       item.classList.add(this.activeClass)
     })
+
+    this.body.classList.add('has-modal');
   }
 
   closeModal() {
     this.containerModal.forEach((item) => {
       item.classList.remove(this.activeClass)
     })
+
+    this.body.classList.remove('has-modal');
   }
 
   clickOutsideModal(modal) {
@@ -32,10 +37,10 @@ export default class Modal {
   }
 
   addModalEvents() {
-    this.openButton.forEach((button) => {
+    this.openModalButton.forEach((button) => {
       button.addEventListener('click', this.openModal);
     })
-    this.closeButton.forEach((button) => {
+    this.closeModalButton.forEach((button) => {
       button.addEventListener('click', this.closeModal)
     })
     this.containerModal.forEach((modal) => {
@@ -44,7 +49,7 @@ export default class Modal {
   }
 
   init() {
-    if (this.openButton.length && this.closeButton.length && this.containerModal.length) {
+    if (this.openModalButton.length && this.closeModalButton.length && this.containerModal.length) {
       this.addModalEvents();
     }
     return this;

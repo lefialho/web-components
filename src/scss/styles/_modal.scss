@@ -12,17 +12,13 @@
   z-index: 9999;
   padding: 0 4rem;
 
-  &.active {
-    display: flex;
-  }
-
   &-container {
     background: white;
     box-shadow: 0 0 0px 10px white;
     position: relative;
     width: 80vw;
     animation: modal .3s forwards;
-    margin: 0 auto;
+    margin: 6rem auto;
     width: 100%;
     border: 2px solid $gray;
 
@@ -101,8 +97,18 @@
   }
 
   &-wrapper {
-    overflow-y: auto;
-    max-height: 60rem;
+    // overflow-y: auto;
+    // max-height: 60rem;
     padding: 4rem;
+  }
+}
+
+.modal-open {
+  display: flex;
+  flex-direction: column;
+
+  .btn-modal {
+    align-self: flex-start;
+    @include btn;
   }
 }

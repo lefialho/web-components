@@ -2,12 +2,14 @@
   cursor: pointer;
 }
 
-.modal-open {
-  display: flex;
-  flex-direction: column;
+.has-modal {
+  overflow: hidden;
+}
 
-  .btn-modal {
-    align-self: flex-start;
-    @include btn;
+.modal { 
+  overflow-y: auto;
+
+  &.active {
+    display: block;
   }
 }
