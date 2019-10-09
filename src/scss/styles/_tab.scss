@@ -4,12 +4,10 @@
   
   &-nav {
     overflow-x: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     ul {
-      border-bottom-color: #dbdbdb;
-      border-bottom-style: solid;
-      border-bottom-width: 1px;
+      border-bottom: 1px solid $ultraLightGray;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -42,7 +40,7 @@
   }
 
   &-content {
-    padding: 0 18px;
+    padding: 0 1.8rem;
     color: $darkGray;
   }
 }

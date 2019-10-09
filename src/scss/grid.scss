@@ -76,7 +76,7 @@ $xs-device: 560px;
 // Grid generator
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(12, auto);
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: $gutter;
 }
 

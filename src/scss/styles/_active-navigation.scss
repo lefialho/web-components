@@ -1,6 +1,6 @@
+// Horizontal menu
 .activate-menu {
   background: $blue;
-  position: relative;
   z-index: 150;
   position: sticky;
   top: 0;
@@ -18,8 +18,9 @@
         color: white;
         @include transition;
         white-space: nowrap;
-  
-        &:hover, &.active {
+
+        &:hover,
+        &.active {
           background-color: $lightBlue;
         }
       }
@@ -27,12 +28,99 @@
   }
 }
 
-.activate-content  {
+
+// Vertical Menu
+.vertical-menu {
+  padding: 2rem;
+  background: $blue;
+  height: 100%;
+  width: 6rem;
+  z-index: 999;
+  transition: .3s ease;
+
+  &.active {
+    width: 15rem;
+  }
+
+  &__list {
+    position: sticky;
+    top: 2rem;
+
+    .vertical-menu__item:last-child {
+      .vertical-menu__link::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    color: black;
+    @include transition;
+    white-space: nowrap;
+    min-width: 100px;
+    @include transition;
+    position: relative;
+
+    &:hover,
+    &.active {
+      &::before {
+        background-color: $lightBlue;
+      }
+    }
+
+    &:hover .vertical-menu__text {
+      color: black;
+    }
+
+    &::before {
+      content: '';
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $lightBlack;
+      border: 2px solid $lightBlack;
+      border-radius: 50%;
+      margin-right: 1rem;
+      position: relative;
+      z-index: 50;
+      opacity: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 2px;
+      background-color: $lightBlack;
+      left: .7rem;
+      top: 26px;
+    }
+
+    .vertical-menu__text {
+      color: $lightBlack;
+      font-weight: 700;
+      opacity: 0;
+      padding: .8rem;
+      min-width: 85px;
+      border-bottom: 1px solid;
+    }
+
+    &.show {
+      span {
+        @include transition;
+        opacity: 1;
+        animation: show-right .3s ease-in-out forwards;
+      }
+    }
+  }
+}
+
+.activate-content {
   padding: 8rem;
   margin: 8rem 0;
   border: 1px solid $lightGray;
 }
-
 
 @media (max-width: 768px) {
   .activate-content {

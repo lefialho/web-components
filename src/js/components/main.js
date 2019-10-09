@@ -8,6 +8,7 @@ import ScrollAnimation from './scroll-animation.js';
 import PopOver from './popover.js';
 import SmoothScroll from './smooth-scroll.js';
 import ActivateNavigation from './active-navigation.js';
+import VerticalMenuNavigation from './vertical-navigation.js';
 import SlidebackTopButton from './back-top.js';
 import SlideNav from './slide.js';
 
@@ -44,6 +45,9 @@ smoothScroll.init();
 
 const activateNavigation = new ActivateNavigation('[data-nav="active-nav"]', '[data-activate="content"]');
 activateNavigation.init();
+
+const verticalMenuNavigation = new VerticalMenuNavigation('[data-vertical-menu]', '[data-nav="vertical-menu"]', '[data-topic]');
+verticalMenuNavigation.init();
 
 const topButton = new SlidebackTopButton('[data-button="top-page"]');
 topButton.init();
