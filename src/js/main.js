@@ -463,7 +463,7 @@
 
   }
 
-  class VerticalMenuNavigation {
+  class VerticalActiveNavigation {
     constructor(verticalMenu, navMenu, topics, events) {
       this.verticalMenu = document.querySelector(verticalMenu);
       this.navMenu = document.querySelector(navMenu);
@@ -833,7 +833,7 @@
   smoothScroll.init();
   const activateNavigation = new ActivateNavigation('[data-nav="active-nav"]', '[data-activate="content"]');
   activateNavigation.init();
-  const verticalMenuNavigation = new VerticalMenuNavigation('[data-vertical-menu]', '[data-nav="vertical-menu"]', '[data-topic]');
+  const verticalMenuNavigation = new VerticalActiveNavigation('[data-vertical-menu]', '[data-nav="vertical-menu"]', '[data-topic]');
   verticalMenuNavigation.init();
   const topButton = new backTopButton('[data-button="top-page"]');
   topButton.init(); // Slides

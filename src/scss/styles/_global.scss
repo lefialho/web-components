@@ -31,6 +31,7 @@ a {
 
 .block-code {
   margin-top: 6rem;
+  margin-bottom: 6rem;
 
   .code {
     display: flex;
@@ -91,7 +92,7 @@ pre {
 
     &__title {
       font-size: 4rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       color: $lightBlack;
 
       &::after {

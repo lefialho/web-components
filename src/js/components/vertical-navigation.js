@@ -1,6 +1,6 @@
 import debounce from './debounce.js';
 
-export default class VerticalMenuNavigation {
+export default class VerticalActiveNavigation {
 	constructor(verticalMenu, navMenu, topics, events) {
 		this.verticalMenu = document.querySelector(verticalMenu);
 		this.navMenu = document.querySelector(navMenu);

@@ -1,6 +1,6 @@
 // Horizontal menu
 .activate-menu {
-  background: $blue;
+  background: $ultraLightGray;
   z-index: 150;
   position: sticky;
   top: 0;
@@ -15,24 +15,24 @@
         padding: 1rem;
         text-decoration: none;
         letter-spacing: .1rem;
-        color: white;
+        color: $lightBlack;
         @include transition;
         white-space: nowrap;
 
         &:hover,
         &.active {
-          background-color: $lightBlue;
+          background-color: $blue;
+          color: white;
         }
       }
     }
   }
 }
 
-
 // Vertical Menu
 .vertical-menu {
   padding: 2rem;
-  background: $blue;
+  background: $ultraLightGray;
   height: 100%;
   width: 5.6rem;
   z-index: 999;
@@ -70,12 +70,12 @@
     &:hover,
     &.active {
       &::before {
-        background-color: $lightBlue;
+        background-color: $blue;
       }
     }
 
     &:hover .vertical-menu__text {
-      color: black;
+      color: $blue;
     }
 
     &::before {
@@ -122,7 +122,7 @@
 
 .activate-content {
   padding: 8rem;
-  margin: 8rem 0;
+  margin-top: 8rem;
   border: 1px solid $lightGray;
 }
 

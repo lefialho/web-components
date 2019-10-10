@@ -40,7 +40,7 @@ block content
           </nav>
 
           <div class="tab-content active" id="tab-one" data-tab="content">
-            <nav class="activate-menu" data-smooth>
+            <nav class="activate-menu">
               <ul class="activate-menu__list" data-nav="active-nav"></ul>
             </nav>
 
@@ -53,13 +53,28 @@ block content
             section.activate-content(data-activate="content" id="section03" aria-label="Seção 03")
               p.main-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?
 
-                p.main-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?
+              p.main-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?
 
             section.activate-content(data-activate="content" id="section04" aria-label="Seção 04")
               p.main-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem?
 
             section.activate-content(data-activate="content" id="section05" aria-label="Seção 05")
               p.main-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nihil, minus, dolorem voluptatibus libero nulla placeat voluptatum eius suscipit consequuntur molestiae fugit at est culpa esse rerum quam, voluptatem nostrum.Iure saepe, eius doloribus non porro reprehenderit veritatis hic veniam ad quidem. Perspiciatis accusantium maiores aliquid. Non voluptates vero, mollitia placeat sit officia minus tempore expedita nostrum cumque repellendus aliquam.
+            
+            .block-code
+              h2.main-content__subtitle HTML Exemplo - Estilo Horizontal
+              .code
+                button(class="btn-copy" data-clipboard-target="#html-code")
+                  img(src="../img/clippy.svg" alt="Copy Simbol")
+                pre
+                  code(id="html-code")
+                    |  &lt;nav class=&quot;activate-menu&quot; data-smooth&gt;
+                    |    &lt;ul class=&quot;activate-menu__list&quot; data-nav=&quot;active-nav&quot;&gt;&lt;/ul&gt;
+                    |  &lt;/nav&gt;
+
+                    |  &lt;section class=&quot;activate-content&quot; data-activate=&quot;content&quot; id=&quot;section01&quot; aria-label=&quot; Seção 01&quot;&gt;
+                    |    &lt;p&gt;Conteúdo aqui&lt;/p&gt;
+                    |  &lt;/section&gt
           </div>
 
           <div class="tab-content" id="tab-two" data-tab="content">
@@ -71,27 +86,31 @@ block content
               .grid-11
                 section.activate-content(data-topic id="topic01" aria-label="Seção 1")
                   p.main-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos. Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nihil, minus, dolorem voluptatibus libero nulla placeat voluptatum eius suscipit consequuntur molestiae fugit at est culpa esse rerum quam, voluptatem nostrum.Iure saepe, eius doloribus non porro reprehenderit veritatis hic veniam ad quidem. Perspiciatis accusantium maiores aliquid. Non voluptates vero, mollitia placeat sit officia minus tempore expedita nostrum cumque repellendus aliquam.
+                  
                 section.activate-content(data-topic id="topic02" aria-label="Seção 2")
                   p.main-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure corporis repudiandae, voluptatum consectetur illo assumenda aut, aliquam nobis laboriosam dolorum sapiente iusto. Corporis, magnam. Placeat nisi tenetur alias corrupti adipisci!Aliquid cum esse aliquam veritatis nulla, est hic voluptatibus natus ratione quod soluta. Natus, a omnis eum sequi odio, facilis quidem deserunt, quas dolor voluptatem similique dicta delectus quos.
+
                 section.activate-content(data-topic id="topic03" aria-label="Seção 3")
                   p.main-content__text Sequi?Culpa sequi soluta deleniti sint pariatur architecto ad ex illum ea quibusdam veniam aliquam, molestiae quis, odit veritatis dolore hic adipisci! Architecto est atque animi possimus distinctio iure deleniti rem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nihil, minus, dolorem voluptatibus libero nulla placeat voluptatum eius suscipit consequuntur molestiae fugit at est culpa esse rerum quam, voluptatem nostrum.Iure saepe, eius doloribus non porro reprehenderit veritatis hic veniam ad quidem. Perspiciatis accusantium maiores aliquid. Non voluptates vero, mollitia placeat sit officia minus tempore expedita nostrum cumque repellendus aliquam.
+
+            .block-code
+              h2.main-content__subtitle HTML Exemplo - Estilo Vertical
+              .code
+                button(class="btn-copy" data-clipboard-target="#html-code")
+                  img(src="../img/clippy.svg" alt="Copy Simbol")
+                pre
+                  code(id="html-code")
+                    |  &lt;nav class=&quot;activate-menu&quot; data-smooth&gt;
+                    |    &lt;ul class=&quot;activate-menu__list&quot; data-nav=&quot;active-nav&quot;&gt;&lt;/ul&gt;
+                    |  &lt;/nav&gt;
+
+                    |  &lt;section class=&quot;activate-content&quot; data-activate=&quot;content&quot; id=&quot;section01&quot; aria-label=&quot; Seção 01&quot;&gt;
+                    |    &lt;p&gt;Conteúdo aqui&lt;/p&gt;
+                    |  &lt;/section&gt
           </div>
         </div>
       
-      .block-code
-        h2.main-content__subtitle HTML Exemplo
-        .code
-          button(class="btn-copy" data-clipboard-target="#html-code")
-            img(src="../img/clippy.svg" alt="Copy Simbol")
-          pre
-            code(id="html-code")
-              |  &lt;nav class=&quot;activate-menu&quot; data-smooth&gt;
-              |    &lt;ul class=&quot;activate-menu__list&quot; data-nav=&quot;active-nav&quot;&gt;&lt;/ul&gt;
-              |  &lt;/nav&gt;
-
-              |  &lt;section class=&quot;activate-content&quot; data-activate=&quot;content&quot; id=&quot;section01&quot; aria-label=&quot; Seção 01&quot;&gt;
-              |    &lt;p&gt;Conteúdo aqui&lt;/p&gt;
-              |  &lt;/section&gt
+      
 
     include ../_includes/footer.pug
 
