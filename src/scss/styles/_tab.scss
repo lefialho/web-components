@@ -15,6 +15,7 @@
 
         &.active a {
           border-bottom-color: $blue;
+          border-bottom: 2px solid;
           color: $blue;
         }
       }

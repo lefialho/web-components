@@ -47,14 +47,14 @@
         <div class="collapse" data-collapse="group">
           <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
           <div class="main-content__text moldure" data-collapse="content">
-            <p class="space-bottom">Para utilizar o sistema de <b>grid</b> é necessário acrescentar um elemento pai com a classe <b>grid-container</b> e adicionar aos elementos filhos, as classes grid-<b>numero<small>*</small></b> ou grid-xs-<b>numero<small>*</small></b> ou grid-s-<b>numero<small>*</small></b>ou grid-m-<b>numero<small>*</small></b> ou grid-l-<b>numero<small>*</small></b>.</p>
-            <p>O <b>número</b> varia de <b>1 até 12</b>, pois foi desenvolvido para comportar até <b>12 colunas</b>.</p>
+            <p class="space-bottom">Para utilizar o sistema de <b>grid</b> é necessário acrescentar um elemento <b>pai</b> com a classe <b>grid-container</b> e adicionar aos elementos filhos, as classes grid-<b>numero<small>*</small></b> ou grid-xs-<b>numero<small>*</small></b> ou grid-s-<b>numero<small>*</small></b> ou grid-m-<b>numero<small>*</small></b> ou grid-l-<b>numero<small>*</small></b>.</p>
+            <p>O <b>número<small>*</small></b> varia de <b>1 até 12</b>, pois foi desenvolvido para comportar até <b>12 colunas</b>.</p>
             <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
-              <li>O valor do <b>grid-numero (default)</b> corresponde à tela com tamanho até <b>560px</b>;</li>
-              <li>O valor do <b>grid-xs-numero (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
-              <li>O valor do <b>grid-s-numero (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
-              <li>O valor do <b>grid-m-numero (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
-              <li>O valor do <b>grid-l-numero (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
+              <li>O valor do <b>grid-numero<small>*</small> (default)</b> corresponde à tela com tamanho até <b>560px</b>;</li>
+              <li>O valor do <b>grid-xs-numero<small>*</small> (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
+              <li>O valor do <b>grid-s-numero<small>*</small> (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
+              <li>O valor do <b>grid-m-numero<small>*</small> (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
+              <li>O valor do <b>grid-l-numero<small>*</small> (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
             </ul>
             <p class="space-bottom">Para acrescentar uma margem de <b>offset</b>, é necessário adicionar as classes grid-offset-<b>numero<small>*</small></b> ou grid-xs-offset-<b>numero<small>*</small></b> ou grid-s-offset-<b>numero<small>*</small></b> ou grid-m-offset-<b>numero<small>*</small></b> ou grid-l-offset-<b>numero<small>*</small></b> nos elementos filhos.</p>
           </div>
@@ -164,7 +164,7 @@
               <li>Para alinhar o item ao centro, adicione a classe <b>grid-self-center</b></li>
               <li>Para alinhar o item ao rodapé, adicione a classe <b>grid-self-end</b></li>
             </ul>
-            <p class="space-bottom">É possível ainda alinhar os itens no <b>eixo x</b>, criando um elemento pai com as seguintes classes:</p>
+            <p class="space-bottom">É possível ainda alinhar os itens no <b>eixo x</b>, criando um elemento <b>pai</b> com as seguintes classes:</p>
             <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
               <li>Para alinhar os itens na esquerda, adicione a classe <b>grid-start</b></li>
               <li>Para alinhar os itens no centro, adicione a classe <b>grid-center</b></li>
@@ -282,16 +282,14 @@
         <div class="collapse" data-collapse="group">
           <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
           <div class="main-content__text moldure" data-collapse="content">
-            <p class="space-bottom">Para utilizar o grid mosaico, é necessário criar um elemento pai com uma classe <b>mosaic</b> e uma outra mosaic-<b>numero<small>*</small></b>. Deve-se ainda, acrescentar mais <b>4 elementos filhos</b>. Existem 4 estilos pré-definidos de mosaico e cada <b>número</b> de <b>1 a 4</b> corresponde a um estilo diferente.</p>
-            <p class="space-bottom">Se desejar, o mosaico pode ser adicionado conforme o tamanho da tela:
-              <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;">
-                <li>O valor do <b>mosaic-numero<small>*</small></b> corresponde à tela com tamanho indefinido (padrão);</li>
-                <li>O valor do <b>mosaic-xs-numero<small>*</small> (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
-                <li>O valor do <b>mosaic-s-numero<small>*</small> (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
-                <li>O valor do <b>mosaic-m-numero<small>*</small> (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
-                <li>O valor do <b>mosaic-l-numero<small>*</small> (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
-              </ul>
-            </p>
+            <p class="space-bottom">Para utilizar o grid mosaico, é necessário criar um elemento <b>pai</b> com uma classe <b>mosaic</b> e outra classe mosaic-<b>numero<small>*</small></b>. Deve-se ainda, acrescentar mais <b>4 elementos filhos</b>. Existem 4 estilos pré-definidos de mosaico e cada <b>número</b> de <b>1 a 4</b> corresponde a um estilo diferente.</p>
+            <p class="space-bottom">Se desejar, o mosaico pode ser adicionado conforme o tamanho da tela:</p>
+            <ul class="space-bottom" style="list-style: disc; padding-left: 4rem;"></ul>
+            <li>O valor do <b>mosaic-numero<small>*</small></b> corresponde à tela com tamanho indefinido (padrão);</li>
+            <li>O valor do <b>mosaic-xs-numero<small>*</small> (extra-small)</b> corresponde à tela com tamanho mínimo de <b>560px</b>;</li>
+            <li>O valor do <b>mosaic-s-numero<small>*</small> (small)</b> corresponde à tela com tamanho mínimo <b>de 768px</b>;</li>
+            <li>O valor do <b>mosaic-m-numero<small>*</small> (medium)</b> corresponde à tela com tamanho mínimo de <b>992px</b>;</li>
+            <li>O valor do <b>mosaic-l-numero<small>*</small> (large)</b> corresponde à tela com tamanho mínimo de <b>1200px</b>;</li>
           </div>
         </div>
         <div class="grid-block">
@@ -335,7 +333,7 @@
           </div>
         </div>
         <div class="main-content__text moldure">
-          <p class="main-content__text">O sistema de grid foi desenvolvido com uso do <b>CSS Grid Layout</b> e portanto, não é compatível com todos os browsers, principalmente os mais antigos. No site do <a href="https://caniuse.com/#search=grid" target="_blank">Can I use</a> é possível verificar à compatibilidade.</p>
+          <p>O sistema de grid foi desenvolvido com uso do <b>CSS Grid Layout</b> e portanto, não é compatível com todos os browsers, principalmente os mais antigos. No site do <a href="https://caniuse.com/#search=grid" target="_blank">Can I use</a> é possível verificar à compatibilidade.</p>
         </div>
       </div>
       <div data-smooth><a class="back-top-button" href="#main" data-button="top-page"><img src="../img/arrow-up.svg" alt=""></a></div>

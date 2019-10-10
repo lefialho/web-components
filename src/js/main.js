@@ -241,7 +241,6 @@
       this.menuMobileButton = document.querySelector(menuMobileButton);
       this.menuList = document.querySelector(menuList);
       this.menuClose = document.querySelectorAll(menuClose);
-      this.bgBlack = document.querySelector(bgBlack);
       this.activeClass = active;
       this.openMenu = this.openMenu.bind(this);
       this.closeMenu = this.closeMenu.bind(this);
@@ -253,6 +252,15 @@
       this.bgBlack.classList.toggle(this.activeClass);
     }
 
+    bgBlackCreation() {
+      const bgBlackCreate = document.createElement('div');
+      bgBlackCreate.setAttribute('class', 'bg-black');
+      bgBlackCreate.setAttribute('data', 'bgBlack');
+      const body = document.querySelector('body');
+      body.appendChild(bgBlackCreate);
+      this.bgBlack = document.querySelector('[data="bgBlack"]');
+    }
+
     closeMenu() {
       this.bgBlack.classList.remove(this.activeClass);
       this.menuMobileButton.classList.remove(this.activeClass);
@@ -261,14 +269,15 @@
 
     addMenuMobileEvents() {
       this.menuMobileButton.addEventListener('click', this.openMenu);
-      this.bgBlack.addEventListener('click', this.closeMenu);
       this.menuClose.forEach(item => {
         item.addEventListener('click', this.closeMenu);
       });
+      this.bgBlack.addEventListener('click', this.closeMenu);
     }
 
     init() {
-      if (this.menuMobileButton && this.menuList && this.bgBlack) {
+      if (this.menuMobileButton && this.menuList) {
+        this.bgBlackCreation();
         this.addMenuMobileEvents();
       }
 
@@ -833,9 +842,9 @@
   };
   const smoothScroll = new SmoothScroll('[data-smooth] a[href^="#"]', options);
   smoothScroll.init();
-  const activateHorizontalNavigation = new ActivateHorizontalNavigation('[data-nav="horizontal-nav"]', '[data-activate="content"]');
+  const activateHorizontalNavigation = new ActivateHorizontalNavigation('[data-nav="horizontal-nav"]', '[data-activate="horizontal-nav"]');
   activateHorizontalNavigation.init();
-  const activateVerticalNavigation = new ActivateVerticalNavigation('[data-nav="vertical-nav"]', '[data-list="vertical-list"]', '[data-topic]');
+  const activateVerticalNavigation = new ActivateVerticalNavigation('[data-nav="vertical-nav"]', '[data-list="vertical-list"]', '[data-activate="vertical-nav"]');
   activateVerticalNavigation.init();
   const topButton = new backTopButton('[data-button="top-page"]');
   topButton.init(); // Slides

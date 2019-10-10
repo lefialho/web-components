@@ -43,10 +43,10 @@ const options = {
 const smoothScroll = new SmoothScroll('[data-smooth] a[href^="#"]', options);
 smoothScroll.init();
 
-const activateHorizontalNavigation = new ActivateHorizontalNavigation('[data-nav="horizontal-nav"]', '[data-activate="content"]');
+const activateHorizontalNavigation = new ActivateHorizontalNavigation('[data-nav="horizontal-nav"]', '[data-activate="horizontal-nav"]');
 activateHorizontalNavigation.init();
 
-const activateVerticalNavigation = new ActivateVerticalNavigation('[data-nav="vertical-nav"]', '[data-list="vertical-list"]', '[data-topic]');
+const activateVerticalNavigation = new ActivateVerticalNavigation('[data-nav="vertical-nav"]', '[data-list="vertical-list"]', '[data-activate="vertical-nav"]');
 activateVerticalNavigation.init();
 
 const topButton = new SlidebackTopButton('[data-button="top-page"]');

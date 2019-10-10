@@ -3,11 +3,13 @@ import outSideClick from './outside-click.js';
 export default class DropDown {
   constructor(dropdownMenus, events) {
     this.dropdownMenus = document.querySelectorAll(dropdownMenus);
+
     if (events === undefined)
       this.events = ['click'];
     else
       this.events = events;
     this.activeClass = 'active'
+    
     this.activeDropDown = this.activeDropDown.bind(this);
   }
 

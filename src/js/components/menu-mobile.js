@@ -3,7 +3,6 @@ export default class MenuMobile {
     this.menuMobileButton = document.querySelector(menuMobileButton);
     this.menuList = document.querySelector(menuList);
     this.menuClose = document.querySelectorAll(menuClose);
-    this.bgBlack = document.querySelector(bgBlack);
     this.activeClass = active;
 
     this.openMenu = this.openMenu.bind(this);
@@ -16,6 +15,17 @@ export default class MenuMobile {
     this.bgBlack.classList.toggle(this.activeClass);
   }
 
+  bgBlackCreation() {
+    const bgBlackCreate = document.createElement('div');
+    bgBlackCreate.setAttribute('class', 'bg-black');
+    bgBlackCreate.setAttribute('data', 'bgBlack');
+    
+    const body = document.querySelector('body');
+    body.appendChild(bgBlackCreate);
+
+    this.bgBlack = document.querySelector('[data="bgBlack"]');
+  }
+
   closeMenu() {
     this.bgBlack.classList.remove(this.activeClass);
     this.menuMobileButton.classList.remove(this.activeClass);
@@ -24,14 +34,16 @@ export default class MenuMobile {
 
   addMenuMobileEvents() {
     this.menuMobileButton.addEventListener('click', this.openMenu)
-    this.bgBlack.addEventListener('click', this.closeMenu)
     this.menuClose.forEach((item) => {
       item.addEventListener('click', this.closeMenu)
-    })
+    });
+    
+    this.bgBlack.addEventListener('click', this.closeMenu);
   }
 
   init() {
-    if (this.menuMobileButton && this.menuList && this.bgBlack) {
+    if (this.menuMobileButton && this.menuList) {
+      this.bgBlackCreation();
       this.addMenuMobileEvents();
     }
     return this
