@@ -7,8 +7,8 @@ import MenuMobile from './menu-mobile.js';
 import ScrollAnimation from './scroll-animation.js';
 import PopOver from './popover.js';
 import SmoothScroll from './smooth-scroll.js';
-import VerticalActiveNavigation from './active-navigation.js';
-import VerticalMenuNavigation from './vertical-navigation.js';
+import ActivateHorizontalNavigation from './active-horizontal-navigation.js';
+import ActivateVerticalNavigation from './active-vertical-navigation.js';
 import SlidebackTopButton from './back-top.js';
 import SlideNav from './slide.js';
 
@@ -43,11 +43,11 @@ const options = {
 const smoothScroll = new SmoothScroll('[data-smooth] a[href^="#"]', options);
 smoothScroll.init();
 
-const activateNavigation = new VerticalActiveNavigation('[data-nav="active-nav"]', '[data-activate="content"]');
-activateNavigation.init();
+const activateHorizontalNavigation = new ActivateHorizontalNavigation('[data-nav="horizontal-nav"]', '[data-activate="content"]');
+activateHorizontalNavigation.init();
 
-const verticalMenuNavigation = new VerticalMenuNavigation('[data-vertical-menu]', '[data-nav="vertical-menu"]', '[data-topic]');
-verticalMenuNavigation.init();
+const activateVerticalNavigation = new ActivateVerticalNavigation('[data-nav="vertical-nav"]', '[data-list="vertical-list"]', '[data-topic]');
+activateVerticalNavigation.init();
 
 const topButton = new SlidebackTopButton('[data-button="top-page"]');
 topButton.init();

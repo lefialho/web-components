@@ -1,6 +1,6 @@
 import debounce from './debounce.js';
 
-export default class ActivateNavigation {
+export default class ActivateHorizontalNavigation {
 	constructor(activeNav, navContents) {
 		this.activeNav = document.querySelector(activeNav);
 		this.navContents = document.querySelectorAll(navContents);
@@ -16,9 +16,11 @@ export default class ActivateNavigation {
 			const contentsId = topic.getAttribute('id');
 			const contentsTitle = topic.getAttribute('aria-label');
 
-			links.innerText = contentsTitle;
-			links.setAttribute('data-menu', 'activeLink');
+			listItems.setAttribute('class', 'horizontal-nav__item');
+			links.setAttribute('class', 'horizontal-nav__link');
+			links.setAttribute('data-horizontal-nav', 'link');
 			links.setAttribute('href', '#' + contentsId);
+			links.innerText = contentsTitle;
 
 			listItems.appendChild(links);
 			this.activeNav.appendChild(listItems);
@@ -27,11 +29,11 @@ export default class ActivateNavigation {
 
 	activeOnScroll(event) {
 		this.navContents.forEach((content) => {
-			const contentStart = content.getBoundingClientRect().top - parseInt(window.getComputedStyle(content).getPropertyValue('margin-top'));
+			const contentStart = content.getBoundingClientRect().top - 50
 			const contentMarginTop = content.offsetHeight;
 			const contentEnd = contentStart + contentMarginTop;
 			const contentId = content.getAttribute('id');
-			const itemMenu = document.querySelector('[data-menu="activeLink"][href="#' + contentId + '"]');
+			const itemMenu = document.querySelector('[data-horizontal-nav="link"][href="#' + contentId + '"]');
 
 			if (content.scrollTop > contentStart && content.scrollTop < contentEnd) {
 				itemMenu.classList.add(this.activeClass)
@@ -42,7 +44,7 @@ export default class ActivateNavigation {
 	}
 
 	activeLinksOnclick() {
-		this.selectLinks = document.querySelectorAll('[data-menu="activeLink"]');
+		this.selectLinks = document.querySelectorAll('[data-horizontal-nav="link"]');
     
 		this.selectLinks.forEach((link) => {
 			link.addEventListener('click', () => this.activeLinks(link));

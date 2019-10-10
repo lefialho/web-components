@@ -9,11 +9,15 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-    }
 
-    li.active a {
-      border-bottom-color: $blue;
-      color: $blue;
+      li {
+        font-weight: 700;
+
+        &.active a {
+          border-bottom-color: $blue;
+          color: $blue;
+        }
+      }
     }
 
     a {

@@ -9,6 +9,7 @@ const uglify = require('gulp-uglify')
 const imagemin = require('gulp-imagemin');
 const svgSprite = require('gulp-svg-sprite');
 const cache = require('gulp-cache');
+const zip = require('gulp-zip');
 const runSequence = require('run-sequence');
 
 const rollup = require('gulp-better-rollup');
@@ -73,6 +74,13 @@ gulp.task('js', ['export-js'], function () {
     .pipe(browserSync.stream())
 });
 
+gulp.task('zip', function () {
+  return gulp.src(['css/**.css', 'js/components.js'])
+  .pipe(zip('files.zip'))
+  .pipe(gulp.dest('./'));
+})
+
+
 //Optimization tasks
 //-------------------
 gulp.task('images', function () {
@@ -104,8 +112,9 @@ gulp.task('sprites', function () {
     .pipe(gulp.dest('.'))
 });
 
+
 // Task Sequence
 // ---------------
 gulp.task('default', function (callback) {
-  runSequence(['pug', 'sass', 'js', 'browserSync', 'images', 'sprites'], callback)
+  runSequence(['pug', 'sass', 'js', 'browserSync', 'images', 'sprites', 'zip'], callback)
 })

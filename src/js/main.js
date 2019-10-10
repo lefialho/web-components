@@ -399,7 +399,7 @@
 
   }
 
-  class ActivateNavigation {
+  class ActivateHorizontalNavigation {
     constructor(activeNav, navContents) {
       this.activeNav = document.querySelector(activeNav);
       this.navContents = document.querySelectorAll(navContents);
@@ -413,9 +413,11 @@
         const links = document.createElement('a');
         const contentsId = topic.getAttribute('id');
         const contentsTitle = topic.getAttribute('aria-label');
-        links.innerText = contentsTitle;
-        links.setAttribute('data-menu', 'activeLink');
+        listItems.setAttribute('class', 'horizontal-nav__item');
+        links.setAttribute('class', 'horizontal-nav__link');
+        links.setAttribute('data-horizontal-nav', 'link');
         links.setAttribute('href', '#' + contentsId);
+        links.innerText = contentsTitle;
         listItems.appendChild(links);
         this.activeNav.appendChild(listItems);
       });
@@ -423,11 +425,11 @@
 
     activeOnScroll(event) {
       this.navContents.forEach(content => {
-        const contentStart = content.getBoundingClientRect().top - parseInt(window.getComputedStyle(content).getPropertyValue('margin-top'));
+        const contentStart = content.getBoundingClientRect().top - 50;
         const contentMarginTop = content.offsetHeight;
         const contentEnd = contentStart + contentMarginTop;
         const contentId = content.getAttribute('id');
-        const itemMenu = document.querySelector('[data-menu="activeLink"][href="#' + contentId + '"]');
+        const itemMenu = document.querySelector('[data-horizontal-nav="link"][href="#' + contentId + '"]');
 
         if (content.scrollTop > contentStart && content.scrollTop < contentEnd) {
           itemMenu.classList.add(this.activeClass);
@@ -438,7 +440,7 @@
     }
 
     activeLinksOnclick() {
-      this.selectLinks = document.querySelectorAll('[data-menu="activeLink"]');
+      this.selectLinks = document.querySelectorAll('[data-horizontal-nav="link"]');
       this.selectLinks.forEach(link => {
         link.addEventListener('click', () => this.activeLinks(link));
       });
@@ -463,7 +465,7 @@
 
   }
 
-  class VerticalActiveNavigation {
+  class ActivateVerticalNavigation {
     constructor(verticalMenu, navMenu, topics, events) {
       this.verticalMenu = document.querySelector(verticalMenu);
       this.navMenu = document.querySelector(navMenu);
@@ -482,12 +484,12 @@
         const textLink = document.createElement('span');
         const topicsId = allTopics[index].getAttribute('id');
         const topicsTitle = allTopics[index].getAttribute('aria-label');
-        textLink.innerText = topicsTitle;
-        listItems.setAttribute('class', 'vertical-menu__item');
-        links.setAttribute('class', 'vertical-menu__link');
-        links.setAttribute('data-verticalMenu', 'link');
+        listItems.setAttribute('class', 'vertical-nav__item');
+        links.setAttribute('class', 'vertical-nav__link');
+        links.setAttribute('data-vertical-nav', 'link');
         links.setAttribute('href', '#' + topicsId);
-        textLink.setAttribute('class', 'vertical-menu__text');
+        textLink.setAttribute('class', 'vertical-nav__text');
+        textLink.innerText = topicsTitle;
         listItems.appendChild(links);
         this.navMenu.appendChild(listItems);
         links.appendChild(textLink);
@@ -496,21 +498,21 @@
 
     activeOnScroll() {
       this.topics.forEach(topic => {
-        const start = topic.getBoundingClientRect().top - parseInt(window.getComputedStyle(topic).getPropertyValue('margin'));
+        const start = topic.getBoundingClientRect().top - 50;
         const end = start + topic.clientHeight;
         const id = topic.getAttribute('id');
-        const $itemMenu = document.querySelector('[data-verticalMenu="link"][href="#' + id + '"]');
+        const itemMenu = document.querySelector('[data-vertical-nav="link"][href="#' + id + '"]');
 
         if (topic.scrollTop > start && topic.scrollTop < end) {
-          $itemMenu.classList.add('active');
+          itemMenu.classList.add('active');
         } else {
-          $itemMenu.classList.remove('active');
+          itemMenu.classList.remove('active');
         }
       });
     }
 
     activeLinksOnclick() {
-      this.selectLinks = document.querySelectorAll('[data-verticalMenu="link"]');
+      this.selectLinks = document.querySelectorAll('[data-vertical-nav="link"]');
       this.selectLinks.forEach(link => {
         link.addEventListener('click', () => this.activeLinks(link));
       });
@@ -831,10 +833,10 @@
   };
   const smoothScroll = new SmoothScroll('[data-smooth] a[href^="#"]', options);
   smoothScroll.init();
-  const activateNavigation = new ActivateNavigation('[data-nav="active-nav"]', '[data-activate="content"]');
-  activateNavigation.init();
-  const verticalMenuNavigation = new VerticalActiveNavigation('[data-vertical-menu]', '[data-nav="vertical-menu"]', '[data-topic]');
-  verticalMenuNavigation.init();
+  const activateHorizontalNavigation = new ActivateHorizontalNavigation('[data-nav="horizontal-nav"]', '[data-activate="content"]');
+  activateHorizontalNavigation.init();
+  const activateVerticalNavigation = new ActivateVerticalNavigation('[data-nav="vertical-nav"]', '[data-list="vertical-list"]', '[data-topic]');
+  activateVerticalNavigation.init();
   const topButton = new backTopButton('[data-button="top-page"]');
   topButton.init(); // Slides
 
