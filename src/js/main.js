@@ -417,11 +417,11 @@
     }
 
     createNavegation() {
-      this.navContents.forEach(topic => {
+      this.navContents.forEach(content => {
         const listItems = document.createElement('li');
         const links = document.createElement('a');
-        const contentsId = topic.getAttribute('id');
-        const contentsTitle = topic.getAttribute('aria-label');
+        const contentsId = content.getAttribute('id');
+        const contentsTitle = content.getAttribute('aria-label');
         listItems.setAttribute('class', 'horizontal-nav__item');
         links.setAttribute('class', 'horizontal-nav__link');
         links.setAttribute('data-horizontal-nav', 'link');
@@ -468,10 +468,10 @@
   }
 
   class ActivateVerticalNavigation {
-    constructor(verticalMenu, navMenu, topics, events) {
-      this.verticalMenu = document.querySelector(verticalMenu);
-      this.navMenu = document.querySelector(navMenu);
-      this.topics = document.querySelectorAll(topics);
+    constructor(verticalNav, navList, navContents, events) {
+      this.verticalNav = document.querySelector(verticalNav);
+      this.navList = document.querySelector(navList);
+      this.navContents = document.querySelectorAll(navContents);
       if (events === undefined) this.events = ['click', 'touchstart'];else this.events = events;
       this.activeClass = 'active';
       this.activeOnScroll = debounce(this.activeOnScroll.bind(this), 50);
@@ -480,33 +480,33 @@
     }
 
     createNavegation() {
-      this.topics.forEach((topic, index, allTopics) => {
+      this.navContents.forEach(content => {
         const listItems = document.createElement('li');
         const links = document.createElement('a');
         const textLink = document.createElement('span');
-        const topicsId = allTopics[index].getAttribute('id');
-        const topicsTitle = allTopics[index].getAttribute('aria-label');
+        const navContentsId = content.getAttribute('id');
+        const navContentsTitle = content.getAttribute('aria-label');
         listItems.setAttribute('class', 'vertical-nav__item');
         links.setAttribute('class', 'vertical-nav__link');
         links.setAttribute('data-vertical-nav', 'link');
-        links.setAttribute('href', '#' + topicsId);
+        links.setAttribute('href', '#' + navContentsId);
         textLink.setAttribute('class', 'vertical-nav__text');
-        textLink.innerText = topicsTitle;
+        textLink.innerText = navContentsTitle;
         listItems.appendChild(links);
-        this.navMenu.appendChild(listItems);
+        this.navList.appendChild(listItems);
         links.appendChild(textLink);
         this.selectLinks = document.querySelectorAll('[data-vertical-nav="link"]');
       });
     }
 
     activeOnScroll() {
-      this.topics.forEach(topic => {
-        const start = topic.getBoundingClientRect().top - 50;
-        const end = start + topic.clientHeight;
-        const id = topic.getAttribute('id');
+      this.navContents.forEach(content => {
+        const start = content.getBoundingClientRect().top - 50;
+        const end = start + content.clientHeight;
+        const id = content.getAttribute('id');
         const itemMenu = document.querySelector('[data-vertical-nav="link"][href="#' + id + '"]');
 
-        if (topic.scrollTop > start && topic.scrollTop < end) {
+        if (content.scrollTop > start && content.scrollTop < end) {
           itemMenu.classList.add('active');
         } else {
           itemMenu.classList.remove('active');
@@ -522,28 +522,30 @@
     }
 
     selectLinksEvents() {
-      this.selectLinks.forEach(link => {
-        link.addEventListener('mouseover', this.showLinks);
-        link.addEventListener('mouseout', this.hideLinks);
-      });
+      if (this.selectLinks) {
+        this.selectLinks.forEach(link => {
+          link.addEventListener('mouseover', this.showLinks);
+          link.addEventListener('mouseout', this.hideLinks);
+        });
+      }
     }
 
     showLinks() {
       this.selectLinks.forEach(link => {
         link.classList.add('show');
       });
-      this.verticalMenu.classList.add('active');
+      this.verticalNav.classList.add('active');
     }
 
     hideLinks() {
       this.selectLinks.forEach(link => {
         link.classList.remove('show');
       });
-      this.verticalMenu.classList.remove('active');
+      this.verticalNav.classList.remove('active');
     }
 
     init() {
-      if (this.verticalMenu && this.navMenu && this.topics) {
+      if (this.verticalNav && this.navList && this.navContents) {
         this.createNavegation();
         this.selectLinksEvents();
         window.addEventListener('scroll', this.activeOnScroll);

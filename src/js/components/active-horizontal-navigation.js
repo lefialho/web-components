@@ -10,11 +10,11 @@ export default class ActivateHorizontalNavigation {
 	}
 
 	createNavegation() {
-		this.navContents.forEach((topic) => {
+		this.navContents.forEach((content) => {
 			const listItems = document.createElement('li');
 			const links = document.createElement('a');
-			const contentsId = topic.getAttribute('id');
-			const contentsTitle = topic.getAttribute('aria-label');
+			const contentsId = content.getAttribute('id');
+			const contentsTitle = content.getAttribute('aria-label');
 
 			listItems.setAttribute('class', 'horizontal-nav__item');
 			links.setAttribute('class', 'horizontal-nav__link');

@@ -9,7 +9,7 @@
 
 [data-dropdown="content"].active{
   display: block;
-  animation: show-up .3s forwards;
+  animation: show-down .3s forwards;
 }
 
 [data-dropdown="link"].active::after {
