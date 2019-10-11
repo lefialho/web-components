@@ -44,6 +44,8 @@
 
 
 .popover {
+  position: relative;
+
   &-content {
     display: none;
     padding: 2rem;
