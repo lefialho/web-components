@@ -24,6 +24,8 @@ export default class ActivateHorizontalNavigation {
 
 			listItems.appendChild(links);
 			this.activeNav.appendChild(listItems);
+
+			this.selectLinks = document.querySelectorAll('[data-horizontal-nav="link"]');
 		})
 	}
 
@@ -43,14 +45,6 @@ export default class ActivateHorizontalNavigation {
 		})
 	}
 
-	activeLinksOnclick() {
-		this.selectLinks = document.querySelectorAll('[data-horizontal-nav="link"]');
-    
-		this.selectLinks.forEach((link) => {
-			link.addEventListener('click', () => this.activeLinks(link));
-		})
-	}
-
 	activeLinks(link) {
 		this.selectLinks.forEach((link) => {
 			link.classList.remove(this.activeClass)
@@ -61,7 +55,6 @@ export default class ActivateHorizontalNavigation {
 	init() {
 		if (this.activeNav && this.navContents) {
 			this.createNavegation();
-			this.activeLinksOnclick();
 			window.addEventListener('scroll', this.activeOnScroll);
 		}
 		return this;

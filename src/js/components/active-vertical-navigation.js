@@ -35,6 +35,8 @@ export default class ActivateVerticalNavigation {
 			listItems.appendChild(links);
 			this.navMenu.appendChild(listItems);
 			links.appendChild(textLink);
+
+			this.selectLinks = document.querySelectorAll('[data-vertical-nav="link"]');
 		})
 	}
 
@@ -53,14 +55,8 @@ export default class ActivateVerticalNavigation {
 		})
 	}
 
-	activeLinksOnclick() {
-		this.selectLinks = document.querySelectorAll('[data-vertical-nav="link"]');
-		this.selectLinks.forEach((link) => {
-			link.addEventListener('click', () => this.activeLinks(link));
-		})
-	}
-
 	activeLinks(link) {
+		
 		this.selectLinks.forEach((link) => {
 			link.classList.remove(this.activeClass);
 		})
@@ -91,7 +87,6 @@ export default class ActivateVerticalNavigation {
 	init() {
 		if (this.verticalMenu && this.navMenu && this.topics) {
 			this.createNavegation();
-			this.activeLinksOnclick();
 			this.selectLinksEvents();
 			window.addEventListener('scroll', this.activeOnScroll);
 		}

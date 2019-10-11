@@ -9,7 +9,7 @@ import PopOver from './popover.js';
 import SmoothScroll from './smooth-scroll.js';
 import ActivateHorizontalNavigation from './active-horizontal-navigation.js';
 import ActivateVerticalNavigation from './active-vertical-navigation.js';
-import SlidebackTopButton from './back-top.js';
+import backTopButton from './back-top.js';
 import SlideNav from './slide.js';
 
 const accordion = new Accordion('[data-accordion="group"]');
@@ -49,7 +49,7 @@ activateHorizontalNavigation.init();
 const activateVerticalNavigation = new ActivateVerticalNavigation('[data-nav="vertical-nav"]', '[data-list="vertical-list"]', '[data-activate="vertical-nav"]');
 activateVerticalNavigation.init();
 
-const topButton = new SlidebackTopButton('[data-button="top-page"]');
+const topButton = new backTopButton('[data-button="top-page"]');
 topButton.init();
 
 

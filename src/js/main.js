@@ -429,6 +429,7 @@
         links.innerText = contentsTitle;
         listItems.appendChild(links);
         this.activeNav.appendChild(listItems);
+        this.selectLinks = document.querySelectorAll('[data-horizontal-nav="link"]');
       });
     }
 
@@ -448,13 +449,6 @@
       });
     }
 
-    activeLinksOnclick() {
-      this.selectLinks = document.querySelectorAll('[data-horizontal-nav="link"]');
-      this.selectLinks.forEach(link => {
-        link.addEventListener('click', () => this.activeLinks(link));
-      });
-    }
-
     activeLinks(link) {
       this.selectLinks.forEach(link => {
         link.classList.remove(this.activeClass);
@@ -465,7 +459,6 @@
     init() {
       if (this.activeNav && this.navContents) {
         this.createNavegation();
-        this.activeLinksOnclick();
         window.addEventListener('scroll', this.activeOnScroll);
       }
 
@@ -502,6 +495,7 @@
         listItems.appendChild(links);
         this.navMenu.appendChild(listItems);
         links.appendChild(textLink);
+        this.selectLinks = document.querySelectorAll('[data-vertical-nav="link"]');
       });
     }
 
@@ -517,13 +511,6 @@
         } else {
           itemMenu.classList.remove('active');
         }
-      });
-    }
-
-    activeLinksOnclick() {
-      this.selectLinks = document.querySelectorAll('[data-vertical-nav="link"]');
-      this.selectLinks.forEach(link => {
-        link.addEventListener('click', () => this.activeLinks(link));
       });
     }
 
@@ -558,7 +545,6 @@
     init() {
       if (this.verticalMenu && this.navMenu && this.topics) {
         this.createNavegation();
-        this.activeLinksOnclick();
         this.selectLinksEvents();
         window.addEventListener('scroll', this.activeOnScroll);
       }
@@ -571,12 +557,12 @@
   class backTopButton {
     constructor(topButton) {
       this.topButton = document.querySelector(topButton);
-      this.acttiveClass = 'active';
+      this.activeClass = 'active';
       this.showButton = debounce(this.showButton.bind(this), 50);
     }
 
     showButton() {
-      if (window.window.pageYOffset > 100) this.topButton.classList.add(this.acttiveClass);else this.topButton.classList.remove(this.acttiveClass);
+      if (window.window.pageYOffset > 100) this.topButton.classList.add(this.activeClass);else this.topButton.classList.remove(this.activeClass);
     }
 
     init() {
