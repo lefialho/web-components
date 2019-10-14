@@ -1,43 +1,33 @@
-// Horizontal menu
+// Horizontal
 .horizontal-nav {
   &__list {
     display: flex;
+    list-style: none;
   }
 
   &__link {
     display: flex;
-    font-weight: 700;
     text-decoration: none;
     letter-spacing: .1rem;
-    color: $lightBlack;
     @include transition;
     white-space: nowrap;
     padding: 1rem;
-
-    &:hover,
-    &.active {
-      background-color: $blue;
-      color: white;
-    }
   }
 }
 
-// Vertical Menu
+// Vertical 
 .vertical-nav {
-  padding: 2rem;
-  background: $ultraLightGray;
   height: 100%;
-  width: 5.6rem;
+  width: 56px;
   z-index: 999;
-  transition: .3s ease;
+  @include transition;
 
   &.active {
-    width: 15rem;
+    width: 150px;
   }
 
   &__list {
-    position: sticky;
-    top: 2rem;
+    list-style: none;
 
     .vertical-nav__item:last-child {
       .vertical-nav__link::after {
@@ -53,28 +43,24 @@
   &__link {
     display: inline-flex;
     align-items: center;
-    color: black;
     @include transition;
     white-space: nowrap;
     min-width: 100px;
     @include transition;
     position: relative;
 
-    &:hover,
-    &.active {
-      &::before {
-        background-color: $blue;
+    &.show {
+      span {
+        @include transition;
+        opacity: 1;
+        animation: show-right .3s ease-in-out forwards;
       }
-    }
-
-    &:hover .vertical-nav__text {
-      color: $blue;
     }
 
     &::before {
       content: '';
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 15px;
+      height: 15px;
       background-color: $lightBlack;
       border: 2px solid $lightBlack;
       border-radius: 50%;
@@ -90,17 +76,14 @@
       height: 100%;
       width: 2px;
       background-color: $lightBlack;
-      left: .7rem;
-      top: 26px;
+      left: 7px;
+      top: 25px;
     }
 
-    .vertical-nav__text {
-      color: $lightBlack;
-      font-weight: 700;
+    .vertical-nav__text { 
       opacity: 0;
       padding: .8rem;
       min-width: 85px;
-      border-bottom: 1px solid;
     }
 
     &.show {
@@ -113,15 +96,9 @@
   }
 }
 
-.activate-content {
-  padding: 8rem;
-  margin-bottom: 8rem;
-  border: 1px solid $lightGray;
-}
-
 @media (max-width: 768px) {
   .vertical-nav {
-    width: 3.6rem;
+    width: 36px;
     padding: 1rem;
   }
 
@@ -129,35 +106,3 @@
     padding: 2rem;
   }
 }
-
-// @media (max-width: 560px) {
-//   .vertical-menu {
-//     height: initial;
-//     width: 100%;
-
-//     &.active {
-//       width: 100%;
-//     }
-
-//     &__list {
-//       display: flex;
-//       overflow-x: auto;
-//     }
-
-//     &__link {
-//       &::after {
-//         content: none
-//       }
-
-//       .vertical-menu__text {
-//         border: none;
-//         opacity: 1;
-//         padding: 0;
-//       }
-//     }
-
-//     &__text {
-//       opacity: 1;
-//     }
-//   }
-// }

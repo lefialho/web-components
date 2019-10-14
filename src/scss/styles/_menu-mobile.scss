@@ -1,12 +1,12 @@
 /* Menu */
 .menu {
   background: $blue;
-  position: relative;
   z-index: 150;
   position: sticky;
   top: 0;
 
-  &-list {
+  &-list,
+  &-mobile {
     display: flex;
     flex-wrap: wrap;
   }
@@ -20,7 +20,8 @@
       color: white;
       @include transition;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         background-color: $lightBlue;
       }
     }
@@ -33,18 +34,49 @@
 }
 
 @media (max-width: 992px) {
+  .menu {
+    &-list {
+      display: none;
+      background: $blue;
+      width: 100%;
+      z-index: 200;
+      top: 3.5rem;
+      box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
+      position: absolute;
+      z-index: 300;
+
+      &.horizontal {
+        display: initial;
+        opacity: 0;
+        left: -100%;
+        @include transition;
+      }
+
+      &.active {
+        display: block;
+        animation: show-down .3s forwards;
+
+        &.horizontal {
+          display: initial;
+          animation: none;
+          opacity: 1;
+          left: 0;
+        }
+      }
+
+      li {
+        border-bottom: 1px solid $darkBlue;
+
+        &:last-child {
+          border: 0;
+        }
+      }
+    }
+  }
+
   .menu-button {
     display: flex;
     align-items: center;
-  }
-
-  .menu-list {
-    display: none;
-  }
-
-  .menu-list.active {
-    display: block;
-    animation: show-down .3s forwards;
   }
 
   .menu-button {
@@ -56,7 +88,6 @@
     color: white;
     cursor: pointer;
     position: relative;
-    z-index: 300;
 
     &::before {
       content: '';
@@ -71,25 +102,6 @@
 
     &.active::before {
       transform: rotate(90deg);
-    }
-  }
-
-  .menu {
-    &-list {
-      background: $blue;
-      width: 100%;
-      z-index: 200;
-      top: 3.5rem;
-      box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
-      position: absolute;
-
-      li {
-        border-bottom: 1px solid $darkBlue;
-
-        &:last-child {
-          border: 0;
-        }
-      }
     }
   }
 }

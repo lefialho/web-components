@@ -43,16 +43,17 @@
         </nav>
       </div>
       <div class="main-content">
-        <h1 class="main-content__title">Dropdown Menu-mobile</h1>
+        <h1 class="main-content__title">Dropdown-Menu (mobile)</h1>
         <div class="collapse" data-collapse="group">
           <div class="utilization collapse__title" data-collapse="item">Veja como utilizar</div>
           <div class="main-content__text moldure" data-collapse="content">
             <p class="space-bottom">Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos <b>menus dropdown</b>. Inserir também um <b>data-menu="close"</b> nos elementos de âncora do menu, para o mesmo fechar quando estiver em <b>mobile</b>.</p>
             <p class="space-bottom"> Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>. As classes podem ter qualquer nome e serem estilizadas livremente.</p>
+            <p>Para o menu abrir lateralmente, acrescentar uma classe <b>horizontal</b> no elemento que contém a classe <b>menu-list</b>.</p>
           </div>
         </div><nav class="menu" data-smooth>
 <button class="menu-button" data-menu="button" aria-expanded="false">Menu</button>
-<ul class="menu-list" data-menu="list" id="menu">
+<ul class="menu-list horizontal" data-menu="list" id="menu">
 <li><a href="" data-menu="close">Home</a></li>
 <li class="drop-down">
 <a class="drop-down__link" href="sobre.html" data-dropdown="link">Sobre</a>
@@ -124,6 +125,7 @@
         </div></div>
 </section>
       </div>
+      <div data-smooth><a class="back-top-button" href="#main" data-button="top-page"><img src="../img/arrow-up.svg" alt=""></a></div>
     </main>
     <script src="../js/lib/clipboard.min.js"></script>
     <script src="../js/clipboard.js"></script>

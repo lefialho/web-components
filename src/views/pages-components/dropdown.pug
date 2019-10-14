@@ -21,16 +21,17 @@ block content
     include ../_includes/menu.pug		
 
     .main-content
-      h1.main-content__title Dropdown Menu-mobile
+      h1.main-content__title Dropdown-Menu (mobile)
       div(class="collapse" data-collapse="group")
         div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
         div.main-content__text.moldure(data-collapse="content")
           p.space-bottom Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos <b>menus dropdown</b>. Inserir também um <b>data-menu="close"</b> nos elementos de âncora do menu, para o mesmo fechar quando estiver em <b>mobile</b>.
           p.space-bottom  Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>. As classes podem ter qualquer nome e serem estilizadas livremente.
-    
+          p Para o menu abrir lateralmente, acrescentar uma classe <b>horizontal</b> no elemento que contém a classe <b>menu-list</b>.
+
       <nav class="menu" data-smooth>
       <button class="menu-button" data-menu="button" aria-expanded="false">Menu</button>
-        <ul class="menu-list" data-menu="list" id="menu">
+        <ul class="menu-list horizontal" data-menu="list" id="menu">
           <li><a href="" data-menu="close">Home</a></li>
 
           <li class="drop-down">
@@ -110,8 +111,6 @@ block content
             </form>
         </div>
       </section>
-
-  //- div(class="bg-black" data-bgBlack)
 
     include ../_includes/footer.pug
 

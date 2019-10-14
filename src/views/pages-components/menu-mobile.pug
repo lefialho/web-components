@@ -1,0 +1,39 @@
+extends ../_components/layout.pug
+include ../_components/mixins/mixins.pug
+
+//- head
+//- ===================================
+append head
+  - var urlCSS = "../css/"
+  include ../_includes/head.pug
+
+//- Content
+//- ===================================
+block content
+  - var selected = 'Mobile Menu';	
+  - var urlAncor = '../#'
+  - var urlIndex = '../index.html'
+  - var urlImg = '../img/'
+  - var urlPages = '../pages-components/'; 
+
+  //Main
+  main.main(id="main")
+    include ../_includes/menu.pug		
+
+    .main-content
+      h1.main-content__title Mobile-Menu
+      div(class="collapse" data-collapse="group")
+        div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
+        div.main-content__text.moldure(data-collapse="content")
+          p.space-bottom Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos <b>menus dropdown</b>. Inserir também um <b>data-menu="close"</b> nos elementos de âncora do menu, para o mesmo fechar quando estiver em <b>mobile</b>.
+          p.space-bottom  Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>. As classes podem ter qualquer nome e serem estilizadas livremente.
+    
+      
+
+    include ../_includes/footer.pug
+
+  //- scripts
+  //- ===================================
+  prepend scripts
+    - var urlJS = '../js/' 
+    include ../_includes/scripts.pug

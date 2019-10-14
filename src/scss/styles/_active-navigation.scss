@@ -52,15 +52,6 @@
   }
 
   &__link {
-    display: inline-flex;
-    align-items: center;
-    color: black;
-    @include transition;
-    white-space: nowrap;
-    min-width: 100px;
-    @include transition;
-    position: relative;
-
     &:hover,
     &.active {
       &::before {
@@ -99,17 +90,7 @@
       color: $lightBlack;
       font-weight: 700;
       opacity: 0;
-      padding: .8rem;
-      min-width: 85px;
       border-bottom: 1px solid;
-    }
-
-    &.show {
-      span {
-        @include transition;
-        opacity: 1;
-        animation: show-right .3s ease-in-out forwards;
-      }
     }
   }
 }
