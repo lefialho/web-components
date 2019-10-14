@@ -25,16 +25,15 @@ block content
       div(class="collapse" data-collapse="group")
         div(class="utilization collapse__title" data-collapse="item") Veja como utilizar
         div.main-content__text.moldure(data-collapse="content")
-          p.space-bottom Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos <b>menus dropdown</b>. Inserir também um <b>data-menu="close"</b> nos elementos de âncora do menu, para o mesmo fechar quando estiver em <b>mobile</b>.
-          p.space-bottom  Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>. As classes podem ter qualquer nome e serem estilizadas livremente.
-          p Para o menu abrir lateralmente, acrescentar uma classe <b>horizontal</b> no elemento que contém a classe <b>menu-list</b>.
+          p.space-bottom Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar os menus drop down e um <b>data-dropdown="content"</b> nos <b>menus dropdown</b>. Inserir também um <b>data-menu="close"</b> nos links do menu, para o mesmo fechar quando estiver em <b>mobile</b>.
+          p Para o menu abrir <b>lateralmente</b>, acrescentar uma classe <b>horizontal</b> no elemento que contém a classe <b>menu-list</b>.
 
       <nav class="menu" data-smooth>
       <button class="menu-button" data-menu="button" aria-expanded="false">Menu</button>
         <ul class="menu-list horizontal" data-menu="list" id="menu">
-          <li><a href="" data-menu="close">Home</a></li>
+          <li class="menu-list__item"><a href="" data-menu="close">Home</a></li>
 
-          <li class="drop-down">
+          <li class="menu-list__item drop-down">
             <a class="drop-down__link" href="sobre.html" data-dropdown="link">Sobre</a>
             <ul class="dropdown-menu" data-dropdown="content">
               <li><a href="empresa.html">A Empresa</a></li>
@@ -44,7 +43,7 @@ block content
             </ul>
           </li>
 
-          <li class="drop-down">
+          <li class="menu-list__item drop-down">
             <a class="drop-down__link" href="sobre.html" data-dropdown="link">Tipos de negócios</a>
             <ul class="dropdown-menu" data-dropdown="content">
               <li><a href="">Negócios 01</a></li>
@@ -54,9 +53,9 @@ block content
             </ul>
           </li>
 
-          <li><a href="" data-menu="close">Faq</a></li>
-          <li><a href="#contact" data-menu="close">Contato</a></li>
-          <li><a aria-controls="#login" data-modal="open">Login →</a></li>
+          <li class="menu-list__item"><a href="" data-menu="close">Faq</a></li>
+          <li class="menu-list__item"><a href="#contact" data-menu="close">Contato</a></li>
+          <li class="menu-list__item"><a aria-controls="#login" data-modal="open">Login →</a></li>
         </ul>
       </nav>
 

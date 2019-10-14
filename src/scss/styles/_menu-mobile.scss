@@ -50,6 +50,11 @@
         opacity: 0;
         left: -100%;
         @include transition;
+        width: 90%;
+
+        .menu-list__item:last-child {
+          height: 100vh;
+        }
       }
 
       &.active {
