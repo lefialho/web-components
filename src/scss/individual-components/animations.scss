@@ -148,7 +148,7 @@
 [data-anime="scroll-fade"],
 [data-anime="scroll-left"],
 [data-anime="scroll-right"],
-[data-anime="scroll-up"],
+[data-anime="scroll-top"],
 [data-anime="scroll-down"],
 [data-anime="scroll-zoomIn"] {
   opacity: 0;
@@ -174,7 +174,7 @@
   animation: show-down-scroll .3s forwards;
 }
 
-[data-anime="scroll-up"].active {
+[data-anime="scroll-top"].active {
   opacity: 1;
   animation: show-up-scroll .3s forwards;
 }

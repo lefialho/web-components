@@ -75,7 +75,7 @@ gulp.task('js', ['export-js'], function () {
 });
 
 gulp.task('zip', function () {
-  return gulp.src(['css/**.css', 'js/components.js'])
+  return gulp.src(['css/**/*.css', 'js/components.js'])
   .pipe(zip('files.zip'))
   .pipe(gulp.dest('./'));
 })

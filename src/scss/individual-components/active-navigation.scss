@@ -1,5 +1,13 @@
-// Horizontal
+@import '../variables-and-mixins';
+
+// Horizontal menu
 .horizontal-nav {
+  background: $ultraLightGray;
+  z-index: 150;
+  position: sticky;
+  top: 0;
+  overflow-x: auto;
+
   &__list {
     display: flex;
     list-style: none;
@@ -7,16 +15,26 @@
 
   &__link {
     display: flex;
+    font-weight: 700;
     text-decoration: none;
     letter-spacing: .1rem;
+    color: $lightBlack;
     @include transition;
     white-space: nowrap;
     padding: 1rem;
+
+    &:hover,
+    &.active {
+      background-color: $blue;
+      color: white;
+    }
   }
 }
 
-// Vertical 
+// Vertical Menu
 .vertical-nav {
+  padding: 2rem;
+  background: $ultraLightGray;
   height: 100%;
   width: 56px;
   z-index: 999;
@@ -27,6 +45,8 @@
   }
 
   &__list {
+    position: sticky;
+    top: 2rem;
     list-style: none;
 
     .vertical-nav__item:last-child {
@@ -47,6 +67,25 @@
     white-space: nowrap;
     min-width: 100px;
     position: relative;
+
+    &:hover,
+    &.active {
+      &::before {
+        background-color: $blue;
+      }
+    }
+
+    &.show {
+      span {
+        @include transition;
+        opacity: 1;
+        animation: show-right .3s ease-in-out forwards;
+      }
+    }
+
+    &:hover .vertical-nav__text {
+      color: $blue;
+    }
 
     &::before {
       content: '';
@@ -71,18 +110,13 @@
       top: 25px;
     }
 
-    .vertical-nav__text { 
+    .vertical-nav__text {
+      color: $lightBlack;
+      font-weight: 700;
+      border-bottom: 1px solid;
       opacity: 0;
       padding: .8rem;
       min-width: 85px;
-    }
-
-    &.show {
-      span {
-        @include transition;
-        opacity: 1;
-        animation: show-right .3s ease-in-out forwards;
-      }
     }
   }
 }
@@ -92,8 +126,36 @@
     width: 36px;
     padding: 1rem;
   }
+}
 
-  .activate-content {
-    padding: 2rem;
+@media (max-width: 560px) {
+  .vertical-nav {
+    height: initial;
+    width: 100%;
+
+    &.active {
+      width: 100%;
+    }
+
+    &__list {
+      display: flex;
+      overflow-x: auto;
+    }
+
+    &__link {
+      &::after {
+        content: none
+      }
+
+      .vertical-nav__text {
+        border: none;
+        opacity: 1;
+        padding: 0;
+      }
+    }
+
+    &__text {
+      opacity: 1;
+    }
   }
 }

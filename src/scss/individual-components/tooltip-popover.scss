@@ -1,9 +1,17 @@
+@import '../variables-and-mixins';
+
+/* Tooltip */
 .tooltip {
+  color: $blue;
   cursor: pointer;
   position: relative;
   z-index: 555;
 
   &-content {
+    font-size: 1.6rem;
+    line-height: 1.55;
+    letter-spacing: -.01rem;
+    font-style: italic;
     visibility: hidden;
     position: absolute;
     bottom: calc(100% + 1.5rem);
@@ -40,9 +48,29 @@
       transform: translate3d(0, 0px, 0);
     }
   }
+
+  .tooltip-content {
+    background: $lightBlack;
+    color: white;
+
+    &::before {
+      background: $lightBlack;
+    }
+  }
+}
+
+/* Popover */
+[data-popover="content"].active {
+  display: block;
+  animation: show-down .3s forwards;
+}
+
+[data-popover="open"] {
+  cursor: pointer;
 }
 
 .popover {
+  color: $blue;
   position: relative;
 
   &-content {
@@ -53,9 +81,16 @@
     top: calc(100% + 1.5rem);
     width: 30rem;
     z-index: 999;
-
+    background: $lightGray;
+    color: $lightBlack;
+    font-size: 1.6rem;
+    line-height: 1.55;
+    letter-spacing: -.01rem;
+  
+  
     &::before {
       content: "";
+      background: $lightGray;
       width: 2rem;
       height: 2rem;
       display: block;
@@ -68,11 +103,14 @@
   }
 }
 
-[data-popover="content"].active {
-  display: block;
-  animation: show-down .3s forwards;
+.btn-popover {
+  @include btn;
 }
 
-[data-popover="open"] {
-  cursor: pointer;
+@media (max-width: 576px) {
+  .tooltip, .popover {
+    &-content {
+      width: 20rem;
+    }
+  }
 }

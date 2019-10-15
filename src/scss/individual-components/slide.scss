@@ -1,0 +1,155 @@
+@import '../variables-and-mixins';
+
+/* Slide */
+.galery {
+  margin-bottom: 6rem;
+
+  &.center {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.slide-wrapper {
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+
+  &::hover {
+    will-change: transform;
+  }
+
+  >* {
+    width: 80vw;
+    max-width: 800px;
+    margin: 0 20px;
+    flex-shrink: 0;
+    overflow: hidden;
+    opacity: .8;
+    transform: scale(.8);
+    transition: .4s;
+    border-radius: 4px;
+    background: #effcff;
+  }
+
+  >*.active {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1);
+  }
+}
+
+.slide-center {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[data-control="slide"] {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+[data-control="slide"]>*>* {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #6ee2fd;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: .5rem;
+}
+
+[data-control="slide"]>*.active>*,
+[data-control="slide"]>*>*:hover {
+  background: #1291af;
+}
+
+.custom-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  
+  >* {
+    opacity: .8;
+    transform: scale(.8);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: .4rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+    transition: .3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  >*.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.no-controls>[data-control="slide"] {
+  display: none;
+}
+
+.arrow-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+
+  * {
+    border: none;
+    border-radius: .4rem;
+    color: white;
+    width: 12rem;
+    height: 4rem;
+    text-indent: -999px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+  }
+
+  *:hover {
+    transition: .3s ease-in-out;
+  }
+
+  *.prev {
+    background: url('../img/slide/arrow-left.svg') center center no-repeat;
+  }
+
+  *.next {
+    background: url('../img/slide/arrow-right.svg') center center no-repeat;
+  }
+}
+
+.prev.hide,
+.next.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .slide-center {
+    max-width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .arrow-nav {
+    *.prev:hover {
+      animation: arrow-left .3s alternate infinite;
+    }
+  
+    *.next:hover {
+      animation: arrow-right .3s alternate infinite;
+    }
+  }
+}

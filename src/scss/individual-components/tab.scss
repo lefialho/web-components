@@ -1,0 +1,62 @@
+@import '../variables-and-mixins';
+
+/* Tab */
+[data-tab="content"] {
+  display: none;
+  opacity: 0;
+}
+
+[data-tab="content"].active {
+  display: block;
+  opacity: 1;
+  animation: show .3s ease-in-out forwards;
+}
+
+.tab {
+  &-nav {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+
+    ul {
+      border-bottom: 1px solid $ultraLightGray;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      li {
+        font-weight: 700;
+
+        &.active a {
+          border-bottom-color: $blue;
+          border-bottom: 2px solid;
+          color: $blue;
+        }
+      }
+    }
+
+    a {
+      font-size: 1.8rem;
+      align-items: center;
+      border-bottom-color: #dbdbdb;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      color: #4a4a4a;
+      display: flex;
+      justify-content: center;
+      margin-bottom: -1px;
+      padding: .5em 1em;
+      vertical-align: top;
+      white-space: nowrap;
+
+      &:hover {
+        border-bottom-color: #363636;
+        color: #363636;
+      }
+    }
+  }
+
+  &-content {
+    padding: 0 1.8rem;
+    color: $darkGray;
+  }
+}
