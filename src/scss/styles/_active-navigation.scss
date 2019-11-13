@@ -52,6 +52,7 @@
   }
 
   &__link {
+
     &:hover,
     &.active {
       &::before {
@@ -105,12 +106,20 @@
   .vertical-nav {
     width: 3.6rem;
     padding: 1rem;
+
+    &__link {
+      &::after {
+        top: 23px;
+      }
+    }
   }
 
   .activate-content {
     padding: 2rem;
   }
 }
+
+// ----- Para deixar o menu horizontal no mobile -----
 
 // @media (max-width: 560px) {
 //   .vertical-menu {

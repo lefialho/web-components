@@ -29,10 +29,13 @@ block content
           p Para o menu abrir <b>lateralmente</b>, acrescentar uma classe <b>horizontal</b> no elemento que contém a classe <b>menu-list</b>.
 
       <nav class="menu" data-smooth>
-      <button class="menu-button" data-menu="button" aria-expanded="false">Menu</button>
+      <button class="menu-button" data-menu="button" aria-expanded="false">
+        <div class="menu-button__icon"></div>
+        <span class="menu-button__text">Menu</span>
+      </button>
+
         <ul class="menu-list horizontal" data-menu="list" id="menu">
           <li class="menu-list__item"><a href="" data-menu="close">Home</a></li>
-
           <li class="menu-list__item drop-down">
             <a class="drop-down__link" href="sobre.html" data-dropdown="link">Sobre</a>
             <ul class="dropdown-menu" data-dropdown="content">

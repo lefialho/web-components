@@ -19,7 +19,7 @@ export default class MenuMobile {
     const bgBlackCreate = document.createElement('div');
     bgBlackCreate.setAttribute('class', 'bg-black');
     bgBlackCreate.setAttribute('data', 'bgBlack');
-    
+
     const body = document.querySelector('body');
     body.appendChild(bgBlackCreate);
 
@@ -34,11 +34,11 @@ export default class MenuMobile {
 
   addMenuMobileEvents() {
     this.menuMobileButton.addEventListener('click', this.openMenu)
+    this.bgBlack.addEventListener('click', this.closeMenu);
     this.menuClose.forEach((item) => {
       item.addEventListener('click', this.closeMenu)
     });
-    
-    this.bgBlack.addEventListener('click', this.closeMenu);
+    window.addEventListener('resize', this.closeMenu);
   }
 
   init() {

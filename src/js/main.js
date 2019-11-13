@@ -269,10 +269,11 @@
 
     addMenuMobileEvents() {
       this.menuMobileButton.addEventListener('click', this.openMenu);
+      this.bgBlack.addEventListener('click', this.closeMenu);
       this.menuClose.forEach(item => {
         item.addEventListener('click', this.closeMenu);
       });
-      this.bgBlack.addEventListener('click', this.closeMenu);
+      window.addEventListener('resize', this.closeMenu);
     }
 
     init() {

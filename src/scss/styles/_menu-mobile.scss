@@ -94,19 +94,54 @@
     cursor: pointer;
     position: relative;
 
-    &::before {
-      content: '';
-      display: inline-block;
-      height: 2px;
-      width: 12px;
+    &__icon {
+      display: flex;
+      align-items: center;
       background: white;
-      box-shadow: 0 4px white, 0 -4px white;
-      margin-right: 5px;
-      transition: transform .3s
+      height: 2px;
+      width: 2rem;
+      margin-right: 1rem;
+      position: relative;
+
+      &::before,
+      &::after {
+        background: white;
+        content: '';
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        transition: .2s ease-in-out;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        bottom: -6px;
+      }
     }
 
-    &.active::before {
-      transform: rotate(90deg);
+    &.active {
+      .menu-button__icon {
+        transform: rotate(45deg);
+
+        &::before,
+        &::after {
+          width: 100%;
+        }
+
+        &::before {
+          transform: rotate(90deg);
+          top: 0;
+        }
+
+        &::after {
+          height: 1px;
+          transform: rotate(90deg);
+          bottom: 0;
+        }
+      }
     }
   }
 }
