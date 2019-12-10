@@ -1,7 +1,7 @@
 (function (factory) {
   typeof define === 'function' && define.amd ? define('main', factory) :
   factory();
-}(function () { 'use strict';
+}((function () { 'use strict';
 
   class Accordion {
     constructor(accordionGroup) {
@@ -879,4 +879,4 @@
   slide10.addArrow('[data-slide="prev10"]', '[data-slide="next10"]');
   slide10.addControl('[data-slide="custom-controls10"]');
 
-}));
+})));
