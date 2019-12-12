@@ -4,6 +4,7 @@
   "description": "Gulp tasks test, for improve my abilityes in the web projects",
   "main": "index.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Leandro Fialho",

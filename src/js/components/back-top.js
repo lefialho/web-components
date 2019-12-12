@@ -12,7 +12,7 @@ export default class backTopButton {
     if (window.window.pageYOffset > 100)
       this.topButton.classList.add(this.activeClass);
     else
-      this.topButton.classList.remove(this.activeClass)
+      this.topButton.classList.remove(this.activeClass);
   }
 
   init() {
